@@ -1,0 +1,75 @@
+@charset "utf-8";
+//*****************************************************公共代码片段*********************************************************//
+
+//嵌入超出文字禁止换行隐藏变成省略号
+%public-hidden-full-font {
+  white-space: nowrap; /*是禁止换行；*/
+  overflow: hidden; /*多出的内容隐藏；*/
+  text-overflow: ellipsis; /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow:ellipsis; /*支持chrome；*/
+}
+
+//嵌入强制换行
+%public-clear-wrap {
+  word-break:break-all; /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap:break-word; /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  /*white-space: pre-wrap;*/ /*只对中文起作用，强制换行；*/
+}
+
+//嵌入禁止换行
+%public-space-nowrap {
+  white-space: nowrap;
+}
+//嵌入清除浮动样式
+%public-clear-float{
+  height: 1%;
+  display:block;
+}
+%public-clear-float:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+//添加向左浮动
+.public-float-left{
+  float: left;
+}
+//添加向右浮动
+.public-float-right{
+  float: right;
+}
+
+//添加相对定位
+.public-position-relative{
+  position: relative;
+}
+
+%public-box-shadow{
+  box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+}
+
+//解决ie6,ie7下display:inline-block的间隙问题
+%public-clear-display-inline-block{
+    font-size: 0;          
+    //解决safari下display:inline-block的间隙问题
+    letter-spacing: -4px;  //根据不同字体字号或许需要做一定的调整
+    word-spacing: -4px;
+    
+    .public_display-inline-block{
+        font-size: 12px;
+        display: inline-block;
+        *display:inline;
+        *zoom:1;
+        letter-spacing:normal;
+        word-spacing:normal;
+    }
+}
+
+
+
+
+
+

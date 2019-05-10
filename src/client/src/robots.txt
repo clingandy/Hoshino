@@ -1,0 +1,38 @@
+User-agent: Baiduspider
+Disallow: /api
+Disallow: /js
+Disallow: /css
+Disallow: /lib
+
+User-agent: 360Spider
+Disallow: /api
+Disallow: /js
+Disallow: /css
+Disallow: /lib
+
+User-agent: Sogouspider
+Disallow: /api
+Disallow: /js
+Disallow: /css
+Disallow: /lib
+
+User-agent: bingbot
+Disallow: /api
+Disallow: /js
+Disallow: /css
+Disallow: /lib
+
+User-agent: Googlebot
+Disallow: /api
+Disallow: /js
+Disallow: /css
+Disallow: /lib
+
+User-agent: Yisouspider
+Disallow: /api
+Disallow: /js
+Disallow: /css
+Disallow: /lib
+
+User-agent: *
+Disallow: /

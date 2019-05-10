@@ -1,0 +1,23 @@
+﻿apps:
+     script: ./index.js
+     name: 'candy-web-debug'
+     watch: false
+     instances: 2
+     exec_mode: cluster
+     max_memory_restart: '200M'
+     env: 
+       SITE: 'candy-web'
+       NODE_ENV: development
+       HTTP_PORT: 8108
+       CDN: ''  #CDN地址
+       AD_WEBSITE: 76   #广告站点ID
+       VERSION: debug     
+       LOGGER_UDP_IP:  '192.168.10.12'
+       LOGGER_UDP_PORT: 20001
+       LOGGER_IS_SEND: true
+       REDIS_HOST: '192.168.10.7'
+       REDIS_PORT: 6379
+       SEO_EXPRIETIME: 30
+     log_date_format: 'YYYY-MM-DD HH:mm Z'
+     autorestart: true
+  

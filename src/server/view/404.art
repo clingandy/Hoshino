@@ -1,0 +1,7 @@
+<!--404-->
+<section class="errorPage">
+    <div class="contentB">
+        <p class="text">抱歉！网址有误！</p>
+        <a class="btn" href="/">返回首页</a>
+    </div>
+</section>

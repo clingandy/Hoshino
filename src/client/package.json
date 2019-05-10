@@ -1,0 +1,47 @@
+{
+  "name": "candy",
+  "version": "1.0.0",
+  "description": "棉花糖客户端",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "棉花糖"
+  ],
+  "author": "Leo",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^8.0.0",
+    "colors": "^1.3.0",
+    "es6-promise": "^4.2.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-bro": "^1.0.3",
+    "gulp-cache-bust": "^1.3.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "postcss-scss": "^1.0.6",
+    "postcss-strip-inline-comments": "^0.1.5",
+    "uglify-js": "^3.4.2"
+  },
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "iosselect": "^1.1.5"
+  }
+}

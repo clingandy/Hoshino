@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- SEO 相关-->
+	{{if seo}}<title>{{seo.title}}</title>{{/if}}
+	{{if seo}}<meta name="keywords" content="{{seo.keyword}}" />{{/if}}
+	{{if seo}}<meta name="description" content="{{seo.description}}" />{{/if}}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-transform" />
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<meta name="applicable-device" content="pc">
+	 <!-- =====  MOBILE SPECIFICATION  ===== -->
+	 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	 <meta name="viewport" content="width=device-width">
+	<!--项目样式-->
+	<link rel="stylesheet" type="text/css" href="{{cdnUrl}}/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="{{cdnUrl}}/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="{{cdnUrl}}/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{cdnUrl}}/css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="{{cdnUrl}}/css/owl.carousel.css">
+	
+
+	<!-- 其他META插入 -->
+	{{if meta}}{{@meta}}{{/if}}
+
+	<!-- 样式插入 -->
+	{{if style}}{{@style}}{{/if}}
+
+	{{if header}}{{@header}}{{/if}}
+
+  <script src="{{cdnUrl}}/lib/jQuery_v3.1.1.min.js"></script>
+  <script src="{{cdnUrl}}/lib/owl.carousel.min.js"></script>
+  <script src="{{cdnUrl}}/lib/bootstrap.min.js"></script>
+  <script src="{{cdnUrl}}/lib/jquery.magnific-popup.js"></script>
+  <script src="{{cdnUrl}}/lib/jquery.firstVisitPopup.js"></script>
+  <script src="{{cdnUrl}}/lib/custom.js"></script>
+</head>
+<body>
+	{{@ content}}
+	<!-- 脚本插入 -->
+	{{if script}}{{@script}}{{/if}}
+	{{if bottom}}{{@bottom}}{{/if}}
+	{{if statistics}}{{@ statistics}}{{/if}}
+</body>
+</html>

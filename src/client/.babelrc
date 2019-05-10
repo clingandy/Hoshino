@@ -1,0 +1,25 @@
+{
+	"presets": [
+		"stage-0",
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": ["Android >= 4.4.4", "iOS >= 8"]
+				}
+			}
+		]
+	],
+	"plugins": [
+		"array-includes",
+		"add-module-exports",
+		[
+			"transform-runtime",
+			{
+				"polyfill": false,
+				"regenerator": true
+			}
+		],
+		["transform-class-properties", { "spec": true }]
+	]
+}

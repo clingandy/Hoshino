@@ -1,0 +1,23 @@
+apps:
+     script: ./index.js
+     name: 'candy-web-lts'
+     watch: false
+     instances: 4
+     exec_mode: cluster
+     max_memory_restart: '200M'
+     env: 
+       SITE: 'candy-web'
+       NODE_ENV: production
+       HTTP_PORT: 8190
+       CDN: ''  #CDN地址
+       AD_WEBSITE: 76   #广告站点ID
+       VERSION: debug     
+       LOGGER_UDP_IP:  '192.168.10.12'
+       LOGGER_UDP_PORT: 20001
+       LOGGER_IS_SEND: false
+       REDIS_HOST: '127.0.0.1'
+       REDIS_PORT: 6379
+       SEO_EXPRIETIME: 300
+     log_date_format: 'YYYY-MM-DD HH:mm Z'
+     autorestart: true
+  
