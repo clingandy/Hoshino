@@ -41,5 +41,10 @@ module.exports = {
 		code: 'service',
 		class: 'service',
 		path: '/service'
+	},{
+		name: '服务',
+		code: 'service',
+		class: 'service',
+		path: '/service'
 	}]
 }
