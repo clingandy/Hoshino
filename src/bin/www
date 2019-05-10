@@ -1,0 +1,11 @@
+var nodemon = require('nodemon');
+nodemon('-e js,css,html --ignore node_modules/**node_modules --inspect=9339 index.js')
+
+nodemon.on('start', function () {
+	console.log('App has started');
+}).on('quit', function () {
+	console.log('App has quit');
+	process.exit();
+}).on('restart', function (files) {
+	console.log('App restarted due to: ', files);
+});

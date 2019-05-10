@@ -12,23 +12,12 @@
 				</div>
 				<div class="col-xs-12 col-sm-8">
 					<ul class="header-top-right text-right">
-						<li class="account"><a href="login.html">My Account</a></li>
 						<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Language
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">简体
 								<span class="caret"></span> </span>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a href="#">English</a></li>
-								<li><a href="#">French</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</li>
-						<li class="currency dropdown"> <span class="dropdown-toggle" id="dropdownMenu12"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Currency
-								<span class="caret"></span> </span>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu12">
-								<li><a href="#">€ Euro</a></li>
-								<li><a href="#">£ Pound Sterling</a></li>
-								<li><a href="#">$ US Dollar</a></li>
+								<li><a href="#">简体</a></li>
+								<li><a href="#">繁体</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -59,8 +48,17 @@
 					<span class="i-bar"><i class="fa fa-bars"></i></span></button>
 				<div class="collapse navbar-collapse js-navbar-collapse">
 					<ul id="menu" class="nav navbar-nav">
-						<li> <a href="index.html">Home</a></li>
-						<li> <a href="category_page.html">women</a></li>
+						{{each navigateList item}}
+						{{if item.code == currentModule}}
+						<li class="active"> 
+						{{else}}
+						<li>
+						{{/if}}
+							<a href="{{item.path}}">{{item.name}}</a>
+						</li>
+						{{/if}}
+						{{/each}}
+						<!--li> <a href="category_page.html">women</a></li>
 						<li> <a href="category_page.html">men</a></li>
 						<li class="dropdown mega-dropdown"> <a href="#" class="dropdown-toggle"
 								data-toggle="dropdown">Collection </a>
@@ -88,7 +86,7 @@
 								<li> <a href="product_detail_page.html">Product Detail Page</a></li>
 								<li> <a href="single_blog.html">Single Post</a></li>
 							</ul>
-						</li>
+						</li-->
 					</ul>
 				</div>
 				<!-- /.nav-collapse -->

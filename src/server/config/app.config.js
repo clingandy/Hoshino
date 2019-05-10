@@ -24,27 +24,37 @@ module.exports = {
 	navigateList: [{
 		name: '首页',
 		code: 'home',
-		class: 'home',
 		path: '/'
 	},{
-		name: '新闻',
-		code: 'news',
-		class: 'news',
-		path: '/news'
+		name: '关于我们',
+		code: 'about',
+		path: '/about'
 	},{
-		name: '产品',
+		name: '所有产品',
 		code: 'product',
-		class: 'product',
-		path: '/product'
+		path: '/product',
+		child: [
+			{name: '上衣', path: '/'},
+			{name: '裤子', path: '/'},
+			{name: '裙子', path: '/'},
+			{name: '袜子', path: '/'},
+			{name: '女装', path: '/'},
+			{name: '男装', path: '/'},
+			{name: '内衣', path: '/'},
+			{name: '内裤', path: '/'},
+			{name: '短裙', path: '/'}
+		]
 	},{
-		name: '服务',
-		code: 'service',
-		class: 'service',
-		path: '/service'
+		name: '最新产品',
+		code: 'new',
+		path: '/new'
 	},{
-		name: '服务',
-		code: 'service',
-		class: 'service',
-		path: '/service'
+		name: '热门产品',
+		code: 'hot',
+		path: '/hot'
+	},{
+		name: '联络我们',
+		code: 'contact',
+		path: '/contact'
 	}]
 }
