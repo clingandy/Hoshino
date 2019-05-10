@@ -1,0 +1,7 @@
+<div>
+	{{include '../public/header.art'}}
+	<div class="contact-container">
+		关于我们
+	</div>
+	{{include '../public/footer.art'}}
+</div>

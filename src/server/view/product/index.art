@@ -1,0 +1,7 @@
+<div>
+	{{include '../public/header.art'}}
+	<div class="contact-container">
+		所有产品
+	</div>
+	{{include '../public/footer.art'}}
+</div>
