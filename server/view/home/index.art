@@ -3,10 +3,10 @@
 	<div class="container banner mt_20">
 		<div class="main-banner owl-carousel">
 			<div class="item">
-				<a href="#"><img src="{{cdnUrl}}/images/main_banner1.jpg" alt="Main Banner" class="img-responsive" /></a>
+				<a href="#"><img src="{{cdnUrl}}/images/banner1.png" alt="Main Banner" class="img-responsive" /></a>
 			</div>
 			<div class="item">
-				<a href="#"><img src="{{cdnUrl}}/images/main_banner2.jpg" alt="Main Banner"class="img-responsive" /></a>
+				<a href="#"><img src="{{cdnUrl}}/images/banner2.png" alt="Main Banner"class="img-responsive" /></a>
 			</div>
 		</div>
 	</div>
@@ -35,27 +35,22 @@
 					<div class="tab-content clearfix box">
 						<div class="tab-pane active" id="nArrivals">
 							<div class="nArrivals owl-carousel">
-								{{each arr}}
+								{{each arr item}}
 								<div class="product-grid">
 									<div class="item">
 										<div class="product-thumb">
 											<div class="image product-imageblock">
 												<a href="product_detail_page.html">
 													<img data-name="product_image"
-														src="{{cdnUrl}}/images/product/product9.jpg" alt="iPod Classic"
-														title="iPod Classic" class="img-responsive">
+														src="{{cdnUrl}}/images/product/product{{item}}.jpg" alt="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+														title="米屋Mayu米潤酒粕大米麵膜（10片裝）" class="img-responsive">
 												</a>
 											</div>
 											<div class="caption product-detail text-center pt_20">
 												<h6 data-name="product_name" class="product-name">
-													<a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and
-														HDVide..</a>
+													<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
 												</h6>
-												<span class="price">
-													<span class="amount">
-														<span class="currencySymbol">$</span>70.00
-													</span>
-												</span>
+												<a href="#" class="price">报价查询</a>
 											</div>
 										</div>
 									</div>
@@ -75,28 +70,23 @@
 						<div class="tab-pane active" id="nArrivals">
 							<div class="tab-pane" id="Featured">
 								<div class="Featured owl-carousel">
-									{{each arr}}
+									{{each arr item}}
 									<div class="product-grid">
 										<div class="item">
 											<div class="product-thumb">
 												<div class="image product-imageblock">
 													<a href="product_detail_page.html">
 														<img data-name="product_image"
-															src="{{cdnUrl}}/images/product/product9.jpg"
-															alt="iPod Classic" title="iPod Classic"
+															src="{{cdnUrl}}/images/product/product{{item}}.jpg"
+															alt="米屋Mayu米潤酒粕大米麵膜（10片裝）" title="米屋Mayu米潤酒粕大米麵膜（10片裝）"
 															class="img-responsive">
 													</a>
 												</div>
 												<div class="caption product-detail text-center pt_20">
 													<h6 data-name="product_name" class="product-name">
-														<a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen
-															and HDVide..</a>
+														<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
 													</h6>
-													<span class="price">
-														<span class="amount">
-															<span class="currencySymbol">$</span>70.00
-														</span>
-													</span>
+													<a href="#" class="price">报价查询</a>
 												</div>
 											</div>
 										</div>

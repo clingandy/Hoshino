@@ -4,16 +4,16 @@
 	<div class="header-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-8">
+				<div class="col-xs-12 col-sm-10">
 					<div class="header-top-left">
 						<div class="contact">
-							<a href="#">TEL：+852 3957 6783</a> 
-							<a href="#">EMAIL: enquiry@hosinowt.com</a>
-							<a href="#">WHATSAPP: +852 9790 4385 </a>  
+							<a href="#">TEL：<span>+852 3957 6783</span></a> 
+							<a href="#">EMAIL: <span>enquiry@hosinowt.com</span></a>
+							<a href="#">WHATSAPP: <span>+852 9790 4385</span></a>  
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-4">
+				<div class="col-xs-12 col-sm-2">
 					<ul class="header-top-right text-right">
 						<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">简体
@@ -31,7 +31,7 @@
 	<div class="header">
 		<div class="container">
 			<div class="row">
-				<div class="navbar-header col-xs-6 col-sm-8"> 
+				<div class="navbar-header col-xs-12 col-sm-8"> 
 					<a class="navbar-brand" href="index.html"> 
 						<img alt="OYEENok" src="images/logo.png"> 
 						<span class="logo-name">
@@ -44,7 +44,7 @@
 					<div class="main-search mt_60">
 						<input id="search-input" name="search" value="" placeholder="Search" class="form-control input-lg" autocomplete="off" type="text">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+							<button type="button" class="btn btn-default btn-lg"><i class="search-icon"></i></button>
 						</span> 
 					</div>
 				</div>

@@ -4,7 +4,7 @@
 		<div class="row" style="text-align: center;">
 			{{each navigateList item index}}
 			{{if index != 1}}
-			<div class="col-md-{{item.col}} footer-block">
+			<div class="col-xs-{{item.col}} col-md-{{item.col}} footer-block">
 				<a href="{{item.path}}" class="footer-title ptb_20">{{item.name}}</a>
 			</div>
 			{{/if}}
@@ -35,6 +35,6 @@
 			</div>
 		</div>
 	</div>
-	<a id="scrollup"></a>
+	<a class="scrollup" id="scrollup"></a>
 </div>
 <!-- =====  FOOTER END  ===== -->

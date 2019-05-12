@@ -1,6 +1,9 @@
 @charset 'utf-8';
+.navbar-brand>img{
+    background: none;
+}
 #menu > li > a{
-    padding: 15px 55px;
+    padding: 15px 40px;
     font-size: 16px
 }
 .home-about-content{
@@ -12,6 +15,112 @@
         color: #e40001;
         &:hover{
             text-decoration: underline;
+        }
+    }
+}
+.carousel-inner>.item>a>img, 
+.carousel-inner>.item>img, 
+.img-responsive, .thumbnail a>img, 
+.thumbnail>img{
+    height: 354px;
+    object-fit: cover;
+}
+.main-search{
+    .btn-lg{
+        .search-icon{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            @extend %white-search;
+            &:hover{
+                @extend %red-search;
+            }        
+        }
+    }
+}
+.scrollup{
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    z-index: 99;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    @extend %arrow-up;
+    background-color: #e40001;
+}
+.product-thumb .price{
+    margin-top: 10px;
+    padding: 6px 13px;
+    border: 1px solid #e40001;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #e40001;
+    &:hover{
+        background: #e40001;
+        color: #fff;
+    }
+}
+.header-top-left .contact {
+    >a{
+        margin-right: 15px;
+    }
+    span{
+        font-weight: 400;
+    }
+}
+
+// 媒体查询
+@media only screen and (min-width: 768px){
+    .header-top-left{
+        .contact{
+            white-space: nowrap;
+            >a{
+                margin-right: 7px;
+            }
+        }
+    }
+    .navbar-brand{
+        padding: 20px 0;
+        >img{
+            width: 150px;
+        }
+        .logo-name{
+            margin-left: 0;
+            font-size: 16px;
+        }
+    }
+    .main-search{
+        margin-top: 35px;
+    }
+    #menu>li>a{
+        padding: 15px 22px;
+    }
+    .footer {
+        padding-top: 40px;
+        .container {
+            &:last-child{
+                margin-top: 40px;
+            }
+        }
+        
+    }
+    .footer-bottom{
+        margin-top: 40px;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-brand{
+        padding: 15px 0;
+        >img{
+            width: 150px;
+        }
+        .logo-name{
+            margin-left: 0;
+            font-size: 16px;
         }
     }
 }

@@ -975,25 +975,6 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     color: #a5a5a5;
 }
 
-/* ----------------------------------------------
-	4.2 Scrollup
------------------------------------------------ */
-
-#scrollup::before {
-    background: #e40001 none repeat scroll 0 0;
-    bottom: 20px;
-    color: #fff;
-    content: "\f106";
-    font-family: fontawesome;
-    font-size: 25px;
-    height: 40px;
-    padding: 6px 12px;
-    position: fixed;
-    right: 20px;
-    width: 40px;
-    z-index: 99;
-}
-
 
 
 /* =====  RESPONSIVE CSS START  =====*/
@@ -1040,24 +1021,24 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
         margin-top: 20px;
     }
 
-    .toggle.active .toggle_div::before {
-        color: #fff;
-        content: "\f055";
-        font-family: "FontAwesome";
-        font-size: 22px;
-        padding: 0;
-        position: absolute;
-        right: 0;
-    }
-    .toggle .toggle_div::before {
-        color: #fff;
-        content: "\f056";
-        font-family: "FontAwesome";
-        font-size: 22px;
-        padding: 0;
-        position: absolute;
-        right: 0;
-    }
+    // .toggle.active .toggle_div::before {
+    //     color: #fff;
+    //     content: "\f055";
+    //     font-family: "FontAwesome";
+    //     font-size: 22px;
+    //     padding: 0;
+    //     position: absolute;
+    //     right: 0;
+    // }
+    // .toggle .toggle_div::before {
+    //     color: #fff;
+    //     content: "\f056";
+    //     font-family: "FontAwesome";
+    //     font-size: 22px;
+    //     padding: 0;
+    //     position: absolute;
+    //     right: 0;
+    // }
     #product-tab .owl-nav {
         top: -79px;
     }
