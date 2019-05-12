@@ -1,10 +1,14 @@
 const BaseController = require('./public/base.controller');
+const HomeService = require('../service/home.service');
 
 class HomeController extends BaseController {
     // 首页
     async index(ctx, next) {
+        let homeService = new HomeService();
         await next();
         try {
+            let bannerList = await homeService.getHomeBanner();
+            console.log("bannerList", bannerList);
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
                 currentModule: 'home',

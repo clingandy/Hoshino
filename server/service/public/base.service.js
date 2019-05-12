@@ -12,7 +12,7 @@ class BaseService {
 	 * 获取相关请求
 	 */
 	getData(httpOpt, cacheOpt) {
-		return getService(httpOpt, cacheOpt, 'daraUri')
+		return getService(httpOpt, cacheOpt, 'dataUri')
 	}
 }
 

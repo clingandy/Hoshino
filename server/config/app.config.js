@@ -7,9 +7,9 @@ module.exports = {
 	},
 	api: {
 		dataUri: {                           //彩种相关api的配置,需要和非彩种相关api做一个区分
-			development: 'http://wap.api.1396c.com/api/',
-			beta: 'http://mweb6.api.csj.roycdn.com/api/',
-			release: 'http://mweb6.api.csj.roycdn.com/api/'
+			development: 'http://47.92.196.208:81/api/',
+			beta: 'http://47.92.196.208:81/api/',
+			release: 'http://47.92.196.208:81/api/'
 		},
 		imageUri : {
 			development: 'http://192.168.10.13:8016/',
