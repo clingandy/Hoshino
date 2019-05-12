@@ -24,15 +24,18 @@ module.exports = {
 	navigateList: [{
 		name: '首页',
 		code: 'home',
-		path: '/'
+		path: '/',
+		col: 2
 	},{
 		name: '关于我们',
 		code: 'about',
-		path: '/about'
+		path: '/about',
+		col: 3
 	},{
 		name: '所有产品',
 		code: 'product',
 		path: '/product',
+		col: 3,
 		child: [
 			{name: '上衣', path: '/'},
 			{name: '裤子', path: '/'},
@@ -43,18 +46,21 @@ module.exports = {
 			{name: '内衣', path: '/'},
 			{name: '内裤', path: '/'},
 			{name: '短裙', path: '/'}
-		]
+		],
 	},{
 		name: '最新产品',
 		code: 'new',
-		path: '/new'
+		path: '/new',
+		col: 2
 	},{
 		name: '热门产品',
 		code: 'hot',
-		path: '/hot'
+		path: '/hot',
+		col: 3
 	},{
 		name: '联络我们',
 		code: 'contact',
-		path: '/contact'
+		path: '/contact',
+		col: 2
 	}]
 }

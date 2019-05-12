@@ -1,0 +1,17 @@
+@charset 'utf-8';
+#menu > li > a{
+    padding: 15px 55px;
+    font-size: 16px
+}
+.home-about-content{
+    line-height: 40px;
+    text-indent: 20px;
+    font-size: 18px;
+    .seeMore{
+        margin-left: 20px;
+        color: #e40001;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

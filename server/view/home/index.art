@@ -19,6 +19,12 @@
 					<div class="heading-part mb_10 ">
 						<h2 class="main_title">关于我们</h2>
 					</div>
+					<div class="home-about-content">
+						星野國際貿易有限公司Hosino Worldwide Trading Ltd. Co. 是一家專門挑選潮流及口碑較佳的日本化妝護膚品代理的專業批發公司，
+						所以產品均由日本大批量直送香港，絕對正貨，價格實惠，我們現在代理的品牌有資生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、
+						大木、大創DAISO、太陽社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石澤研究所 ISHIZAWA LABS、米諾 MINON、肌美精 Kracie、克麗貝蒂 Creer Beaute、
+						沛麗康 pelican、妮維雅 Nivea、花王 KAO、娜麗絲 Naris、黎琺 Refa、柳屋 Yanagiya...<a class="seeMore" href="/about">查看更多</a>
+					</div>
 				</div>
 				<!-- =====  aboutUs  ===== -->
 				<!-- =====  PRODUCT TAB  ===== -->
@@ -40,7 +46,7 @@
 														title="iPod Classic" class="img-responsive">
 												</a>
 											</div>
-											<div class="caption product-detail text-center">
+											<div class="caption product-detail text-center pt_20">
 												<h6 data-name="product_name" class="product-name">
 													<a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and
 														HDVide..</a>
@@ -81,7 +87,7 @@
 															class="img-responsive">
 													</a>
 												</div>
-												<div class="caption product-detail text-center">
+												<div class="caption product-detail text-center pt_20">
 													<h6 data-name="product_name" class="product-name">
 														<a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen
 															and HDVide..</a>
@@ -103,21 +109,21 @@
 				</div>
 			</div>
 		</div>
-		<div id="brand_carouse" class="ptb_50 text-center">
+		<!--div id="brand_carouse" class="ptb_50 text-center">
 			<div class="type-01">
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="brand owl-carousel ptb_20">
-							{{each arr item}}
+							{{each brandArr item}}
 							<div class="item text-center">
-								 <a href="#"><img src="images/brand/brand{{item}}.png" alt="Disney" class="img-responsive" /></a>
+								 <a href="#"><img src="images/brand/brand{{item}}.jpg" alt="Disney" class="img-responsive" /></a>
 						   </div>
 						 {{/each}}
 						 </div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div-->
 	</div>
 	{{include '../public/footer.art'}}
 </div>

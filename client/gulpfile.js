@@ -156,7 +156,7 @@ gulp.task('watch', () => {
         	remove:true //是否去掉不必要的前缀
         }))
 		.pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('dist/css/'));
+        .pipe(gulp.dest('src/css/'));
 	});
 
 	gulp.watch('src/images/**/**', function(e) {
