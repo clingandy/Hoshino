@@ -7,11 +7,34 @@ class HomeController extends BaseController {
         let homeService = new HomeService();
         await next();
         try {
+            // 获取分类
+            let categoryList = await homeService.getAllCategorys();
+            categoryList = categoryList.Code == 0 ? categoryList.Result : [];
+
+            // 获取banner
             let bannerList = await homeService.getHomeBanner();
-            console.log("bannerList", bannerList);
+            bannerList = bannerList.Code == 200 ? bannerList.Result : [];
+
+            // 获取最新产品列表
+            let latestProductList = await homeService.getLatestProducts();
+            latestProductList = latestProductList.Code == 0 ? latestProductList.Result : [];
+
+            // 获取热门产品列表
+            let hotProductList = await homeService.getHotProducts();
+            hotProductList = hotProductList.Code == 0 ? hotProductList.Result : [];
+
+            // 获取视频列表
+            let vedioList = await homeService.getVedioList();
+            vedioList = vedioList.Code == 0 ? vedioList.Result : [];
+
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
                 currentModule: 'home',
+                categoryList,
+                bannerList,
+                latestProductList,
+                hotProductList,
+                vedioList,
                 arr: [1, 2, 3, 4],
                 brandArr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
                 seo: {

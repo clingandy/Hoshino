@@ -2,12 +2,11 @@
 	{{include '../public/header.art'}}
 	<div class="container banner mt_10">
 		<div class="main-banner owl-carousel">
+			{{each bannerList item}}
 			<div class="item">
-				<a href="#"><img src="{{cdnUrl}}/images/banner1.png" alt="Main Banner" class="img-responsive" /></a>
+				<a href="/"><img src="{{item.Banner_URL}}" class="img-responsive" /></a>
 			</div>
-			<div class="item">
-				<a href="#"><img src="{{cdnUrl}}/images/banner2.png" alt="Main Banner"class="img-responsive" /></a>
-			</div>
+			{{/each}}
 		</div>
 	</div>
 	<!-- =====  CONTAINER START  ===== -->
