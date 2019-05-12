@@ -1,0 +1,124 @@
+<div>
+	{{include '../public/header.art'}}
+	<div class="container banner mt_20">
+		<div class="main-banner owl-carousel">
+			<div class="item">
+				<a href="#"><img src="{{cdnUrl}}/images/main_banner1.jpg" alt="Main Banner" class="img-responsive" /></a>
+			</div>
+			<div class="item">
+				<a href="#"><img src="{{cdnUrl}}/images/main_banner2.jpg" alt="Main Banner"class="img-responsive" /></a>
+			</div>
+		</div>
+	</div>
+	<!-- =====  CONTAINER START  ===== -->
+	<div class="container">
+		<div class="row ">
+			<div class="col-sm-12 mtb_10">
+				<!-- =====  aboutUs  ===== -->
+				<div id="product-tab" class="mt_50">
+					<div class="heading-part mb_10 ">
+						<h2 class="main_title">关于我们</h2>
+					</div>
+				</div>
+				<!-- =====  aboutUs  ===== -->
+				<!-- =====  PRODUCT TAB  ===== -->
+				<div id="product-tab" class="mt_50">
+					<div class="heading-part mb_10 ">
+						<h2 class="main_title">最新产品</h2>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="nArrivals owl-carousel">
+								{{each arr}}
+								<div class="product-grid">
+									<div class="item">
+										<div class="product-thumb">
+											<div class="image product-imageblock">
+												<a href="product_detail_page.html">
+													<img data-name="product_image"
+														src="{{cdnUrl}}/images/product/product9.jpg" alt="iPod Classic"
+														title="iPod Classic" class="img-responsive">
+												</a>
+											</div>
+											<div class="caption product-detail text-center">
+												<h6 data-name="product_name" class="product-name">
+													<a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and
+														HDVide..</a>
+												</h6>
+												<span class="price">
+													<span class="amount">
+														<span class="currencySymbol">$</span>70.00
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- =====  PRODUCT TAB  END ===== -->
+				<!-- =====  PRODUCT TAB  ===== -->
+				<div id="product-tab" class="mt_50">
+					<div class="heading-part mb_10 ">
+						<h2 class="main_title">热门产品</h2>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="tab-pane" id="Featured">
+								<div class="Featured owl-carousel">
+									{{each arr}}
+									<div class="product-grid">
+										<div class="item">
+											<div class="product-thumb">
+												<div class="image product-imageblock">
+													<a href="product_detail_page.html">
+														<img data-name="product_image"
+															src="{{cdnUrl}}/images/product/product9.jpg"
+															alt="iPod Classic" title="iPod Classic"
+															class="img-responsive">
+													</a>
+												</div>
+												<div class="caption product-detail text-center">
+													<h6 data-name="product_name" class="product-name">
+														<a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen
+															and HDVide..</a>
+													</h6>
+													<span class="price">
+														<span class="amount">
+															<span class="currencySymbol">$</span>70.00
+														</span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="brand_carouse" class="ptb_50 text-center">
+			<div class="type-01">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="brand owl-carousel ptb_20">
+							{{each arr item}}
+							<div class="item text-center">
+								 <a href="#"><img src="images/brand/brand{{item}}.png" alt="Disney" class="img-responsive" /></a>
+						   </div>
+						 {{/each}}
+						 </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{include '../public/footer.art'}}
+</div>
+<script src="{{cdnUrl}}/lib/custom.js"></script>

@@ -401,7 +401,7 @@ function owl_carousel () {
         gl_view();
         search();
         footerToggle(); 
-        m_popup_select ();
+       // m_popup_select ();
         log_reg_tab();
 
     });

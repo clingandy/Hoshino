@@ -10,7 +10,9 @@ const gulp = require('gulp'),
 
 gulp.task('build',['sass:build'], function() {
 
-	
+	gulp.src('src/fonts/**')
+    	.pipe(gulp.dest('dist/fonts/'));
+
     gulp.src('src/images/**')
 		.pipe(gulp.dest('dist/images/'));
 	gulp.src('src/pic/**')
@@ -55,10 +57,6 @@ gulp.task('build',['sass:build'], function() {
 			showLog : true
 		}))
 		.pipe(gulp.dest('dist/css'));
-
-	gulp.src('src/fonts/**')
-    	.pipe(gulp.dest('dist/fonts/'));
-
 	
 	return gulp.src('src/js/**/*.js', {read : false})
         .pipe(bro({
@@ -130,14 +128,6 @@ gulp.task('watch', () => {
         .pipe(gulp.dest(pathObject.publicPath));
 	})
 
-	// 监控font变化
-	gulp.watch('src/fonts/**', function(e) {
-		gUtil.log(gUtil.colors.green(`run css task ,change file : `),gUtil.colors.yellow(`${e.path},`), gUtil.colors.white(`change Event : `), gUtil.colors.red(`${e.type}`));
-		let pathObject = getWatchDistPath(e.path);
-		return gulp.src(e.path)
-			.pipe(gulp.dest(pathObject.publicPath));
-	});
-
 	// 监控css 改变
 	gulp.watch('src/**/*.css', function(e) {
 		gUtil.log(gUtil.colors.green(`run css task ,change file : `),gUtil.colors.yellow(`${e.path},`), gUtil.colors.white(`change Event : `), gUtil.colors.red(`${e.type}`));
@@ -166,7 +156,7 @@ gulp.task('watch', () => {
         	remove:true //是否去掉不必要的前缀
         }))
 		.pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('src/css/'));
+        .pipe(gulp.dest('dist/css/'));
 	});
 
 	gulp.watch('src/images/**/**', function(e) {

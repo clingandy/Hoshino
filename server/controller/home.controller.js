@@ -8,6 +8,7 @@ class HomeController extends BaseController {
 			let dataObj = {
 				navigateList: __AppConfig.navigateList,
 				currentModule: 'home',
+				arr: [1,2,3,4,5,6,7,8,9],
 				seo:{
 					title: '首页',
 					description: '首页',
