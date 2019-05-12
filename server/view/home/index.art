@@ -1,6 +1,6 @@
 <div>
 	{{include '../public/header.art'}}
-	<div class="container banner mt_20">
+	<div class="container banner mt_10">
 		<div class="main-banner owl-carousel">
 			<div class="item">
 				<a href="#"><img src="{{cdnUrl}}/images/banner1.png" alt="Main Banner" class="img-responsive" /></a>
@@ -15,7 +15,7 @@
 		<div class="row ">
 			<div class="col-sm-12 mtb_10">
 				<!-- =====  aboutUs  ===== -->
-				<div id="product-tab" class="mt_50">
+				<div id="product-tab" class="mt_10">
 					<div class="heading-part mb_10 ">
 						<h2 class="main_title">关于我们</h2>
 					</div>
@@ -26,11 +26,146 @@
 						沛麗康 pelican、妮維雅 Nivea、花王 KAO、娜麗絲 Naris、黎琺 Refa、柳屋 Yanagiya...<a class="seeMore" href="/about">查看更多</a>
 					</div>
 				</div>
-				<!-- =====  aboutUs  ===== -->
+				<!-- =====  aboutUs END  ===== -->
 				<!-- =====  PRODUCT TAB  ===== -->
-				<div id="product-tab" class="mt_50">
+				<div id="product-tab" class="mt_10">
 					<div class="heading-part mb_10 ">
 						<h2 class="main_title">最新产品</h2>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="nArrivals owl-carousel">
+								{{each arr item}}
+								<div class="product-grid">
+									<div class="item">
+										<div class="product-thumb">
+											<div class="image product-imageblock">
+												<a href="product_detail_page.html">
+													<img data-name="product_image"
+														src="{{cdnUrl}}/images/product/product{{item}}.jpg" alt="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+														title="米屋Mayu米潤酒粕大米麵膜（10片裝）" class="img-responsive">
+												</a>
+											</div>
+											<div class="caption product-detail text-center pt_20">
+												<h6 data-name="product_name" class="product-name">
+													<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+												</h6>
+												<a href="#" class="price">报价查询</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="nArrivals owl-carousel">
+								{{each arr item}}
+								<div class="product-grid">
+									<div class="item">
+										<div class="product-thumb">
+											<div class="image product-imageblock">
+												<a href="product_detail_page.html">
+													<img data-name="product_image"
+														src="{{cdnUrl}}/images/product/product{{item}}.jpg" alt="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+														title="米屋Mayu米潤酒粕大米麵膜（10片裝）" class="img-responsive">
+												</a>
+											</div>
+											<div class="caption product-detail text-center pt_20">
+												<h6 data-name="product_name" class="product-name">
+													<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+												</h6>
+												<a href="#" class="price">报价查询</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="nArrivals owl-carousel">
+								{{each arr item}}
+								<div class="product-grid">
+									<div class="item">
+										<div class="product-thumb">
+											<div class="image product-imageblock">
+												<a href="product_detail_page.html">
+													<img data-name="product_image"
+														src="{{cdnUrl}}/images/product/product{{item}}.jpg" alt="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+														title="米屋Mayu米潤酒粕大米麵膜（10片裝）" class="img-responsive">
+												</a>
+											</div>
+											<div class="caption product-detail text-center pt_20">
+												<h6 data-name="product_name" class="product-name">
+													<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+												</h6>
+												<a href="#" class="price">报价查询</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="nArrivals owl-carousel">
+								{{each arr item}}
+								<div class="product-grid">
+									<div class="item">
+										<div class="product-thumb">
+											<div class="image product-imageblock">
+												<a href="product_detail_page.html">
+													<img data-name="product_image"
+														src="{{cdnUrl}}/images/product/product{{item}}.jpg" alt="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+														title="米屋Mayu米潤酒粕大米麵膜（10片裝）" class="img-responsive">
+												</a>
+											</div>
+											<div class="caption product-detail text-center pt_20">
+												<h6 data-name="product_name" class="product-name">
+													<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+												</h6>
+												<a href="#" class="price">报价查询</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="nArrivals owl-carousel">
+								{{each arr item}}
+								<div class="product-grid">
+									<div class="item">
+										<div class="product-thumb">
+											<div class="image product-imageblock">
+												<a href="product_detail_page.html">
+													<img data-name="product_image"
+														src="{{cdnUrl}}/images/product/product{{item}}.jpg" alt="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+														title="米屋Mayu米潤酒粕大米麵膜（10片裝）" class="img-responsive">
+												</a>
+											</div>
+											<div class="caption product-detail text-center pt_20">
+												<h6 data-name="product_name" class="product-name">
+													<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+												</h6>
+												<a href="#" class="price">报价查询</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/each}}
+							</div>
+						</div>
 					</div>
 					<div class="tab-content clearfix box">
 						<div class="tab-pane active" id="nArrivals">
@@ -62,7 +197,7 @@
 				</div>
 				<!-- =====  PRODUCT TAB  END ===== -->
 				<!-- =====  PRODUCT TAB  ===== -->
-				<div id="product-tab" class="mt_50">
+				<div id="product-tab" class="mt_10">
 					<div class="heading-part mb_10 ">
 						<h2 class="main_title">热门产品</h2>
 					</div>
@@ -96,24 +231,142 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-		<!--div id="brand_carouse" class="ptb_50 text-center">
-			<div class="type-01">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="brand owl-carousel ptb_20">
-							{{each brandArr item}}
-							<div class="item text-center">
-								 <a href="#"><img src="images/brand/brand{{item}}.jpg" alt="Disney" class="img-responsive" /></a>
-						   </div>
-						 {{/each}}
-						 </div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="tab-pane" id="Featured">
+								<div class="Featured owl-carousel">
+									{{each arr item}}
+									<div class="product-grid">
+										<div class="item">
+											<div class="product-thumb">
+												<div class="image product-imageblock">
+													<a href="product_detail_page.html">
+														<img data-name="product_image"
+															src="{{cdnUrl}}/images/product/product{{item}}.jpg"
+															alt="米屋Mayu米潤酒粕大米麵膜（10片裝）" title="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+															class="img-responsive">
+													</a>
+												</div>
+												<div class="caption product-detail text-center pt_20">
+													<h6 data-name="product_name" class="product-name">
+														<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+													</h6>
+													<a href="#" class="price">报价查询</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="tab-pane" id="Featured">
+								<div class="Featured owl-carousel">
+									{{each arr item}}
+									<div class="product-grid">
+										<div class="item">
+											<div class="product-thumb">
+												<div class="image product-imageblock">
+													<a href="product_detail_page.html">
+														<img data-name="product_image"
+															src="{{cdnUrl}}/images/product/product{{item}}.jpg"
+															alt="米屋Mayu米潤酒粕大米麵膜（10片裝）" title="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+															class="img-responsive">
+													</a>
+												</div>
+												<div class="caption product-detail text-center pt_20">
+													<h6 data-name="product_name" class="product-name">
+														<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+													</h6>
+													<a href="#" class="price">报价查询</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="tab-pane" id="Featured">
+								<div class="Featured owl-carousel">
+									{{each arr item}}
+									<div class="product-grid">
+										<div class="item">
+											<div class="product-thumb">
+												<div class="image product-imageblock">
+													<a href="product_detail_page.html">
+														<img data-name="product_image"
+															src="{{cdnUrl}}/images/product/product{{item}}.jpg"
+															alt="米屋Mayu米潤酒粕大米麵膜（10片裝）" title="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+															class="img-responsive">
+													</a>
+												</div>
+												<div class="caption product-detail text-center pt_20">
+													<h6 data-name="product_name" class="product-name">
+														<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+													</h6>
+													<a href="#" class="price">报价查询</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content clearfix box">
+						<div class="tab-pane active" id="nArrivals">
+							<div class="tab-pane" id="Featured">
+								<div class="Featured owl-carousel">
+									{{each arr item}}
+									<div class="product-grid">
+										<div class="item">
+											<div class="product-thumb">
+												<div class="image product-imageblock">
+													<a href="product_detail_page.html">
+														<img data-name="product_image"
+															src="{{cdnUrl}}/images/product/product{{item}}.jpg"
+															alt="米屋Mayu米潤酒粕大米麵膜（10片裝）" title="米屋Mayu米潤酒粕大米麵膜（10片裝）"
+															class="img-responsive">
+													</a>
+												</div>
+												<div class="caption product-detail text-center pt_20">
+													<h6 data-name="product_name" class="product-name">
+														<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
+													</h6>
+													<a href="#" class="price">报价查询</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									{{/each}}
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				<!-- =====  PRODUCT TAB END  ===== -->
+				<!-- =====  Video  ===== -->
+				<div id="product-tab" class="mt_10">
+					<div class="heading-part mb_10 ">
+						<h2 class="main_title">宣传视频</h2>
+					</div>
+					<div class="tab-content clearfix box" style="margin:0;">
+						<video src="http://www.w3school.com.cn/i/movie.ogg" width="100%" controls="controls">
+							您的浏览器不支持 video 标签。
+						</video>
+					</div>
+				</div>
+				<!-- =====  Video END  ===== -->
 			</div>
-		</div-->
+		</div>
 	</div>
 	{{include '../public/footer.art'}}
 </div>
