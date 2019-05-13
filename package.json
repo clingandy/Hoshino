@@ -1,7 +1,7 @@
 {
   "name": "candy",
   "version": "0.0.1",
-  "description": "棉花糖站群系统",
+  "description": "星野系统",
   "main": "index.js",
   "scripts": {
     "start": "node bin/www",

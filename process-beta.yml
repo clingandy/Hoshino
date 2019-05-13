@@ -1,14 +1,14 @@
 apps:
      script: ./index.js
-     name: 'candy-web-beta'
+     name: 'xingye-web-beta'
      watch: false
      instances: 2
      exec_mode: cluster
      max_memory_restart: '200M'
      env: 
-       SITE: 'candy-web'
+       SITE: 'xingye-web'
        NODE_ENV: development
-       HTTP_PORT: 8012
+       HTTP_PORT: 8010
        CDN: ''  #CDN地址
        AD_WEBSITE: 76   #广告站点ID
        VERSION: debug     
