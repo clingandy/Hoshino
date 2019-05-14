@@ -27,6 +27,10 @@ module.exports = {
 			method: 'get',
 			path : `/contact`,
 			action: 'contact'
+		},{
+			method: 'get',
+			path : `/detail`,
+			action: 'detail'
 		}]
 	}]
 }

@@ -123,7 +123,26 @@ class HomeController extends BaseController {
         } catch (ex) {
             ctx.app.emit('error', ex, ctx);
         }
-    }
+	}
+	
+	// 获取产品详情
+	async detail(ctx, next) {
+		await next();
+        try {
+            let dataObj = {
+                navigateList: __AppConfig.navigateList,
+                currentModule: 'hot',
+                seo: {
+                    title: '产品详情',
+                    description: '产品详情',
+                    keyword: '产品详情'
+                }
+            };
+            return await ctx.render(`product/detail`, dataObj);
+        } catch (ex) {
+            ctx.app.emit('error', ex, ctx);
+        }
+	}
 
     // 联络我们
     async contact(ctx, next) {
