@@ -5,10 +5,10 @@
         <!-- =====  BANNER STRAT  ===== -->
         <div class="col-sm-12">
           <div class="breadcrumb ptb_20">
-            <h1>About Us</h1>
+            <h1>关于我们</h1>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li class="active">About Us</li>
+              <li><a href="/">首页</a></li>
+              <li class="active">关于我们</li>
             </ul>
           </div>
         </div>

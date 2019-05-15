@@ -5,93 +5,61 @@
         <!-- =====  BANNER STRAT  ===== -->
         <div class="col-sm-12">
           <div class="breadcrumb ptb_20">
-            <h1>Contact Us</h1>
+            <h1>联络我们</h1>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li class="active">Contact Us</li>
+              <li><a href="index.html">首页</a></li>
+              <li class="active">联络我们</li>
             </ul>
           </div>
         </div>
-        <!-- =====  BREADCRUMB END===== -->
-        <div id="column-left" class="col-sm-4 col-lg-3 hidden-xs">
-          <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" style="" role="button">
-            <div class="nav-responsive">
-              <div class="heading-part">
-                <h2 class="main_title">Top category</h2>
-              </div>
-              <ul class="nav  main-navigation collapse in">
-                <li><a href="#">Appliances</a></li>
-                <li><a href="#">Mobile Phones</a></li>
-                <li><a href="#">Tablet PC & Accessories</a></li>
-                <li><a href="#">Consumer Electronics</a></li>
-                <li><a href="#">Computers & Networking</a></li>
-                <li><a href="#">Electrical & Tools</a></li>
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Bags & Shoes</a></li>
-                <li><a href="#">Toys & Hobbies</a></li>
-                <li><a href="#">Watches & Jewelry</a></li>
-                <li><a href="#">Home & Garden</a></li>
-                <li><a href="#">Health & Beauty</a></li>
-                <li><a href="#">Outdoors & Sports</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="left_banner left-sidebar-widget mt_30 mb_40"> <a href="#"><img src="images/left1.jpg" alt="Left Banner" class="img-responsive" /></a> </div>
-        </div>
-        <div class="col-sm-8 col-lg-9 mtb_20">
+        <div class="col-sm-12 col-lg-12 mtb_20">
           <!-- contact  -->
           <div class="row">
             <div class="col-md-4 col-xs-12 contact">
               <div class="location mb_50">
-                <h5 class="capitalize mb_20"><strong>Our Location</strong></h5>
-                <div class="address">Office address
-                  <br> 124,Lorem Ipsum has been
-                  <br> text ever since the 1500</div>
-                <div class="call mt_10"><i class="fa fa-phone" aria-hidden="true"></i>+91-9987-654-321</div>
+                <h5 class="capitalize mb_20"><strong>我们的地址：</strong></h5>
+                <div class="address">广东省广州市番禺区番禺广场</div>
               </div>
               <div class="Career mb_50">
-                <h5 class="capitalize mb_20"><strong>Careers</strong></h5>
-                <div class="address">dummy text ever since the 1500s, simply dummy text of the typesetting industry. </div>
-                <div class="email mt_10"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:careers@yourdomain.com" target="_top">careers@yourdomain.com</a></div>
+                <h5 class="capitalize mb_20"><strong>电话</strong></h5>
+                <div class="address">+852 3957 6783</div>
               </div>
               <div class="Hello mb_50">
-                <h5 class="capitalize mb_20"><strong>Say Hello</strong></h5>
-                <div class="address">simply dummy text of the printing and typesetting industry.</div>
-                <div class="email mt_10"><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@yourdomailname.com" target="_top">info@yourdomailname.com</a></div>
+                <h5 class="capitalize mb_20"><strong>电邮</strong></h5>
+                <div class="address">enquiry@hosinowt.com</div>
+              </div>
+			   <div class="Hello mb_50">
+                <h5 class="capitalize mb_20"><strong>WECHAT</strong></h5>
+                <div class="address">+852 9790 4385</div>
+              </div>
+			   <div class="Hello mb_50">
+                <h5 class="capitalize mb_20"><strong>WHATSAPP</strong></h5>
+                <div class="address">+852 9790 4385</div>
               </div>
             </div>
             <div class="col-md-8 col-xs-12 contact-form mb_50">
               <!-- Contact FORM -->
               <div id="contact_form">
                 <form id="contact_body" method="post" action="contact_me.php">
-                  <!--                                <label class="full-with-form" ><span>Name</span></label>
--->
-                  <input class="full-with-form " type="text" name="name" placeholder="Name" data-required="true" />
-                  <!--                <label class="full-with-form" ><span>Email Address</span></label>
--->
-                  <input class="full-with-form  mt_30" type="email" name="email" placeholder="Email Address" data-required="true" />
-                  <!--                <label class="full-with-form" ><span>Phone Number</span></label>
--->
-                  <input class="full-with-form  mt_30" type="text" name="phone1" placeholder="Phone Number" maxlength="15" data-required="true" />
-                  <!--                <label class="full-with-form" ><span>Subject</span></label>
--->
-                  <input class="full-with-form  mt_30" type="text" name="subject" placeholder="Subject" data-required="true">
-                  <!--                                <label class="full-with-form" ><span>Attachment</span></label>
--->
-                  <!--                                <label class="full-with-form" ><span>Message</span></label>
--->
-                  <textarea class="full-with-form  mt_30" name="message" placeholder="Message" data-required="true"></textarea>
-                  <button class="btn mt_30" type="submit">Send Message</button>
+                 <label class="full-with-form" ><span>*公司名称</span></label>
+                 <input class="full-with-form " type="text" name="compnay" placeholder="请输入公司名称" data-required="true" />
+                 <label class="full-with-form" ><span>*姓名</span></label>
+                 <input class="full-with-form " type="text" name="name" placeholder="请输入姓名" data-required="true" />
+                 <label class="full-with-form" ><span>*联络电话</span></label>
+                 <input class="full-with-form " type="text" name="phone" placeholder="请输入联络电话" data-required="true" />
+				 <label class="full-with-form" ><span>*电子邮箱</span></label>
+                 <input class="full-with-form " type="email" name="email" placeholder="请输入电子邮箱" data-required="true" />
+				 <label class="full-with-form" ><span>联络地址</span></label>
+                 <input class="full-with-form " type="text" name="address" placeholder="请输入联络地址" data-required="true" />
+				 <label class="full-with-form" ><span>查询事项</span></label>
+                 <textarea class="full-with-form " name="message" placeholder="请输入查询事项" data-required="true"></textarea>
+				 <label class="full-with-form" ><span>*验证码</span></label>
+                 <input class="full-with-form " type="text" name="address" placeholder="请输入验证码" data-required="true" />
+                 <button class="btn mt_30" type="submit">提交</button>
                 </form>
                 <div id="contact_results"></div>
               </div>
               <!-- END Contact FORM -->
-            </div>
-          </div>
-          <!-- map  -->
-          <div class="row">
-            <div class="col-xs-12 map mb_80">
-              <div id="map"></div>
             </div>
           </div>
         </div>

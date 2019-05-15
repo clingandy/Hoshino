@@ -79,7 +79,8 @@ class HomeController extends BaseController {
                     title: '所有产品',
                     description: '所有产品',
                     keyword: '所有产品'
-                }
+				},
+				arr: [1,2,3,4,5,6,7,8,9]
             };
             return await ctx.render(`product/index`, dataObj);
         } catch (ex) {
@@ -98,7 +99,8 @@ class HomeController extends BaseController {
                     title: '最新产品',
                     description: '最新产品',
                     keyword: '最新产品'
-                }
+				},
+				arr: [1,2,3,4,5,6,7,8,9]
             };
             return await ctx.render(`product/new`, dataObj);
         } catch (ex) {
@@ -117,7 +119,8 @@ class HomeController extends BaseController {
                     title: '最热产品',
                     description: '最热产品',
                     keyword: '最热产品'
-                }
+				},
+				arr: [1,2,3,4,5,6,7,8,9,10]
             };
             return await ctx.render(`product/hot`, dataObj);
         } catch (ex) {
@@ -136,7 +139,8 @@ class HomeController extends BaseController {
                     title: '产品详情',
                     description: '产品详情',
                     keyword: '产品详情'
-                }
+				},
+				arr: [1,2,3,4,5,6,7,8,9]
             };
             return await ctx.render(`product/detail`, dataObj);
         } catch (ex) {
