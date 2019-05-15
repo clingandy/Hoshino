@@ -5,6 +5,7 @@ const config = require('./service/public/config.service');
 const CacheService = require('./service/public/cache.service');
 const LoggerService = require('./service/public/logger.service');
 const proxy = require('koa-proxy');
+const i18n_module = require('i18n-nodejs');
 
 // 日志服务
 const loggerService = new LoggerService();
@@ -38,6 +39,15 @@ async function start() {
 		host:  _url, // proxy
 		match: /^\/spunsugar\//       
 	}));
+
+	// 多语言
+	var langConfig = {
+		"lang": "zh_TW",
+		"langFile": __dirname + "/config/lang.json"//relative path to index.js file of i18n-nodejs module
+	}
+	var i18n = new i18n_module(langConfig.lang, langConfig.langFile);
+	//global._i18n = i18n;
+	//console.log(i18n.__('Welcome'));
 
 	console.log(`listen host ${port}`);
 	app.listen(port);

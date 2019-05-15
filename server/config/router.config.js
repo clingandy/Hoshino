@@ -29,6 +29,10 @@ module.exports = {
 			action: 'contact'
 		},{
 			method: 'get',
+			path : `/submit_query`,
+			action: 'submit_query'
+		},{
+			method: 'get',
 			path : `/detail`,
 			action: 'detail'
 		}]

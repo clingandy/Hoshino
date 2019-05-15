@@ -162,6 +162,25 @@ class HomeController extends BaseController {
             ctx.app.emit('error', ex, ctx);
         }
     }
+
+    // 提交查询
+    async submit_query(ctx, next) {
+        await next();
+        try {
+            let dataObj = {
+                navigateList: __AppConfig.navigateList,
+                currentModule: 'submit_query',
+                seo: {
+                    title: '提交查询',
+                    description: '提交查询',
+                    keyword: '提交查询'
+                }
+            };
+            return await ctx.render(`product/submit_query`, dataObj);
+        } catch (ex) {
+            ctx.app.emit('error', ex, ctx);
+        }
+    }
 }
 
 module.exports = HomeController;

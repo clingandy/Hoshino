@@ -1,5 +1,5 @@
 var nodemon = require('nodemon');
-nodemon('-e js,css,html --ignore node_modules/**node_modules --inspect=9339 index.js')
+nodemon('-e js,css,html --ignore node_modules/**node_modules --inspect=9349 index.js')
 
 nodemon.on('start', function () {
 	console.log('App has started');
