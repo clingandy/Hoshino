@@ -13,7 +13,6 @@ class Common {
 	 */
 	init() {
 	}
-	
 }
 
 export default Common;

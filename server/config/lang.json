@@ -1,10 +1,10 @@
 {
-    "Welcome": {
-        "zh_CN": "欢迎",
-        "zh_TW": "歡迎"
+    "Lang": {
+        "zh_CN": "简体",
+        "zh_TW": "繁体"
     },
-    "Chat": {
-        "zh_CN": "说",
-        "zh_TW": "說"
+    "CompanyName": {
+        "zh_CN": "星野国际贸易有限公司",
+        "zh_TW": "星野國際貿易有限公司"
     }
 }

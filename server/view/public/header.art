@@ -15,11 +15,11 @@
 				<div class="col-xs-12 col-sm-2">
 					<ul class="header-top-right text-right">
 						<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">简体
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">{{i18n.__('Lang')}}
 								<span class="caret"></span> </span>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a href="#">简体</a></li>
-								<li><a href="#">繁体</a></li>
+								<li><a href="javascript:void(0);" onclick="setLang('zh_CN')">简体</a></li>
+								<li><a href="javascript:void(0);" onclick="setLang('zh_TW')">繁体</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -34,7 +34,7 @@
 					<a class="navbar-brand" href="index.html"> 
 						<img alt="OYEENok" src="images/logo.png"> 
 						<span class="logo-name">
-							星野國際貿易有限公司<br/>
+							{{i18n.__('CompanyName')}}<br/>
 							Hosino Worldwide Trading Ltd. Co.
 						</span>
 					</a> 
@@ -99,3 +99,10 @@
 		</div>
 	</div>
 </header>
+<script type="text/javascript">
+  	// 设置多语言cookie和刷新页面
+	function setLang(langType){
+		document.cookie="langType=" + langType;  
+		location.reload();
+	};
+</script>
