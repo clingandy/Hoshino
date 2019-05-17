@@ -19,6 +19,7 @@ module.exports = app => {
 		layout: true,
 		layoutName: 'layout/master',
 		i18n: [],
+		imgUrl: ''
 	}
 
 	// 添加helper;
@@ -45,6 +46,19 @@ module.exports = app => {
 		return settings.i18n[langType];
 	}
 
+	// 
+	function getImgUrl(){
+		if(settings.imgUrl ==''){
+			let nodeEnv = ((process.env.NODE_ENV || 'development'));
+			if (nodeEnv == "development") {
+				settings.imgUrl = __AppConfig.api['imageUri'].development;
+			} else {
+				settings.imgUrl = ((process.env.VERSION || 'beta') == 'beta' ? __AppConfig.api['imageUri'].beta : __AppConfig.api['imageUri'].release);
+			}
+		}
+		return settings.imgUrl
+	}
+
     function render(filename, data) {
 		debug(`render: ${filename}`);
 		settings.filename = filename;
@@ -56,7 +70,6 @@ module.exports = app => {
 				filename: settings.layoutName,
 				extname: '.html'
 			});
-			data.cdnUrl = data.cdnUrl ? data.cdnUrl : '';
 			let _context = Object.assign(data, {content: _tmpContent});
 			_tmpContent = layoutRender(_context);
 		}
@@ -67,6 +80,8 @@ module.exports = app => {
 		const ctx = this;
 		const context = Object.assign({}, ctx.state, _context);
 		context.i18n = getLang(ctx);
+		context.cdnUrl = context.cdnUrl ? context.cdnUrl : '';
+		context.imgUrl = getImgUrl();
         const html = render(view, context);
         const writeResp = context.writeResp === false ? false : (context.writeResp || settings.writeResp);
 

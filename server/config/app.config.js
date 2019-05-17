@@ -12,9 +12,9 @@ module.exports = {
 			release: 'http://47.92.196.208:81/api/'
 		},
 		imageUri : {
-			development: 'http://192.168.10.13:8016/',
-			beta: 'http://127.0.0.1:88/',
-			release: 'http://127.0.0.1:88/'
+			development: 'http://47.92.196.208',
+			beta: 'http://47.92.196.208',
+			release: 'http://47.92.196.208'
 		}
 	},
 	getCdn(){

@@ -1,9 +1,9 @@
 <div>
 	{{include '../public/header.art'}}
-	<div class="container">
+	<div class="container mt_20">
       <div class="row ">
         <!-- =====  BANNER STRAT  ===== -->
-        <div class="col-sm-12">
+        <!--<div class="col-sm-12">
           <div class="breadcrumb ptb_20">
             <h1>关于我们</h1>
             <ul>
@@ -11,9 +11,9 @@
               <li class="active">关于我们</li>
             </ul>
           </div>
-        </div>
+        </div>-->
         <!-- =====  BREADCRUMB END===== -->
-        <div class="col-sm-12 col-lg-12 mtb_20">
+        <div class="col-sm-12 col-lg-12">
           <!-- about  -->
           <div class="row">
             <div class="col-md-4">

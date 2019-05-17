@@ -4,10 +4,9 @@
 		<div class="main-banner owl-carousel">
 			{{each bannerList item}}
 			<div class="item">
-				<a href="/"><img src="{{cdnUrl}}{{item.Banner_URL}}" class="img-responsive" /></a>
+				<a href="/"><img src="{{imgUrl}}{{item.Banner_URL}}" class="img-responsive" /></a>
 			</div>
 			{{/each}}
-			{{_i18n.__('Welcome')}}
 		</div>
 	</div>
 	<!-- =====  CONTAINER START  ===== -->
