@@ -160,7 +160,7 @@ $(function() {
         $('.nArrivals , .Bestsellers , .Featured').owlCarousel({
             autoplay: false,
             responsiveClass: true,
-            items: 4, //10 items above 1000px browser width
+            items: 5, //10 items above 1000px browser width
             responsive: {
                 0: {
                     items: 2,
@@ -171,11 +171,11 @@ $(function() {
                     nav: true
                 },
                 600: {
-                    items: 3,
+                    items: 4,
                     nav: true
                 },
                 1000: {
-                    items: 4,
+                    items: 5,
                     nav: true
                 }
             }

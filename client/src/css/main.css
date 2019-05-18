@@ -1398,6 +1398,12 @@ label.checkme {
 #product-thumbnail .owl-nav .owl-prev {
   left: 0; }
 
+.owl-carousel .product-thumb .img-responsive {
+  height: 243px;
+  width: auto;
+  object-fit: cover;
+  margin: 0 auto; }
+
 /* ----------------------------------------------
 	2.0.1 About 
 ----------------------------------------------- */
