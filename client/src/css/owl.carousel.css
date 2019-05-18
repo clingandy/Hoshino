@@ -235,10 +235,10 @@
 
 /*#不显示按钮 */
 
-.owl-nav {
+.tab-content .owl-nav {
     display: none;
 }
 
-.owl-dots {
+.tab-content .owl-dots {
     display: none;
 }

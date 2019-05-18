@@ -1,6 +1,6 @@
 <div>
 	{{include '../public/header.art'}}
-	<div class="container mt_20">
+	<div class="container about mt_20">
       <div class="row ">
         <!-- =====  BANNER STRAT  ===== -->
         <!--<div class="col-sm-12">
@@ -16,20 +16,35 @@
         <div class="col-sm-12 col-lg-12">
           <!-- about  -->
           <div class="row">
-            <div class="col-md-4">
-              <img src="{{cdnUrl}}/images/logo.png" alt="#">
-			  <div class="company-name">
-					星野國際貿易有限公司<br>
-					Hosino Worldwide Trading Ltd. Co.
-			  </div>
+            <div class="col-md-3">
+              <img style="filter: invert(80%);" src="{{cdnUrl}}/images/logo.png" alt="#">
+              <div class="company-name">
+                <p>星野國際貿易有限公司</p>
+                <p>Hosino Worldwide</p>
+                <p>Trading Ltd. Co.</p>
+              </div>
             </div>
-            <div class="col-md-8">
-              <div class="about-text">
-				关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们
-				关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们
-				关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们
-				关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们
-				关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们
+            <div class="col-md-9 mt_10">
+              <h2>關於 HOSINO</h2>
+              <div class="about-text mt_10">
+                星野國際貿易有限公司Hosino Worldwide Trading Ltd. Co. 是一家專門挑選潮流及口碑較佳的日本化妝護膚品代理的專業批發公司，所以產品均由日本大批量直送香港，絕對正貨，價格實惠，我們現在代理的品牌有資生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、大木、大創DAISO、太陽社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石澤研究所 ISHIZAWA LABS、米諾 MINON、肌美精 Kracie、克麗貝蒂 Creer Beaute、沛麗康 pelican、妮維雅 Nivea、花王 KAO、娜麗絲 Naris、黎琺 Refa、柳屋 Yanagiya、曼秀雷敦Mentholatum、久光製藥、嘉娜寶 Kanebo、貝親Pigeon、Quality First、Cow牛乳、HOUSE OF ROSE、CECILE MAIA、POLA寶麗、KOSE高絲等，貨品種類往後會不斷增加。  
+              </div>
+              <h3 class="mt_10">我們的優點：</h3>
+              <div>
+                我們除了透過不同送貨方法送抵香港客戶，我們亦可以代安排送貨給中國各省客戶。
+              </div>
+              <div class="mt_10">
+                如有任何問題，歡迎大家透過以下方法向我們查詢：
+              </div>
+              <div>
+                <p>電話: +852 3957 6783</p>
+                <p>國內手機: +86 198 9657 6596</p>
+                <p>Email: enquiry@hosinowt.com</p>
+                <p>Whatsapp: +852 9790 4385</p>
+                <p>Wechat: +852 9790 4385</p>
+              </div>
+              <div class="mt_10">
+               地址：香港九龍觀塘駿業街49號佳貿中心5樓5B室(辦公室，不設陳列室)
               </div>
             </div>
           </div>
@@ -38,22 +53,51 @@
       </div>
 	  <div id="brand_carouse" class="ptb_30 text-center">
         <div class="type-01">
-          <div class="heading-part mb_10 ">
-            <h2 class="main_title">品牌LOGO</h2>
+          <div class="heading-part mb_10">
+            <h2 class="main_title">合作品牌</h2>
           </div>
-          <div class="row">
+          <div class="row brandlogo">
+            <div class="col-sm-12 mb_20">
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand1.jpg" alt="CECILE MAIA" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand2.jpg" alt="Cle de Peau – Beaute" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand3.jpg" alt="Cow牛乳" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand4.jpg" alt="HOUSE OF ROSE" class="img-responsive" /></a>
+            </div>
+            <div class="col-sm-12 mb_20">
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand5.jpg" alt="inclear" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand6.jpg" alt="KOSE高絲" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand7.jpg" alt="pillbox" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand8.jpg" alt="pola" class="img-responsive" /></a>
+            </div>
+            <div class="col-sm-12 mb_20">
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand9.jpg" alt="Quality First" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand10.jpg" alt="貝親Pigeon" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand11.jpg" alt="碧迪皙 PDC" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand12.jpg" alt="大創DAISO" class="img-responsive" /></a>
+            </div>
+            <div class="col-sm-12 mb_20">
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand13.jpg" alt="大木製藥" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand14.jpg" alt="花王 KAO" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand15.jpg" alt="肌美精 Kracie" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand16.jpg" alt="嘉娜寶 Kanebo" class="img-responsive" /></a>
+            </div>
+            <div class="col-sm-12 mb_20">
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand17.jpg" alt="久光製藥" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand18.jpg" alt="克麗貝蒂 Creer Beaute" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand19.jpg" alt="黎琺 Refa" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand20.jpg" alt="柳屋 Yanagiya" class="img-responsive" /></a>
+            </div>
+            <div class="col-sm-12 mb_20">
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand21.jpg" alt="曼秀雷敦Mentholatum" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand22.jpg" alt="米諾 MINON" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand23.jpg" alt="妮維雅 Nivea" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand24.jpg" alt="沛麗康 pelican" class="img-responsive" /></a>
+            </div>
             <div class="col-sm-12">
-              <div class="brand owl-carousel">
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand1.jpg" alt="Disney" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand2.jpg" alt="Dell" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand3.jpg" alt="Harley" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand4.jpg" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand5.jpg" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand6.jpg" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand7.jpg" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand8.jpg" alt="Canon" class="img-responsive" /></a> </div>
-                <div class="item text-center"> <a href="#"><img src="images/brand/brand9.jpg" alt="Canon" class="img-responsive" /></a> </div>
-              </div>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand25.jpg" alt="日本 kawai河合" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand26.jpg" alt="石澤研究所 ISHIZAWA LABS" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand27.jpg" alt="太陽社" class="img-responsive" /></a>
+              <a class="col-sm-3" href="javascript:void(0);"><img src="images/brand/brand28.jpg" alt="資生堂 Shiseido" class="img-responsive" /></a>
             </div>
           </div>
         </div>
