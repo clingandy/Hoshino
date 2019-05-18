@@ -11,18 +11,18 @@
 			{{/each}}
 		</div>
 	</div>
-	<div class="container mt_60" style="text-align: center;">
+	<div class="contactWays container mt_60" style="text-align: center;">
 		<div class="row">
-			<div class="col-sm-3 col-md-3">
+			<div class="col-md-3">
 				<a href="#" style="color: #fff;"> TEL：+852 3957 6783</a> 
 			</div>
-			<div class="col-sm-3 col-md-3">
+			<div class="col-md-3">
 				<a href="#" style="color: #fff;"> EMAIL: enquiry@hosinowt.com</a>
 			</div>
-			<div class="col-sm-3 col-md-3">
+			<div class="col-md-3">
 				<a href="#" style="color: #fff;"> WECHAT: +852 9790 4385 </a>  
 			</div>
-			<div class="col-sm-3 col-md-3">
+			<div class="col-md-3">
 				<a href="#" style="color: #fff;"> WHATSAPP: +852 9790 4385 </a>  
 			</div>
 		</div>

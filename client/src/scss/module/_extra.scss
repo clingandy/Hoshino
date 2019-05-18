@@ -135,6 +135,18 @@
 }
 
 @media only screen and (max-width: 767px) {
+	.header-top{
+		.row, .container{
+			padding: 0;
+		}
+	}
+	.header-top-left, .header-top-right{
+		margin: 0;
+		text-align: left;
+	}
+	.header-top-left .contact>a{
+		font-size: 12px;
+	}
     .navbar-brand{
         padding: 15px 0;
         >img{
@@ -144,5 +156,63 @@
             margin-left: 0;
             font-size: 16px;
         }
-    }
+	}
+	.main-search {
+		width: 100%;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.owl-carousel .owl-item img{
+		height: auto;
+	}
+	#product-tab .heading-part{
+		margin-bottom: 10px;
+	}
+	#product-tab .product-thumb{
+		margin-bottom: 0;
+	}
+	.home-about-content{
+		line-height: 28px;
+		font-size: 14px;
+	}
+	.owl-carousel .owl-item .product-imageblock img{
+		height: 208px;
+	}
+	.caption.product-detail{
+		margin-top: 0;
+		padding-top: 10px;
+	}
+	.product-thumb .price{
+		padding: 3px 10px;
+		font-size: 12px;
+	}
+	.main_title{
+		font-size: 16px;
+	}
+	.footer{
+		padding-top: 0;
+		margin-top: 10px;
+	}
+	.footer .col-xs-2{
+		padding: 0;
+	}
+	.footer h6, .footer-title{
+		font-size: 12px;
+	}
+	.contactWays{
+		margin-top: 0;
+		padding-bottom: 20px;
+		font-size: 12px;
+	}
+	.footer-bottom{
+		margin: 0;
+		padding: 0;
+		font-size: 12px;
+		.copyright-part{
+			margin: 0;
+		}
+	}
+	.footer-block a{
+		display: block;
+	}
 }
