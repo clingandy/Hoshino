@@ -5,7 +5,11 @@
 			{{each navigateList item index}}
 			{{if index != 1}}
 			<div class="col-xs-{{item.col}} col-md-{{item.col}} footer-block">
+				{{if item.footerPath}}
+				<a href="{{item.footerPath}}" class="footer-title ptb_20">{{item.name}}</a>
+				{{else}}
 				<a href="{{item.path}}" class="footer-title ptb_20">{{item.name}}</a>
+				{{/if}}
 			</div>
 			{{/if}}
 			{{/each}}
