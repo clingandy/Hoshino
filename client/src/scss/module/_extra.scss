@@ -141,12 +141,18 @@
 		}
 	}
 	.header-top-left, .header-top-right{
-		margin: 0;
-		text-align: left;
-	}
-	.header-top-left .contact>a{
-		font-size: 12px;
-	}
+        text-align: right;
+    }
+    .header-top-left{
+        text-align: left;
+        .contact>a{
+            margin-left: 10px;
+            font-size: 12px;
+            &:last-child{
+                display: none;
+            }
+        }
+    }
     .navbar-brand{
         padding: 15px 0;
         >img{
@@ -213,6 +219,42 @@
 		}
 	}
 	.footer-block a{
-		display: block;
-	}
+        display: block;
+        font-size: 14px;
+    }
+    // 关于我们
+    .company-logo{
+        display: none;
+    }
+    .brandlogo{
+        .col-sm-3{
+            width: 50%;
+        }
+        a{
+            float: left;
+        }
+    }
+    // 联络我们
+    .contact {
+        .mb_50{
+            margin-bottom: 15px;
+        }
+        .mb_20{
+            margin-bottom: 5px;
+        }
+    }
+    .contact-form{
+        .btn{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .company-logo{
+        width: 26%;
+    }
+    .company-intro{
+        width: 74%;
+    }
 }

@@ -93,11 +93,12 @@
     font-size: 22px;
 }
 .about .text-center .brandlogo a {
+    display: block;
     text-align: center;
     img{
         height: 100px;
         text-align: center;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 }
 
@@ -518,6 +519,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     color: #fff;
 }
 .footer-block a {
+    font-size: 16px;
     color: #fff;
 }
 .footer-block a:hover {
@@ -678,7 +680,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 /*-----------------------------------*/
 
 @media (max-width: 767px) {
-    
+    %list-nav-icon{background: url(../../images/icons/list-icon.png) no-repeat center;}
     .header-top-left, .header-top-right {
         text-align: center;
     }
@@ -705,12 +707,19 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     z-index: 1;
     background: rgba(0, 0, 0, 0.92);
     top: 50px;
+    left: 0;
     }
     .navbar-left, .navbar-right {
         float: none !important;
     }
     .navbar-toggle {
         display: block;
+        .list-icon{
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            @extend %list-nav-icon;
+        }
     }
     .navbar-collapse {
         border-top: 1px solid transparent;

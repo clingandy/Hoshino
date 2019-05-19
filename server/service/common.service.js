@@ -1,6 +1,19 @@
 import BaseService from './public/base.service';
 class CommonService extends BaseService {
 
+	/** 获取所有分类*/
+	async getAllCategorys() {
+		let cacheOpt = { key: `b_category/GetAllCategory`, expired:0 };
+        let httpOpt = { 
+            url: `b_category/GetAllCategory` ,
+            params: {}
+		};
+		let result = await this.getData(httpOpt, cacheOpt);
+
+		return result;
+	}
+	
+
 	/**
 	 * 获取SEO
 	 * @param {*} pageCode

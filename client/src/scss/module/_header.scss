@@ -27,11 +27,6 @@
     padding: 0 10px;
     line-height: 11px;
 }
-
-.header-top-right>li:last-child {
-    padding: 0 0 0 20px;
-}
-
 .header-top-left .contact {
     text-transform: uppercase;
 }
@@ -59,7 +54,7 @@
     border-radius: 0;
     border: 0;
     margin: 0;
-    padding:3px 20px;
+    padding:3px 10px 3px 20px;
     background: #e40001;
     color: #FFF;
 }
@@ -144,7 +139,7 @@
 .mega-dropdown-menu>li ul>li>a:hover, .mega-dropdown-menu>li ul>li>a:focus {
     text-decoration: none;
     color: #ffff;
-    background-color: #e40001;
+    background-color: #eb215a;
 }
 .mega-dropdown-menu .dropdown-header {
     color: #fff;

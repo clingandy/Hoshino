@@ -4,11 +4,13 @@ const plugins = require('./plugins');
 const config = require('./service/public/config.service');
 const CacheService = require('./service/public/cache.service');
 const LoggerService = require('./service/public/logger.service');
+const CommonService = require('./service/common.service');
 const proxy = require('koa-proxy');
 
 
 // 日志服务
 const loggerService = new LoggerService();
+const commonService = new CommonService();
 
 async function start() {
 	const port = process.env.HTTP_PORT || 3001;
@@ -39,6 +41,11 @@ async function start() {
 		host:  _url, // proxy
 		match: /^\/spunsugar\//       
 	}));
+
+	// 获取分类
+	let categoryList = await commonService.getAllCategorys();
+	categoryList = categoryList.Code == 200 ? categoryList.Result : [];
+	__AppConfig.categoryList = categoryList;
 
 	//_i18n.__('Welcome')
 

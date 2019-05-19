@@ -7,9 +7,6 @@ class HomeController extends BaseController {
         let homeService = new HomeService();
         await next();
         try {
-            // 获取分类
-            let categoryList = await homeService.getAllCategorys();
-            categoryList = categoryList.Code == 0 ? categoryList.Result : [];
 
             // 获取banner
             let bannerList = await homeService.getHomeBanner();
@@ -26,11 +23,10 @@ class HomeController extends BaseController {
             // 获取视频列表
             let vedioList = await homeService.getVedioList();
             vedioList = vedioList.Code == 0 ? vedioList.Result : [];
-
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'home',
-                categoryList,
                 bannerList,
                 latestProductList,
                 hotProductList,
@@ -55,6 +51,7 @@ class HomeController extends BaseController {
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'about',
                 seo: {
                     title: '关于我们',
@@ -74,6 +71,7 @@ class HomeController extends BaseController {
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'product',
                 seo: {
                     title: '所有产品',
@@ -94,6 +92,7 @@ class HomeController extends BaseController {
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'new',
                 seo: {
                     title: '最新产品',
@@ -114,6 +113,7 @@ class HomeController extends BaseController {
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'hot',
                 seo: {
                     title: '最热产品',
@@ -134,6 +134,7 @@ class HomeController extends BaseController {
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'hot',
                 seo: {
                     title: '产品详情',
@@ -154,6 +155,7 @@ class HomeController extends BaseController {
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'contact',
                 seo: {
                     title: '联络我们',
@@ -173,6 +175,7 @@ class HomeController extends BaseController {
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'submit_query',
                 seo: {
                     title: '提交查询',

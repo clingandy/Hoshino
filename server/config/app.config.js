@@ -34,19 +34,9 @@ module.exports = {
 	},{
 		name: '所有产品',
 		code: 'product',
-		path: '/product',
+		path: '',
 		col: 3,
-		child: [
-			{name: '上衣', path: '/'},
-			{name: '裤子', path: '/'},
-			{name: '裙子', path: '/'},
-			{name: '袜子', path: '/'},
-			{name: '女装', path: '/'},
-			{name: '男装', path: '/'},
-			{name: '内衣', path: '/'},
-			{name: '内裤', path: '/'},
-			{name: '短裙', path: '/'}
-		],
+		footerPath: '/product'
 	},{
 		name: '最新产品',
 		code: 'new',
@@ -62,5 +52,6 @@ module.exports = {
 		code: 'contact',
 		path: '/contact',
 		col: 2
-	}]
+	}],
+	categoryList: []
 }
