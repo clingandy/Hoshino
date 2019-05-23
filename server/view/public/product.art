@@ -13,32 +13,18 @@
         <!-- =====  BREADCRUMB END===== -->
         <div id="column-left" class="col-sm-2 col-lg-2 ">
           <div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
-            <div class="nav-responsive">
+            {{each categoryList category}}
+			<div class="nav-responsive">
               <div class="heading-part">
-                <h2 class="main_title">防晒霜</h2>
+                <h2 class="main_title">{{category.Name}}</h2>
               </div>
               <ul class="nav  main-navigation collapse in">
-                <li><a href="#">安奈防晒霜</a></li>
-                <li><a href="#">安奈防晒霜</a></li>
-                <li><a href="#">安奈防晒霜</a></li>
-                <li><a href="#">安奈防晒霜</a></li>
-                <li><a href="#">安奈防晒霜</a></li>
-                <li><a href="#">安奈防晒霜</a></li>
+			  	{{each category.Child child}}
+                <li><a href="#">{{child.Name}}</a></li>
+				{{/each}}
               </ul>
             </div>
-			      <div class="nav-responsive">
-              <div class="heading-part">
-                <h2 class="main_title">面霜</h2>
-              </div>
-              <ul class="nav  main-navigation collapse in">
-                <li><a href="#">青瓜面霜</a></li>
-                <li><a href="#">青瓜面霜</a></li>
-                <li><a href="#">青瓜面霜</a></li>
-                <li><a href="#">青瓜面霜</a></li>
-                <li><a href="#">青瓜面霜</a></li>
-                <li><a href="#">青瓜面霜</a></li>
-              </ul>
-            </div>
+			{{/each}}
           </div>
         </div>
         <div class="col-sm-10 col-lg-10">

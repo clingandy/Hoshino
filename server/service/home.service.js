@@ -22,11 +22,14 @@ class HomeService extends BaseService {
 	/** 
 	 * 获取最新产品列表
 	*/
-	async getLatestProducts() {
+	async getLatestProducts(pageindex = 1, pagesize = 12) {
 		let cacheOpt = { key: `b_product/GetNewProductList`, expired:0 };
         let httpOpt = { 
             url: `b_product/GetNewProductList` ,
-            params: {}
+            params: {
+				pageindex,
+				pagesize
+			}
 		};
 		let result = await this.getData(httpOpt, cacheOpt);
 
@@ -34,18 +37,40 @@ class HomeService extends BaseService {
 	}
 
 	/*获取热门产品列表*/
-	async getHotProducts() {
+	async getHotProducts(pageindex = 1, pagesize = 12) {
 
 		let cacheOpt = { key: `b_product/GetHotProductList`, expired:0 };
         let httpOpt = { 
             url: `b_product/GetHotProductList` ,
-            params: {}
+            params: {
+				pageindex,
+				pagesize
+			}
 		};
 		let result = await this.getData(httpOpt, cacheOpt);
 
 		return result;
 	}
 
+
+	/** 获取推荐产品列表*/
+
+	async getRecommendProducts(pageindex = 1, pagesize = 12) {
+
+		let cacheOpt = { key: `b_product/GetRecommendProductList`, expired:0 };
+        let httpOpt = { 
+            url: `b_product/GetRecommendProductList` ,
+			params: {
+				pageindex,
+				pagesize
+			}
+		};
+		let result = await this.getData(httpOpt, cacheOpt);
+
+		return result;
+	}
+
+	
 	/** 获取vedio列表*/
 	async getVedioList() {
 		let cacheOpt = { key: `b_video_resources/GetIndexList`, expired:0 };

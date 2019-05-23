@@ -1,10 +1,10 @@
 const BaseController = require('./public/base.controller');
 const HomeService = require('../service/home.service');
-
+let homeService = new HomeService();
 class HomeController extends BaseController {
     // 首页
     async index(ctx, next) {
-        let homeService = new HomeService();
+        
         await next();
         try {
 
@@ -90,10 +90,17 @@ class HomeController extends BaseController {
     async new(ctx, next) {
         await next();
         try {
+			let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 12];
+			let productList = await homeService.getLatestProducts(pageindex, pageSize); 
+			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 0;
+			productList = productList.Code == 200 ? productList.Result : [];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
                 categoryList: __AppConfig.categoryList,
-                currentModule: 'new',
+				currentModule: 'new',
+				productList,
+				pageCount,
+				currentPage: pageindex,
                 seo: {
                     title: '最新产品',
                     description: '最新产品',
@@ -111,10 +118,17 @@ class HomeController extends BaseController {
     async hot(ctx, next) {
         await next();
         try {
+			let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 12];
+			let productList = await homeService.getHotProducts(pageindex, pageSize); 
+			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 0;
+			productList = productList.Code == 200 ? productList.Result : [];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
                 categoryList: __AppConfig.categoryList,
-                currentModule: 'hot',
+				currentModule: 'hot',
+				productList,
+				pageCount,
+				currentPage: pageindex,
                 seo: {
                     title: '最热产品',
                     description: '最热产品',
@@ -132,10 +146,16 @@ class HomeController extends BaseController {
 	async detail(ctx, next) {
 		await next();
         try {
+			// 获取推荐产品列表
+			let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 12];
+			let productList = await homeService.getRecommendProducts(pageindex, pageSize); 
+			// let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 0;
+			productList = productList.Code == 200 ? productList.Result : [];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
                 categoryList: __AppConfig.categoryList,
-                currentModule: 'hot',
+				currentModule: 'hot',
+				productList,
                 seo: {
                     title: '产品详情',
                     description: '产品详情',

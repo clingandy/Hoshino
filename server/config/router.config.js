@@ -17,11 +17,23 @@ module.exports = {
 			action: 'product'
 		},{
 			method: 'get',
+			path : `/product/:pageindex`,
+			action: 'product'
+		},{
+			method: 'get',
 			path : `/new`,
 			action: 'new'
 		},{
 			method: 'get',
+			path : `/new/:pageindex`,
+			action: 'new'
+		},{
+			method: 'get',
 			path : `/hot`,
+			action: 'hot'
+		},{
+			method: 'get',
+			path : `/hot/:pageindex`,
 			action: 'hot'
 		},{
 			method: 'get',
