@@ -47,8 +47,6 @@ async function start() {
 	categoryList = categoryList.Code == 200 ? categoryList.Result : [];
 	__AppConfig.categoryList = categoryList;
 
-	//_i18n.__('Welcome')
-
 	console.log(`listen host ${port}`);
 	app.listen(port);
 }

@@ -19,10 +19,39 @@ class HomeService extends BaseService {
 		return result;
 	}
 
+	/** 获取vedio列表*/
+	async getVedioList() {
+		let cacheOpt = { key: `b_video_resources/GetIndexList`, expired:0 };
+        let httpOpt = { 
+            url: `b_video_resources/GetIndexList` ,
+            params: {}
+		};
+		let result = await this.getData(httpOpt, cacheOpt);
+
+		return result;
+	}
+
+	/** 
+	 * 获取全部产品列表
+	*/
+	async getAllProducts(pageindex = 1, pagesize = 20) {
+		let cacheOpt = { key: `b_product/GetProductList`, expired:0 };
+        let httpOpt = { 
+            url: `b_product/GetProductList` ,
+            params: {
+				pageindex,
+				pagesize
+			}
+		};
+		let result = await this.getData(httpOpt, cacheOpt);
+
+		return result;
+	}
+
 	/** 
 	 * 获取最新产品列表
 	*/
-	async getLatestProducts(pageindex = 1, pagesize = 12) {
+	async getLatestProducts(pageindex = 1, pagesize = 25) {
 		let cacheOpt = { key: `b_product/GetNewProductList`, expired:0 };
         let httpOpt = { 
             url: `b_product/GetNewProductList` ,
@@ -37,7 +66,7 @@ class HomeService extends BaseService {
 	}
 
 	/*获取热门产品列表*/
-	async getHotProducts(pageindex = 1, pagesize = 12) {
+	async getHotProducts(pageindex = 1, pagesize = 20) {
 
 		let cacheOpt = { key: `b_product/GetHotProductList`, expired:0 };
         let httpOpt = { 
@@ -55,7 +84,7 @@ class HomeService extends BaseService {
 
 	/** 获取推荐产品列表*/
 
-	async getRecommendProducts(pageindex = 1, pagesize = 12) {
+	async getRecommendProducts(pageindex = 1, pagesize = 20) {
 
 		let cacheOpt = { key: `b_product/GetRecommendProductList`, expired:0 };
         let httpOpt = { 
@@ -64,19 +93,6 @@ class HomeService extends BaseService {
 				pageindex,
 				pagesize
 			}
-		};
-		let result = await this.getData(httpOpt, cacheOpt);
-
-		return result;
-	}
-
-	
-	/** 获取vedio列表*/
-	async getVedioList() {
-		let cacheOpt = { key: `b_video_resources/GetIndexList`, expired:0 };
-        let httpOpt = { 
-            url: `b_video_resources/GetIndexList` ,
-            params: {}
 		};
 		let result = await this.getData(httpOpt, cacheOpt);
 

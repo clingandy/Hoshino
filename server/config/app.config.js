@@ -34,7 +34,7 @@ module.exports = {
 	},{
 		name: '所有产品',
 		code: 'product',
-		path: '',
+		path: '/product',
 		col: 3,
 		footerPath: '/product'
 	},{

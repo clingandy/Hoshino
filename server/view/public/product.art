@@ -14,48 +14,58 @@
         <div id="column-left" class="col-sm-2 col-lg-2 ">
           <div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
             {{each categoryList category}}
-			<div class="nav-responsive">
-              <div class="heading-part">
-                <h2 class="main_title">{{category.Name}}</h2>
-              </div>
+			        <div class="nav-responsive">
+                <div class="heading-part">
+                  <h2 class="main_title">{{i18n.__('Lang')=='简体'?category.Name_CN:category.Name_HK}}</h2>
+                </div>
               <ul class="nav  main-navigation collapse in">
-			  	{{each category.Child child}}
-                <li><a href="#">{{child.Name}}</a></li>
-				{{/each}}
+              {{each category.Child child}}
+                <li><a href="#">{{i18n.__('Lang')=='简体'?child.Name_CN:child.Name_HK}}</a></li>
+              {{/each}}
               </ul>
             </div>
-			{{/each}}
+			    {{/each}}
           </div>
         </div>
         <div class="col-sm-10 col-lg-10">
           <div class="row">
-            {{each arr item}}
-                  <div class="product-layout  product-grid  col-md-3 col-sm-4 col-xs-12 ">
-                    <div class="item">
-                      <div class="product-thumb clearfix mb_20">
-                        <div class="image product-imageblock"> 
-                          <a href="product_detail_page.html"> 
-                            <img src="images/product/product{{item}}.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive" /> 
-                          </a>
-                        </div>
-                        <div class="caption product-detail text-center">
-                          <h6 data-name="product_name" class="product-name mt_0">
-                            <a href="#" title="Casual Shirt With Ruffle Hem">防晒霜</a>
-                          </h6>
-                          <a href="/submit_query" class="price">报价查询</a>
-                        </div>
-                      </div>
+            {{each productList item}}
+              <div class="product-layout  product-grid  col-md-3 col-sm-4 col-xs-12 ">
+                <div class="item">
+                  <div class="product-thumb clearfix mb_20">
+                    <div class="image product-imageblock"> 
+                      <a href="detail?id={{item.Product_ID}}">
+                        {{if item.product_resourcesList.length ==0}}
+                          <img src="{{imgUrl}}/images/product/product1-2.jpg" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
+                          title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+                        {{/if}}
+                        {{each item.product_resourcesList imgItem k}}
+                        {{if k==0}}
+                          <img src="{{imgUrl}}{{imgItem.P_Resources_URL}}" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
+                          title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+                        {{/if}}
+                        {{/each}}
+                      </a>
+                    </div>
+                    <div class="caption product-detail text-center">
+                      <h6 data-name="product_name" class="product-name mt_0">
+                        <a href="detail?id={{item.Product_ID}}" title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}">
+                        {{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}</a>
+                      </h6>
+                      <a href="/submit_query?pName={{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="price">报价查询</a>
                     </div>
                   </div>
+                </div>
+              </div>
             {{/each}}
           </div>
           <div class="pagination-nav text-center mt_50">
             <ul>
-              <li><a href="#"><</a></li>
-              <li class="active"><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">></a></li>
+              <li><a href="?pageindex={{currentPage>1?currentPage-1:1}}"><</a></li>
+              <li class="active"><a href="?pageindex=1">1</a></li>
+              <li><a href="?pageindex=2">2</a></li>
+              <li><a href="?pageindex=3">3</a></li>
+              <li><a href="?pageindex={{currentPage<pageCount?currentPage+1:pageCount}}">></a></li>
             </ul>
           </div>
         </div>

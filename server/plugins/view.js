@@ -46,7 +46,7 @@ module.exports = app => {
 		return settings.i18n[langType];
 	}
 
-	// 
+	// 获取图片地址
 	function getImgUrl(){
 		if(settings.imgUrl ==''){
 			let nodeEnv = ((process.env.NODE_ENV || 'development'));

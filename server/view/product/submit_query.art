@@ -1,74 +1,145 @@
 <div>
 	{{include '../public/header.art'}}
     <div class="container mt_20">
-        <div id="submit_query_form">
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label"></label>
-                    <div class="col-sm-10">
-                        <h3>产品名称：XXXXXX</h3>
-                        <div>欢迎随时致电/电邮/WECHAT/WHATSAPP查询，我们会尽快回复您们</div>
-                        <div>電話: +852 3957 6783</div>
-                        <div>电邮：enquiry@hosinowt.com</div>
-                        <div>WECHAT： +852 9790 4385</div>
-                        <div>WHATSAPP：+852 9790 4385</div>
-                        <div class="mt_10">您们亦可以填写以下表格并提交查询：</div>
-                    </div>
+        <form class="form-horizontal" id="submit_query_form">
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                    <h3>产品名称：XXXXXX</h3>
+                    <div>欢迎随时致电/电邮/WECHAT/WHATSAPP查询，我们会尽快回复您们</div>
+                    <div>電話: +852 3957 6783</div>
+                    <div>电邮：enquiry@hosinowt.com</div>
+                    <div>WECHAT： +852 9790 4385</div>
+                    <div>WHATSAPP：+852 9790 4385</div>
+                    <div class="mt_10">您们亦可以填写以下表格并提交查询：</div>
                 </div>
-                <div class="form-group mt_10">
-                    <label for="" class="col-sm-2 control-label">公司*</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" type="text" name="company" placeholder="Company Name" data-required="true" />
-                    </div>
+            </div>
+            <div class="form-group mt_10">
+                <label for="" class="col-sm-2 control-label">公司*</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="company" placeholder="Company Name" />
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">联系人*</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" type="text" name="email" placeholder="Email Address" data-required="true" />
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">联系人*</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="contact" placeholder="Contact"/>
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">电话*</label>
-                    <div class="col-sm-10">
-                        <input class="full-with-form " type="text" name="phone1" placeholder="Phone Number" data-required="true" />
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">电话*</label>
+                <div class="col-sm-10">
+                    <input class="full-with-form " type="text" name="phone" placeholder="Phone Number" />
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">电邮*</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" type="email" name="email" placeholder="Email Address" data-required="true" />
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">电邮*</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="email" name="email" placeholder="Email Address" />
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">查询事项*</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control mt_30" name="message" placeholder="Message" maxlength="500" data-required="true"></textarea>
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">查询事项*</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control mt_30" name="message" placeholder="Message" maxlength="500"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">资料上传*</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" type="text" name="subject" placeholder="Subject" data-required="true" />
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">资料上传*</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="subject" placeholder="Subject" />
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-2 control-label">验证码*</label>
-                    <div class="col-sm-5">
-                        <input class="form-control" type="text" name="authcode" placeholder="authcode" data-required="true" />
-                    </div>
-                    <div class="col-sm-5">
-                        <img style="height:3em;cursor:pointer;" src="http://img3.imgtn.bdimg.com/it/u=2796844653,1078325532&fm=26&gp=0.jpg"></img>
-                    </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">验证码*</label>
+                <div class="col-sm-5">
+                    <input class="form-control" type="text" name="authcode" placeholder="Authcode" />
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">提交</button>
-                    </div>
+                <div class="col-sm-5">
+                    <img style="height:3em;cursor:pointer;" src="123.jpg"></img>
                 </div>
-            </form>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" id="submitBtn" class="btn btn-default">提交</button>
+                </div>
+            </div>
+        </form>
 
-            <div id="contact_results"></div>
-        </div>
+        <div id="contact_results"></div>
     </div>
     {{include '../public/footer.art'}}
 </div>
+<script src="{{cdnUrl}}/lib/jQuery_v3.1.1.min.js"></script>
+<script src="{{cdnUrl}}/lib/jquery.validate.min.js"></script>
+<script type="text/javascript">
+function validform(formId){
+  return $(formId).validate({
+     rules: {
+        company: {
+            required: true,
+            minlength: 6
+        },
+        contact: {
+            required: true,
+            minlength: 2
+        },
+        phone: {
+            required: true,
+            minlength: 6
+        },
+        email: {
+            required: true,
+            email: true
+        },
+        message: {
+            required: true,
+            minlength: 5
+        },
+        subject: "required",
+        authcode: {
+            required: true,
+            minlength: 4
+        }
+    },
+    messages: {
+        company: {
+            required: "请输入公司名称",
+            minlength: "公司名称最少由六个字符组成"
+        },
+        contact: {
+            required: "请输入联系人",
+            minlength: "联系人最少由两个字符组成"
+        },
+        phone: {
+            required: "请输入电话",
+            minlength: "电话最少由六个字符组成"
+        },
+        email: {
+            required: "请输入电邮",
+            email: "请输入正确的电邮"
+        },
+        message: {
+            required: "请输入查询事项",
+            minlength: "查询事项最少由五个字符组成"
+        },
+        subject: {
+            required: "请上传资料内容"
+        },
+        authcode: {
+            required: "请输入验证码",
+            minlength: "验证码必需由四个字符组成"
+        }
+    }
+  });
+}
+
+$("#submitBtn").click(function(){
+    if(!validform("#submit_query_form").form()) {
+        
+    } else {
+        $('#submit_query_form')[0].reset() 
+    }
+});
+
+</script>
