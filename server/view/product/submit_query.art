@@ -70,7 +70,6 @@
     </div>
     {{include '../public/footer.art'}}
 </div>
-<script src="{{cdnUrl}}/lib/jQuery_v3.1.1.min.js"></script>
 <script src="{{cdnUrl}}/lib/jquery.validate.min.js"></script>
 <script type="text/javascript">
 function validform(formId){
