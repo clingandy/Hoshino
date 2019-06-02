@@ -92,6 +92,41 @@
 		margin: 0 auto;
 	}
 }
+.contactWays{
+    span{
+        display: inline-block;
+        width: 26px;
+        height: 32px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .tel-icon{
+        @extend %tel-icon;
+    }
+    .wechat-icon{
+        @extend %wechat-icon;
+    }
+    .whatsapp-icon{
+        @extend %whatsapp-icon;
+    }
+    .email-icon{
+        @extend %email-icon;
+    }
+}
+.detail-content{
+    margin: 20px 0;
+    font-size: 20px;
+    color: #333;
+    line-height: 40px;
+    .content-item{
+        span{
+            display: inline-block;
+            width: 130px;
+            text-align: right;
+            font-weight: bold;
+        }
+    }
+}
 
 // 媒体查询
 @media only screen and (min-width: 768px){
@@ -208,7 +243,7 @@
 	.contactWays{
 		margin-top: 0;
 		padding-bottom: 20px;
-		font-size: 12px;
+        font-size: 12px;
 	}
 	.footer-bottom{
 		margin: 0;
@@ -246,6 +281,17 @@
     .contact-form{
         .btn{
             width: 100%;
+        }
+    }
+    .detail-content{
+        margin: 10px 0;
+        font-size: 16px;
+        line-height: 30px;
+        .content-item{
+            span{
+                display: inline-block;
+                width: 130px;
+            }
         }
     }
 }

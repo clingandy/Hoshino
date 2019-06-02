@@ -22,25 +22,25 @@
 					</video>
 				</div>
 				<div class="col-sm-6 col-md-6">
-					<img style="height: 400px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product1.jpg">
+					<img style="height: 438px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product1.jpg">
 				</div>
 				<div class="col-sm-6 col-md-6">
-					<img style="height: 400px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product2.jpg">
+					<img style="height: 438px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product2.jpg">
 				</div>
 				<div class="col-sm-6 col-md-6">
-					<img style="height: 400px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product3.jpg">
+					<img style="height: 438px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product3.jpg">
 				</div>
 			</div>
 			<div class="detail-content">
-				<div class="content-item"><span>品牌：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>名称：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>规格：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>产地：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>包装：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>功效：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>特点：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>保质期：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-				<div class="content-item"><span>产品编号：</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+				<div class="content-item"><span>品牌：</span>这是品牌的标题</div>
+				<div class="content-item"><span>名称：</span>这是品牌的名称</div>
+				<div class="content-item"><span>规格：</span>这是品牌的规格</div>
+				<div class="content-item"><span>产地：</span>这是品牌的产地</div>
+				<div class="content-item"><span>包装：</span>这是品牌的包装</div>
+				<div class="content-item"><span>功效：</span>这是品牌的功效</div>
+				<div class="content-item"><span>特点：</span>这是品牌的特点</div>
+				<div class="content-item"><span>保质期：</span>这是品牌的保质期</div>
+				<div class="content-item"><span>产品编号：</span>这是品牌的产品编号</div>
 			</div>
 		</div>
       </div>

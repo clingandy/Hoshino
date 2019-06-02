@@ -3,6 +3,14 @@
  */
 module.exports = {
 	routerList : [{
+		controller: '/public/api.controller',
+		router: [{
+			method: 'post',
+			path: '/api/submitContact',
+			action: 'submitContactForm'
+		}]
+	},
+	{
 		controller: 'home.controller',
 		router: [{
 			method: 'get',

@@ -313,7 +313,7 @@
     height: auto;
     padding: 0px;
 }
-.pagination-nav ul li a {
+.pagination-nav a {
     background-color: #f7f7f7;
     color: #808080;
     display: block;
@@ -322,12 +322,15 @@
     line-height: 36px;
     text-align: center;
     width: 36px;
+    &:hover{
+        background: #e40001;
+    }
 }
-.pagination-nav ul li.active a {
+.pagination-nav a.active {
     background: #e40001 none repeat scroll 0 0;
     color: #fff;
 }
-.pagination-nav ul li {
+.pagination-nav a {
     display: inline-block;
     margin: 0 2px;
 }

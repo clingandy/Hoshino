@@ -1,4 +1,3 @@
-import Template from '../public/template';
 import Common from '../public/pc_common';
 import "../../lib/Utils";
 

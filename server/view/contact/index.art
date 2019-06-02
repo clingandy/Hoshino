@@ -29,11 +29,11 @@
                 <h5 class="capitalize mb_20"><strong>电邮</strong></h5>
                 <div class="address">enquiry@hosinowt.com</div>
               </div>
-			   <div class="Hello mb_50">
+			      <div class="Hello mb_50">
                 <h5 class="capitalize mb_20"><strong>WECHAT</strong></h5>
                 <div class="address">+852 9790 4385</div>
-              </div>
-			   <div class="Hello mb_50">
+            </div>
+			      <div class="Hello mb_50">
                 <h5 class="capitalize mb_20"><strong>WHATSAPP</strong></h5>
                 <div class="address">+852 9790 4385</div>
               </div>
@@ -41,22 +41,22 @@
             <div class="col-md-8 col-xs-12 contact-form mb_50">
               <!-- Contact FORM -->
               <div id="contact_form">
-                <form id="contact_body" method="post" action="contact_me.php">
+                <form id="contact_body" method="post" action="">
                  <label class="full-with-form" ><span>*公司名称</span></label>
-                 <input class="full-with-form " type="text" name="compnay" placeholder="请输入公司名称" data-required="true" />
+                 <input class="full-with-form " type="text" name="company" placeholder="请输入公司名称" data-required="true" />
                  <label class="full-with-form" ><span>*姓名</span></label>
                  <input class="full-with-form " type="text" name="name" placeholder="请输入姓名" data-required="true" />
                  <label class="full-with-form" ><span>*联络电话</span></label>
                  <input class="full-with-form " type="text" name="phone" placeholder="请输入联络电话" data-required="true" />
-				 <label class="full-with-form" ><span>*电子邮箱</span></label>
+				         <label class="full-with-form" ><span>*电子邮箱</span></label>
                  <input class="full-with-form " type="email" name="email" placeholder="请输入电子邮箱" data-required="true" />
-				 <label class="full-with-form" ><span>联络地址</span></label>
+				         <label class="full-with-form" ><span>联络地址</span></label>
                  <input class="full-with-form " type="text" name="address" placeholder="请输入联络地址" data-required="true" />
-				 <label class="full-with-form" ><span>查询事项</span></label>
+				         <label class="full-with-form" ><span>查询事项</span></label>
                  <textarea class="full-with-form " name="message" placeholder="请输入查询事项" data-required="true"></textarea>
-				 <label class="full-with-form" ><span>*验证码</span></label>
-                 <input class="full-with-form " type="text" name="address" placeholder="请输入验证码" data-required="true" />
-                 <button class="btn mt_30" type="submit">提交</button>
+				         <label class="full-with-form" ><span>*验证码</span></label>
+                 <input class="full-with-form " type="text" name="authcode" placeholder="请输入验证码" data-required="true" />
+                 <div><button class="btn mt_30" type="button" id="submitBtn">提交</button></div>
                 </form>
                 <div id="contact_results"></div>
               </div>
@@ -68,3 +68,76 @@
     </div>
 	{{include '../public/footer.art'}}
 </div>
+<script src="{{cdnUrl}}/lib/jquery.validate.min.js"></script>
+<script type="text/javascript">
+function validform(formId){
+  return $(formId).validate({
+     rules: {
+        company: {
+            required: true,
+            minlength: 6
+        },
+        name: {
+            required: true,
+            minlength: 2
+        },
+        phone: {
+            required: true,
+            minlength: 6
+        },
+        email: {
+            required: true,
+            email: true
+        },
+        address: "required",
+        message: {
+            required: true,
+            minlength: 5
+        },
+        subject: "required",
+        authcode: {
+            required: true,
+            minlength: 4
+        }
+    },
+    messages: {
+        company: {
+            required: "请输入公司名称",
+            minlength: "公司名称最少由六个字符组成"
+        },
+        name: {
+            required: "请输入联系人",
+            minlength: "联系人最少由两个字符组成"
+        },
+        phone: {
+            required: "请输入电话",
+            minlength: "电话最少由六个字符组成"
+        },
+        email: {
+            required: "请输入电邮",
+            email: "请输入正确的电邮"
+        },
+        message: {
+            required: "请输入查询事项",
+            minlength: "查询事项最少由五个字符组成"
+        },
+        address: {
+            required: "请输入联络地址"
+        },
+        authcode: {
+            required: "请输入验证码",
+            minlength: "验证码必需由四个字符组成"
+        }
+    }
+  });
+}
+
+$("#submitBtn").click(function(){
+    if(!validform("#contact_body").form()) {
+        
+    } else {
+        $('#contact_body')[0].reset() 
+    }
+});
+
+</script>

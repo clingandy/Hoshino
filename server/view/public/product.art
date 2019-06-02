@@ -59,7 +59,7 @@
               </div>
             {{/each}}
           </div>
-          <div class="pagination-nav text-center mt_50">
+          <!--div class="pagination-nav text-center mt_50">
             <ul>
               <li><a href="?pageindex={{currentPage>1?currentPage-1:1}}"><</a></li>
               <li class="active"><a href="?pageindex=1">1</a></li>
@@ -67,7 +67,8 @@
               <li><a href="?pageindex=3">3</a></li>
               <li><a href="?pageindex={{currentPage<pageCount?currentPage+1:pageCount}}">></a></li>
             </ul>
-          </div>
+          </div-->
+          {{@page(pageCount, currentPage, 6, currentModule)}}
         </div>
       </div>
     </div>

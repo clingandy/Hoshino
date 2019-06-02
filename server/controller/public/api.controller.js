@@ -19,6 +19,10 @@ class APIController {
 
         await next();
     }
+
+    async submitContactForm(ctx, next) {
+        let obj = ctx.request.body;
+    }
 }
 
 module.exports = APIController;

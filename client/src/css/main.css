@@ -37,6 +37,22 @@
 .scrollup {
   background: url(../../images/icons/arrow-up.png) no-repeat center; }
 
+.contactWays .tel-icon {
+  background: url(../../images/icons/tel-icon.png) no-repeat center;
+  background-size: 100% auto; }
+
+.contactWays .email-icon {
+  background: url(../../images/icons/email-icon.png) no-repeat center;
+  background-size: 100% auto; }
+
+.contactWays .wechat-icon {
+  background: url(../../images/icons/wechat-icon.png) no-repeat center;
+  background-size: 100% auto; }
+
+.contactWays .whatsapp-icon {
+  background: url(../../images/icons/whatsapp-icon.png) no-repeat center;
+  background-size: 100% auto; }
+
 /* ----------------------------------------------
 	BASIC
 	1.1 General  
@@ -1612,7 +1628,7 @@ label.checkme {
   height: auto;
   padding: 0px; }
 
-.pagination-nav ul li a {
+.pagination-nav a {
   background-color: #f7f7f7;
   color: #808080;
   display: block;
@@ -1621,12 +1637,14 @@ label.checkme {
   line-height: 36px;
   text-align: center;
   width: 36px; }
+  .pagination-nav a:hover {
+    background: #e40001; }
 
-.pagination-nav ul li.active a {
+.pagination-nav a.active {
   background: #e40001 none repeat scroll 0 0;
   color: #fff; }
 
-.pagination-nav ul li {
+.pagination-nav a {
   display: inline-block;
   margin: 0 2px; }
 
@@ -2177,6 +2195,24 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   object-fit: cover;
   margin: 0 auto; }
 
+.contactWays span {
+  display: inline-block;
+  width: 26px;
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle; }
+
+.detail-content {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #333;
+  line-height: 40px; }
+  .detail-content .content-item span {
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+    font-weight: bold; }
+
 @media only screen and (min-width: 768px) {
   .header-top-left .contact {
     white-space: nowrap; }
@@ -2274,7 +2310,14 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   .contact .mb_20 {
     margin-bottom: 5px; }
   .contact-form .btn {
-    width: 100%; } }
+    width: 100%; }
+  .detail-content {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 30px; }
+    .detail-content .content-item span {
+      display: inline-block;
+      width: 130px; } }
 
 @media only screen and (min-width: 992px) {
   .company-logo {
