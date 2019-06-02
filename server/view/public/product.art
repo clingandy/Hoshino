@@ -12,13 +12,27 @@
         </div>-->
         <!-- =====  BREADCRUMB END===== -->
         <div id="column-left" class="col-sm-2 col-lg-2 ">
-          <div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
+          <!--div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
             {{each categoryList category}}
 			        <div class="nav-responsive">
                 <div class="heading-part">
                   <h2 class="main_title">{{i18n.__('Lang')=='简体'?category.Name_CN:category.Name_HK}}</h2>
                 </div>
               <ul class="nav  main-navigation collapse in">
+              {{each category.Child child}}
+                <li><a href="#">{{i18n.__('Lang')=='简体'?child.Name_CN:child.Name_HK}}</a></li>
+              {{/each}}
+              </ul>
+            </div>
+			    {{/each}}
+          </div-->
+          <div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
+            {{each categoryList category index}}
+			        <div class="nav-responsive" data-index="{{index}}">
+                <div class="heading-part">{{i18n.__('Lang')}}
+                  <h2 class="main_title">{{i18n.__('Lang')=='简体'?category.Name_CN:category.Name_HK}}</h2>
+                </div>
+              <ul class="nav  main-navigation collapse in" style="display: none;">
               {{each category.Child child}}
                 <li><a href="#">{{i18n.__('Lang')=='简体'?child.Name_CN:child.Name_HK}}</a></li>
               {{/each}}

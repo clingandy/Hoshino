@@ -72,10 +72,17 @@ class HomeController extends BaseController {
 			let productList = await homeService.getAllProducts(pageindex, pageSize); 
 			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
 			productList = productList.Code == 200 ? productList.Result : [];
-
+            let categoryList = [
+                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
+                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
+                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
+                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
+                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]}
+            ];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList: __AppConfig.categoryList,
+                //categoryList: __AppConfig.categoryList,
+                categoryList,
                 currentModule: 'product',
                 productList,
 				pageCount,

@@ -3,3 +3,4 @@
 	{{include '../public/product.art'}}
 	{{include '../public/footer.art'}}
 </div>
+<script src="{{cdnUrl}}/view/product/index.js"></script>
