@@ -69,7 +69,8 @@ class HomeController extends BaseController {
         await next();
         try {
             let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
-			let productList = await homeService.getAllProducts(pageindex, pageSize); 
+            let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
+			let productList = await homeService.getAllProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
 			productList = productList.Code == 200 ? productList.Result : [];
             let categoryList = [
@@ -103,8 +104,9 @@ class HomeController extends BaseController {
     async new(ctx, next) {
         await next();
         try {
-			let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
-			let productList = await homeService.getLatestProducts(pageindex, pageSize); 
+            let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
+            let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
+			let productList = await homeService.getLatestProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
             
@@ -114,7 +116,8 @@ class HomeController extends BaseController {
 				currentModule: 'new',
 				productList,
 				pageCount,
-				currentPage: pageindex,
+                currentPage: pageindex,
+                showLabel: true,
                 seo: {
                     title: '最新产品',
                     description: '最新产品',
@@ -131,8 +134,9 @@ class HomeController extends BaseController {
     async hot(ctx, next) {
         await next();
         try {
-			let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
-			let productList = await homeService.getHotProducts(pageindex, pageSize); 
+            let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
+            let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
+			let productList = await homeService.getHotProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
             
@@ -142,7 +146,8 @@ class HomeController extends BaseController {
 				currentModule: 'hot',
 				productList,
 				pageCount,
-				currentPage: pageindex,
+                currentPage: pageindex,
+                showLabel: true,
                 seo: {
                     title: '最热产品',
                     description: '最热产品',
@@ -159,16 +164,21 @@ class HomeController extends BaseController {
 	async detail(ctx, next) {
 		await next();
         try {
-			// 获取推荐产品列表
-			let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 12];
-			let productList = await homeService.getRecommendProducts(pageindex, pageSize); 
+            // 获取推荐产品列表
+            let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
+			let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 5];
+			let productList = await homeService.getRecommendProducts(pageindex, pageSize, lang); 
 			// let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
-			productList = productList.Code == 200 ? productList.Result : [];
+            productList = productList.Code == 200 ? productList.Result : [];
+            // 详情
+            let detail = await homeService.getProductDetail(ctx.query.id, lang);
+            detail = detail.Code == 200 ? detail.Result : [];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
                 categoryList: __AppConfig.categoryList,
 				currentModule: 'detail',
-				productList,
+                productList,
+                detail,
                 seo: {
                     title: '产品详情',
                     description: '产品详情',

@@ -1,78 +1,82 @@
 <div>
 	{{include '../public/header.art'}}
 	<div class="container mt_20">
-      <div class="row ">
-        <!-- =====  BANNER STRAT  ===== -->
-        <!--<div class="col-sm-12">
-          <div class="breadcrumb ptb_20">
-            <h1>详情标题</h1>
-            <ul>
-              <li><a href="index.html">首页</a></li>
-              <li><a href="/product">产品</a></li>
-              <li class="active">详情标题</li>
-            </ul>
-          </div>
-        </div>-->
-        <!-- =====  BREADCRUMB END===== -->
-		<div class="col-sm-12 goods-detail">
-			<div class="row detail-pics">
-				<div class="col-sm-6 col-md-6">
-					<video src="http://www.w3school.com.cn/i/movie.ogg" width="100%" controls="controls">
-						您的浏览器不支持 video 标签。
-					</video>
-				</div>
-				<div class="col-sm-6 col-md-6">
-					<img style="height: 438px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product1.jpg">
-				</div>
-				<div class="col-sm-6 col-md-6">
-					<img style="height: 438px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product2.jpg">
-				</div>
-				<div class="col-sm-6 col-md-6">
-					<img style="height: 438px;width: auto;margin: 0 auto;display: block;" src="{{cdnUrl}}/images/product/product3.jpg">
-				</div>
+		<div class="col-sm-12 row goods-detail mb_30">
+			{{each detail.product_resourcesList item i}}
+			{{if i==0}}
+			{{if item.P_Resources_Type=="image"}}
+			<div class="detail-pic mb_10">
+				<img src="{{imgUrl}}/{{item.P_Resources_URL}}" alt="{{item.P_Resources_Name_HK}}">
 			</div>
-			<div class="detail-content">
-				<div class="content-item"><span>品牌：</span>这是品牌的标题</div>
-				<div class="content-item"><span>名称：</span>这是品牌的名称</div>
-				<div class="content-item"><span>规格：</span>这是品牌的规格</div>
-				<div class="content-item"><span>产地：</span>这是品牌的产地</div>
-				<div class="content-item"><span>包装：</span>这是品牌的包装</div>
-				<div class="content-item"><span>功效：</span>这是品牌的功效</div>
-				<div class="content-item"><span>特点：</span>这是品牌的特点</div>
-				<div class="content-item"><span>保质期：</span>这是品牌的保质期</div>
-				<div class="content-item"><span>产品编号：</span>这是品牌的产品编号</div>
+			{{else}}
+			<div class="detail-pic mb_10">
+				<video src="{{imgUrl}}/{{item.P_Resources_URL}}" controls="controls">
+					您的浏览器不支持 video 标签。
+				</video>
 			</div>
+			{{/if}}
+			{{/if}}
+			{{/each}}
+			<div class="detail-content mb_10">
+				<div class="content-item"><span>名称：</span>{{detail.Product_Name_HK}}</div>
+				{{each detail.product_attributeList itemAttr}}
+				<div class="content-item"><span>{{itemAttr.P_Attribute_Name_HK}}：</span>{{itemAttr.P_Attribute_Value_HK}}</div>
+				{{/each}}
+			</div>
+			{{each detail.product_resourcesList item i}}
+			{{if i!=0}}
+			{{if item.P_Resources_Type=="image"}}
+			<div class="detail-pic mb_10">
+				<img src="{{imgUrl}}/{{item.P_Resources_URL}}" alt="{{item.P_Resources_Name_HK}}">
+			</div>
+			{{else}}
+			<div class="detail-pic mb_10">
+				<video src="{{imgUrl}}/{{item.P_Resources_URL}}" controls="controls">
+					您的浏览器不支持 video 标签。
+				</video>
+			</div>
+			{{/if}}
+			{{/if}}
+			{{/each}}
 		</div>
-      </div>
       <!-- =====  PRODUCT TAB  ===== -->
-	<div id="product-tab" class="mt_10">
+	<div id="product-tab" class="mt_10" style="position: static;">
 		<div class="heading-part mb_10 ">
 			<h2 class="main_title">相关产品</h2>
 		</div>
 		<div class="tab-content clearfix box">
 			<div class="tab-pane active" id="nArrivals">
 				<div class="nArrivals owl-carousel">
-					{{each arr item}}
-					<div class="product-grid">
-						<div class="item">
-							<div class="product-thumb">
-								<div class="image product-imageblock">
-									<a href="product_detail_page.html">
-										<img data-name="product_image"
-											src="{{cdnUrl}}/images/product/product{{item}}.jpg" alt="米屋Mayu米潤酒粕大米麵膜（10片裝）"
-											title="米屋Mayu米潤酒粕大米麵膜（10片裝）" class="img-responsive">
-									</a>
-								</div>
-								<div class="caption product-detail text-center pt_20">
-									<h6 data-name="product_name" class="product-name">
-										<a href="#" title="米屋Mayu米潤酒粕大米麵膜（10片裝）">米屋Mayu米潤酒粕大米麵膜（10片裝）</a>
-									</h6>
-									<a href="/submit_query" class="price">报价查询</a>
+					{{each productList item j}}
+						<div class="product-grid">
+							<div class="item">
+								<div class="product-thumb">
+									<div class="image product-imageblock">
+										<a href="detail?id={{item.Product_ID}}">
+											{{if item.product_resourcesList.length ==0}}
+												<img data-name="product_image"
+												src="/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
+												title="{{item.Product_Name_HK}}" class="img-responsive">
+											{{/if}}
+											{{each item.product_resourcesList imgItem k}}
+											{{if k==0}}
+												<img data-name="product_image"
+												src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
+												title="{{item.Product_Name_HK}}" class="img-responsive">
+											{{/if}}
+											{{/each}}
+										</a>
+									</div>
+									<div class="caption product-detail text-center pt_10">
+										<h6 data-name="product_name" class="product-name">
+											<a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
+										</h6>
+										<a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">报价查询</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					{{/each}}
+						{{/each}}
 				</div>
 			</div>
 		</div>

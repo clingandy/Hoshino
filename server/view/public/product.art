@@ -44,29 +44,31 @@
         <div class="col-sm-10 col-lg-10">
           <div class="row">
             {{each productList item}}
-              <div class="product-layout  product-grid  col-md-3 col-sm-4 col-xs-12 ">
+              <div class="product-layout  product-grid  col-md-3 col-sm-4 col-xs-6 ">
                 <div class="item">
                   <div class="product-thumb clearfix mb_20">
-                    <div class="image product-imageblock"> 
+                    <div class="image product-imageblock">
+                      {{if showLabel}}
+                        <img class="product-lable-img" src="/images/{{currentModule}}.png">
+                      {{/if}}
                       <a href="detail?id={{item.Product_ID}}">
                         {{if item.product_resourcesList.length ==0}}
-                          <img src="{{imgUrl}}/images/product/product1-2.jpg" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
-                          title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+                          <img src="/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
+                          title="{{item.Product_Name_HK}}" class="img-responsive">
                         {{/if}}
                         {{each item.product_resourcesList imgItem k}}
                         {{if k==0}}
-                          <img src="{{imgUrl}}{{imgItem.P_Resources_URL}}" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
-                          title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+                          <img src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
+                          title="{{item.Product_Name_HK}}" class="img-responsive">
                         {{/if}}
                         {{/each}}
                       </a>
                     </div>
                     <div class="caption product-detail text-center">
                       <h6 data-name="product_name" class="product-name mt_0">
-                        <a href="detail?id={{item.Product_ID}}" title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}">
-                        {{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}</a>
+                        <a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
                       </h6>
-                      <a href="/submit_query?pName={{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="price">报价查询</a>
+                      <a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">报价查询</a>
                     </div>
                   </div>
                 </div>

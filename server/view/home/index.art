@@ -4,7 +4,7 @@
 		<div class="main-banner owl-carousel">
 			{{each bannerList item}}
 			<div class="item">
-				<a href="/"><img width="100%" src="{{imgUrl}}{{item.Banner_URL}}" class="img-responsive" /></a>
+				<a href="/"><img width="100%" src="{{imgUrl}}/{{item.Banner_URL}}" class="img-responsive" /></a>
 			</div>
 			{{/each}}
 		</div>
@@ -45,24 +45,23 @@
 												<a href="detail?id={{item.Product_ID}}">
 													{{if item.product_resourcesList.length ==0}}
 														<img data-name="product_image"
-														src="{{imgUrl}}/images/product/product1-2.jpg" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
-														title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+														src="/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
+														title="{{item.Product_Name_HK}}" class="img-responsive">
 													{{/if}}
 													{{each item.product_resourcesList imgItem k}}
 													{{if k==0}}
 														<img data-name="product_image"
-														src="{{imgUrl}}{{imgItem.P_Resources_URL}}" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
-														title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+														src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
+														title="{{item.Product_Name_HK}}" class="img-responsive">
 													{{/if}}
 													{{/each}}
 												</a>
 											</div>
 											<div class="caption product-detail text-center pt_10">
 												<h6 data-name="product_name" class="product-name">
-													<a href="detail?id={{item.Product_ID}}" title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}">
-													{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}</a>
+													<a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
 												</h6>
-												<a href="/submit_query?pName={{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="price">报价查询</a>
+												<a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">报价查询</a>
 											</div>
 										</div>
 									</div>
@@ -95,24 +94,23 @@
 												<a href="detail?id={{item.Product_ID}}">
 													{{if item.product_resourcesList.length ==0}}
 														<img data-name="product_image"
-														src="{{imgUrl}}/images/product/product1-2.jpg" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
-														title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+														src="/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
+														title="{{item.Product_Name_HK}}" class="img-responsive">
 													{{/if}}
 													{{each item.product_resourcesList imgItem k}}
 													{{if k==0}}
 														<img data-name="product_image"
-														src="{{imgUrl}}{{imgItem.P_Resources_URL}}" alt="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}"
-														title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="img-responsive">
+														src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
+														title="{{item.Product_Name_HK}}" class="img-responsive">
 													{{/if}}
 													{{/each}}
 												</a>
 											</div>
 											<div class="caption product-detail text-center pt_10">
 												<h6 data-name="product_name" class="product-name">
-													<a href="detail?id={{item.Product_ID}}" title="{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}">
-													{{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}</a>
+													<a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
 												</h6>
-												<a href="/submit_query?pName={{i18n.__('Lang')=='简体'?item.Product_Name_CH:item.Product_Name_HK}}" class="price">报价查询</a>
+												<a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">报价查询</a>
 											</div>
 										</div>
 									</div>
