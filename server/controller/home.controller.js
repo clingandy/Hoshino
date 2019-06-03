@@ -4,8 +4,6 @@ let homeService = new HomeService();
 class HomeController extends BaseController {
     // 首页
     async index(ctx, next) {
-        
-        await next();
         try {
 
             // 获取banner
@@ -46,7 +44,6 @@ class HomeController extends BaseController {
 
     // 关于我们
     async about(ctx, next) {
-        await next();
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
@@ -66,24 +63,15 @@ class HomeController extends BaseController {
 
     // 所有产品
     async product(ctx, next) {
-        await next();
         try {
-            let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
+            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
 			let productList = await homeService.getAllProducts(pageindex, pageSize, lang); 
-			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
+			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
 			productList = productList.Code == 200 ? productList.Result : [];
-            let categoryList = [
-                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
-                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
-                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
-                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]},
-                {Name_HK: '衣服', Child: [{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'},{Name_HK: '上衣'}]}
-            ];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                //categoryList: __AppConfig.categoryList,
-                categoryList,
+                categoryList: __AppConfig.categoryList,
                 currentModule: 'product',
                 productList,
 				pageCount,
@@ -102,12 +90,11 @@ class HomeController extends BaseController {
 
     // 最新产品
     async new(ctx, next) {
-        await next();
         try {
-            let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
+            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
 			let productList = await homeService.getLatestProducts(pageindex, pageSize, lang); 
-			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
+			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
             
             let dataObj = {
@@ -132,12 +119,11 @@ class HomeController extends BaseController {
 
     // 最热产品
     async hot(ctx, next) {
-        await next();
         try {
-            let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 20];
+            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-			let productList = await homeService.getHotProducts(pageindex, pageSize, lang); 
-			let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
+            let productList = await homeService.getHotProducts(pageindex, pageSize, lang); 
+			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
             
             let dataObj = {
@@ -162,7 +148,6 @@ class HomeController extends BaseController {
 	
 	// 获取产品详情
 	async detail(ctx, next) {
-		await next();
         try {
             // 获取推荐产品列表
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
@@ -194,7 +179,6 @@ class HomeController extends BaseController {
 
     // 联络我们
     async contact(ctx, next) {
-        await next();
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
@@ -214,7 +198,6 @@ class HomeController extends BaseController {
 
     // 提交查询
     async submit_query(ctx, next) {
-        await next();
         try {
             let dataObj = {
                 navigateList: __AppConfig.navigateList,

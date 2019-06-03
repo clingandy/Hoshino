@@ -7,7 +7,6 @@ module.exports = Template => {
 	 * @param {*} showCount 展示多少页
 	 */
 	Template.defaults.imports.page = (pageCount, currentPage, showCount, href, showFirstAndLast) => {
-
         var _result = [];
         currentPage = parseInt(currentPage);
 		pageCount = parseInt(pageCount);
@@ -39,7 +38,7 @@ module.exports = Template => {
 		// 当页数还大的时候
 		
 		if(_result && _result.length > 0) {
-			if (pageCount == 1) {
+			if (currentPage == 1) {
 				_result.unshift(`<a class="prv" data-pageIndex="${currentPage - 1}">&lt;</a>`);
 			} else {
 				_result.unshift(`<a class="prv" href="/${href}/${currentPage - 1}" data-pageIndex="${currentPage - 1}">&lt;</a>`);

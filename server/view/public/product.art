@@ -12,20 +12,6 @@
         </div>-->
         <!-- =====  BREADCRUMB END===== -->
         <div id="column-left" class="col-sm-2 col-lg-2 ">
-          <!--div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
-            {{each categoryList category}}
-			        <div class="nav-responsive">
-                <div class="heading-part">
-                  <h2 class="main_title">{{i18n.__('Lang')=='简体'?category.Name_CN:category.Name_HK}}</h2>
-                </div>
-              <ul class="nav  main-navigation collapse in">
-              {{each category.Child child}}
-                <li><a href="#">{{i18n.__('Lang')=='简体'?child.Name_CN:child.Name_HK}}</a></li>
-              {{/each}}
-              </ul>
-            </div>
-			    {{/each}}
-          </div-->
           <div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
             {{each categoryList category index}}
 			        <div class="nav-responsive" data-index="{{index}}">
@@ -75,16 +61,7 @@
               </div>
             {{/each}}
           </div>
-          <!--div class="pagination-nav text-center mt_50">
-            <ul>
-              <li><a href="?pageindex={{currentPage>1?currentPage-1:1}}"><</a></li>
-              <li class="active"><a href="?pageindex=1">1</a></li>
-              <li><a href="?pageindex=2">2</a></li>
-              <li><a href="?pageindex=3">3</a></li>
-              <li><a href="?pageindex={{currentPage<pageCount?currentPage+1:pageCount}}">></a></li>
-            </ul>
-          </div-->
-          {{@page(pageCount, currentPage, 6, currentModule)}}
+          {{@page(pageCount, currentPage, 11, currentModule)}}
         </div>
       </div>
     </div>

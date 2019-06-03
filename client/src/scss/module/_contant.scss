@@ -315,8 +315,10 @@
     height: auto;
     padding: 0px;
 }
+.pagination-nav{
+    text-align: center;
+}
 .pagination-nav a {
-    background-color: #f7f7f7;
     color: #808080;
     display: block;
     font-size: 14px;
@@ -324,7 +326,9 @@
     line-height: 36px;
     text-align: center;
     width: 36px;
+    background-color: #f7f7f7;
     &:hover{
+        color: #fff;
         background: #e40001;
     }
 }
@@ -365,7 +369,7 @@
     line-height: 1.8em;
 }
 .goods-detail .detail-pic{
-    padding: 0 20px;
+    //padding: 0 20px;
     height: auto;
     text-align:center;
 }
@@ -379,8 +383,9 @@
     cursor:pointer;
 }
 .goods-detail .detail-pic img, .goods-detail .detail-pic video{
-    margin: 10px auto 0;
     display: block;
+    max-width: 100%;
+    margin: 10px auto 0;
 }
 .goods-detail .detail-pic-one .detail-pic-one-pic{
     height: 100%;
