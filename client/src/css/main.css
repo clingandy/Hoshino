@@ -1449,7 +1449,7 @@ label.checkme {
   overflow: hidden;
   padding-bottom: 10px;
   border: 1px solid #f6f6f6;
-  background-color: #f6f6f6; }
+  background-color: #fff; }
 
 .product-thumb:hover {
   border-collapse: #e9e9e9;
@@ -1680,17 +1680,30 @@ label.checkme {
   position: relative; }
 
 /* =====  detail css  ===== */
+.goods-detail .detail-content {
+  font-size: 16px;
+  line-height: 1.8em; }
+
 .goods-detail .detail-pic {
   padding: 0 20px;
   height: auto;
   text-align: center; }
 
-.goods-detail .detail-content {
-  margin-left: 30%; }
+.goods-detail .detail-pic-one {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #eee;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; }
 
-.goods-detail .detail-pic img {
+.goods-detail .detail-pic img, .goods-detail .detail-pic video {
   margin: 10px auto 0;
   display: block; }
+
+.goods-detail .detail-pic-one .detail-pic-one-pic {
+  height: 100%; }
 
 /* =====  left sidebar css  ===== */
 .left-special.left-sidebar-widget li {
@@ -2084,9 +2097,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   #subbanner1, #subbanner2, #subbanner4, #subbanner5 {
     float: left;
     margin: 10px;
-    width: 45%; }
-  .goods-detail .detail-content {
-    margin-left: 10%; } }
+    width: 45%; } }
 
 /*-----------------------------------*/
 @media (max-width: 480px) {

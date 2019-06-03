@@ -2,26 +2,35 @@
 	{{include '../public/header.art'}}
 	<div class="container mt_20">
 		<div class="col-sm-12 row goods-detail mb_30">
+			<div class="col-sm-1"></div>
+			{{if !detail.product_resourcesList}}
+			<div class="col-sm-4 detail-pic-one mb_10">
+				<img src="/images/product/product1-2.png" class="detail-pic-one-pic" alt="{{item.P_Resources_Name_HK}}">
+			</div>
+			{{/if}}
 			{{each detail.product_resourcesList item i}}
 			{{if i==0}}
 			{{if item.P_Resources_Type=="image"}}
-			<div class="detail-pic mb_10">
-				<img src="{{imgUrl}}/{{item.P_Resources_URL}}" alt="{{item.P_Resources_Name_HK}}">
+			<div class="col-sm-4 detail-pic-one mb_10">
+				<img src="{{imgUrl}}/{{item.P_Resources_URL}}" class="detail-pic-one-pic" alt="{{item.P_Resources_Name_HK}}">
 			</div>
 			{{else}}
-			<div class="detail-pic mb_10">
-				<video src="{{imgUrl}}/{{item.P_Resources_URL}}" controls="controls">
+			<div class="col-sm-4 detail-pic-one mb_10">
+				<video src="{{imgUrl}}/{{item.P_Resources_URL}}" class="detail-pic-one-pic" controls="controls">
 					您的浏览器不支持 video 标签。
 				</video>
 			</div>
 			{{/if}}
 			{{/if}}
 			{{/each}}
-			<div class="detail-content mb_10">
+			<div class="col-sm-7 detail-content mb_10 mt_20">
 				<div class="content-item"><span>名称：</span>{{detail.Product_Name_HK}}</div>
 				{{each detail.product_attributeList itemAttr}}
 				<div class="content-item"><span>{{itemAttr.P_Attribute_Name_HK}}：</span>{{itemAttr.P_Attribute_Value_HK}}</div>
 				{{/each}}
+			</div>
+			<div class="heading-part mb_10 mt_20">
+				<h2 class="main_title">产品介绍</h2>
 			</div>
 			{{each detail.product_resourcesList item i}}
 			{{if i!=0}}
@@ -42,7 +51,7 @@
       <!-- =====  PRODUCT TAB  ===== -->
 	<div id="product-tab" class="mt_10" style="position: static;">
 		<div class="heading-part mb_10 ">
-			<h2 class="main_title">相关产品</h2>
+			<h2 class="main_title">推荐产品</h2>
 		</div>
 		<div class="tab-content clearfix box">
 			<div class="tab-pane active" id="nArrivals">
