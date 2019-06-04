@@ -22,33 +22,39 @@ module.exports = {
 		return this.cdnUrl[nodeEnv];
 	},
 	navigateList: [{
-		name: '首页',
+		name_CN: '首页',
+		name_HK: '首頁',
 		code: 'home',
 		path: '/',
 		col: 2
 	},{
-		name: '关于我们',
+		name_CN: '关于我们',
+		name_HK: '關於我們',
 		code: 'about',
 		path: '/about',
 		col: 3
 	},{
-		name: '所有产品',
+		name_CN: '所有产品',
+		name_HK: '所有產品',
 		code: 'product',
 		path: '/product',
 		col: 3,
 		footerPath: '/product'
 	},{
-		name: '最新产品',
+		name_CN: '最新产品',
+		name_HK: '最新產品',
 		code: 'new',
 		path: '/new',
 		col: 2
 	},{
-		name: '热门产品',
+		name_CN: '热门产品',
+		name_HK: '熱門產品',
 		code: 'hot',
 		path: '/hot',
 		col: 3
 	},{
-		name: '联络我们',
+		name_CN: '联络我们',
+		name_HK: '聯絡我們',
 		code: 'contact',
 		path: '/contact',
 		col: 2
