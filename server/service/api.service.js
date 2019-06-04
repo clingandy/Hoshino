@@ -11,7 +11,12 @@ class ApiService extends BaseService {
 	async postContact(opt) {
 		let cacheOpt = { key: `b_contact/Post`, expired:0 };
         let httpOpt = { 
-            url: `b_contact/Post` ,
+			url: `b_contact/Post`,
+			method: 'post',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			form: true,
             params: opt
 		};
 		let result = await this.getData(httpOpt, cacheOpt);

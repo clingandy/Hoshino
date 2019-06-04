@@ -41,9 +41,9 @@
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="main-search mt_60">
-						<input id="search-input" name="search" value="" placeholder="Search" class="form-control input-lg" autocomplete="off" type="text">
+						<input id="search-input" name="search" value="" placeholder="搜索" class="form-control input-lg" autocomplete="off" type="text">
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default btn-lg"><i class="search-icon"></i></button>
+							<button id="searchBtn" type="button" class="btn btn-default btn-lg"><i class="search-icon"></i></button>
 						</span> 
 					</div>
 				</div>
@@ -86,8 +86,23 @@
 </header>
 <script type="text/javascript">
   	// 设置多语言cookie和刷新页面
+	var date=new Date();
+	var expireDays=100; //将date设置为10天以后的时间	
+	date.setTime(date.getTime()+expireDays*24*3600*1000); //将userId和userName两个cookie设置为10天后过期
 	function setLang(langType){
-		document.cookie="langType=" + langType;  
+		document.cookie="langType=" + langType + ";expire=" + date;  
 		location.reload();
 	};
+
+	// 搜索功能
+	$("#searchBtn").click(function() {
+		let location = window.location.search;
+		let id = '';
+		if (location.indexOf('id') > -1) {
+			location = location.replace('?', '');
+			id = location.split('=')[1];
+		}
+		let name = $("#search-input").val();
+		window.location.href = `/product?id=${id}&name=${name}`;
+	});
 </script>

@@ -67,7 +67,6 @@ function getService(httpOpt, cacheOpt, urlType) {
 
             return obj.join('&');
         }
-		
 		return axios.request(options).then(result => {
             if (cacheOpt && cacheOpt.expired > 0 && result && result.data) {
                 __cacheService.set(cacheOpt, result.data);

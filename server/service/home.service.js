@@ -5,6 +5,17 @@ const BaseService = require('./public/base.service');
  */
 class HomeService extends BaseService {
 
+	 ///api/Home/GetValidateCode
+	 async getValidataCode() {
+		let cacheOpt = { key: `Home/GetValidateCode`, expired:0 };
+        let httpOpt = { 
+            url: `Home/GetValidateCode` ,
+            params: {}
+		};
+		let result = await this.getData(httpOpt, cacheOpt);
+
+		return result;
+	}
 	/**
 	 * 获取轮播图
 	 */
@@ -34,18 +45,20 @@ class HomeService extends BaseService {
 	/** 
 	 * 获取全部产品列表
 	*/
-	async getAllProducts(pageindex = 1, pagesize = 20, lang = 2) {
+	async getAllProducts(pageindex = 1, pagesize = 20, lang = 2, product_name = "", categoryID = -1) {
 		let cacheOpt = { key: `b_product/GetProductList`, expired:0 };
         let httpOpt = { 
             url: `b_product/GetProductList` ,
             params: {
 				pageindex,
 				pagesize,
-				lang
+				lang,
+				categoryID,
+				product_name
 			}
 		};
 		let result = await this.getData(httpOpt, cacheOpt);
-
+		console.log("result", result);
 		return result;
 	}
 
