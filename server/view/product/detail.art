@@ -24,9 +24,9 @@
 			{{/if}}
 			{{/each}}
 			<div class="col-sm-7 detail-content mb_10 mt_20">
-				<div class="content-item"><span>名称：</span>{{detail.Product_Name_HK}}</div>
+				<div class="content-item"><span class="col-sm-4">商品名称：</span><lable class="col-sm-8">{{detail.Product_Name_HK}}</lable></div>
 				{{each detail.product_attributeList itemAttr}}
-				<div class="content-item"><span>{{itemAttr.P_Attribute_Name_HK}}：</span>{{itemAttr.P_Attribute_Value_HK}}</div>
+				<div class="content-item"><span class="col-sm-4">{{itemAttr.P_Attribute_Name_HK}}：</span><lable class="col-sm-8">{{itemAttr.P_Attribute_Value_HK}}</lable></div>
 				{{/each}}
 			</div>
 			<div class="heading-part mb_10 mt_20">
@@ -35,11 +35,11 @@
 			{{each detail.product_resourcesList item i}}
 			{{if i!=0}}
 			{{if item.P_Resources_Type=="image"}}
-			<div class="detail-pic mb_10">
+			<div class="detail-pic">
 				<img src="{{imgUrl}}/{{item.P_Resources_URL}}" alt="{{item.P_Resources_Name_HK}}">
 			</div>
 			{{else}}
-			<div class="detail-pic mb_10">
+			<div class="detail-pic">
 				<video src="{{imgUrl}}/{{item.P_Resources_URL}}" controls="controls">
 					您的浏览器不支持 video 标签。
 				</video>

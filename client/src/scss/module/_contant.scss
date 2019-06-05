@@ -111,6 +111,13 @@
         margin: 20px auto;
     }
 }
+.about .company-intro p{
+    font-size: 18px;
+    line-height: 1.8em;
+}
+.about .company-intro .about-text{
+    text-indent: 2em;
+}
 
 /* ----------------------------------------------
 	3.0.1 Product + Category Page 
@@ -385,8 +392,9 @@
 .goods-detail .detail-pic img, .goods-detail .detail-pic video{
     display: block;
     max-width: 100%;
-    margin: 10px auto 0;
+    margin: 0 auto;
 }
+
 .goods-detail .detail-pic-one .detail-pic-one-pic{
     height: 100%;
 }
