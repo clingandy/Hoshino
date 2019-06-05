@@ -3,7 +3,7 @@ class CommonService extends BaseService {
 
 	/** 获取所有分类*/
 	async getAllCategorys(lang = 2) {
-		let cacheOpt = { key: `b_category/GetAllCategory`, expired:0 };
+		let cacheOpt = { key: `b_category/GetAllCategory`, expired:30000 };
         let httpOpt = { 
             url: `b_category/GetAllCategory` ,
             params: {

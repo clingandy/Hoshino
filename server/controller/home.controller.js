@@ -1,39 +1,31 @@
 const BaseController = require('./public/base.controller');
 const HomeService = require('../service/home.service');
-const CommonService = require('../service/common.service');
 const homeService = new HomeService();
-const commonService = new CommonService();
-
 
 class HomeController extends BaseController {
     // 首页
     async index(ctx, next) {
         try {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            // 获取分类
-            let categoryList = await commonService.getAllCategorys(lang);
-            categoryList = categoryList.Code == 200 ? categoryList.Result : [];
-
+            
             // 获取banner
             let bannerList = await homeService.getHomeBanner();
             bannerList = bannerList.Code == 200 ? bannerList.Result : [];
             
             // 获取最新产品列表
-            let latestProductList = await homeService.getLatestProducts();
+            let latestProductList = await homeService.getLatestProducts(1, 25, lang);
             latestProductList = latestProductList.Code == 200 ? latestProductList.Result : [];
 
             // 获取热门产品列表
-            let hotProductList = await homeService.getHotProducts();
+            let hotProductList = await homeService.getHotProducts(1, 20, lang);
             hotProductList = hotProductList.Code == 200 ? hotProductList.Result : [];
 
             // 获取视频列表
             let vedioList = await homeService.getVedioList();
             vedioList = vedioList.Code == 200 ? vedioList.Result : [];
-            
-            
+
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
                 currentModule: 'home',
                 bannerList,
                 latestProductList,
@@ -54,14 +46,8 @@ class HomeController extends BaseController {
     // 关于我们
     async about(ctx, next) {
         try {
-            let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-             // 获取分类
-             let categoryList = await commonService.getAllCategorys(lang);
-             categoryList = categoryList.Code == 200 ? categoryList.Result : [];
-
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
                 currentModule: 'about',
                 seo: {
                     title: '关于我们',
@@ -81,9 +67,6 @@ class HomeController extends BaseController {
             let id = ctx.query.id ? ctx.query.id : -1;
             let product_name = ctx.query.name ? ctx.query.name : "";
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            // 获取分类
-            let categoryList = await commonService.getAllCategorys(lang);
-            categoryList = categoryList.Code == 200 ? categoryList.Result : [];
             
             let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
 			let productList = await homeService.getAllProducts(pageindex, pageSize, lang, product_name, id); 
@@ -91,7 +74,6 @@ class HomeController extends BaseController {
 			productList = productList.Code == 200 ? productList.Result : [];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
                 currentModule: 'product',
                 productList,
 				pageCount,
@@ -112,9 +94,6 @@ class HomeController extends BaseController {
     async new(ctx, next) {
         try {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            // 获取分类
-            let categoryList = await commonService.getAllCategorys(lang);
-            categoryList = categoryList.Code == 200 ? categoryList.Result : [];
 
             let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
 			let productList = await homeService.getLatestProducts(pageindex, pageSize, lang); 
@@ -123,7 +102,6 @@ class HomeController extends BaseController {
             
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
 				currentModule: 'new',
 				productList,
 				pageCount,
@@ -145,10 +123,6 @@ class HomeController extends BaseController {
     async hot(ctx, next) {
         try {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            // 获取分类
-            let categoryList = await commonService.getAllCategorys(lang);
-            categoryList = categoryList.Code == 200 ? categoryList.Result : [];
-
             let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
             let productList = await homeService.getHotProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
@@ -156,7 +130,6 @@ class HomeController extends BaseController {
             
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
 				currentModule: 'hot',
 				productList,
 				pageCount,
@@ -178,9 +151,6 @@ class HomeController extends BaseController {
 	async detail(ctx, next) {
         try {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            // 获取分类
-            let categoryList = await commonService.getAllCategorys(lang);
-            categoryList = categoryList.Code == 200 ? categoryList.Result : [];
 
             // 获取推荐产品列表
 			let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 5];
@@ -192,7 +162,6 @@ class HomeController extends BaseController {
             detail = detail.Code == 200 ? detail.Result : [];
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
 				currentModule: 'detail',
                 productList,
                 detail,
@@ -212,14 +181,8 @@ class HomeController extends BaseController {
     // 联络我们
     async contact(ctx, next) {
         try {
-            let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            // 获取分类
-            let categoryList = await commonService.getAllCategorys(lang);
-            categoryList = categoryList.Code == 200 ? categoryList.Result : [];
-
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
                 currentModule: 'contact',
                 seo: {
                     title: '联络我们',
@@ -236,14 +199,9 @@ class HomeController extends BaseController {
     // 提交查询
     async submit_query(ctx, next) {
         try {
-            let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            // 获取分类
-            let categoryList = await commonService.getAllCategorys(lang);
-            categoryList = categoryList.Code == 200 ? categoryList.Result : [];
-
             let dataObj = {
                 navigateList: __AppConfig.navigateList,
-                categoryList,
+                productName:ctx.query.pName,
                 currentModule: 'submit_query',
                 seo: {
                     title: '提交查询',

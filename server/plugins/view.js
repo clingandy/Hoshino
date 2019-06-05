@@ -5,6 +5,8 @@ const debug = require('debug')('art-template');
 const template = require('art-template');
 const path = require('path');
 const i18n_module = require('i18n-nodejs');
+const CommonService = require('../service/common.service');
+const commonService = new CommonService();
 
 module.exports = app => {
 	if (app.context.render) {
@@ -19,7 +21,8 @@ module.exports = app => {
 		layout: true,
 		layoutName: 'layout/master',
 		i18n: [],
-		imgUrl: ''
+		imgUrl: '',
+		apiUrl: ''
 	}
 
 	// 添加helper;
@@ -59,6 +62,26 @@ module.exports = app => {
 		return settings.imgUrl
 	}
 
+	// 获取API地址
+	function getApiUrl(){
+		if(settings.apiUrl ==''){
+			let nodeEnv = ((process.env.NODE_ENV || 'development'));
+			if (nodeEnv == "development") {
+				settings.apiUrl = __AppConfig.api['dataUri'].development;
+			} else {
+				settings.apiUrl = ((process.env.VERSION || 'beta') == 'beta' ? __AppConfig.api['dataUri'].beta : __AppConfig.api['dataUri'].release);
+			}
+		}
+		return settings.apiUrl
+	}
+
+	// 获取分类
+	async function getCategory(ctx){
+		let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
+		let categoryList = await commonService.getAllCategorys(lang);
+		return categoryList.Code == 200 ? categoryList.Result : [];
+	}
+
     function render(filename, data) {
 		debug(`render: ${filename}`);
 		settings.filename = filename;
@@ -82,6 +105,8 @@ module.exports = app => {
 		context.i18n = getLang(ctx);
 		context.cdnUrl = context.cdnUrl ? context.cdnUrl : '';
 		context.imgUrl = getImgUrl();
+		context.apiUrl = getApiUrl();
+		context.categoryList = await getCategory(ctx);
         const html = render(view, context);
         const writeResp = context.writeResp === false ? false : (context.writeResp || settings.writeResp);
 

@@ -24,7 +24,7 @@
 			{{/if}}
 			{{/each}}
 			<div class="col-sm-7 detail-content mb_10 mt_20">
-				<div class="content-item"><span class="col-sm-4">商品名称：</span><lable class="col-sm-8">{{detail.Product_Name_HK}}</lable></div>
+				<div class="content-item"><span class="col-sm-4">产品名称：</span><lable class="col-sm-8">{{detail.Product_Name_HK}}</lable></div>
 				{{each detail.product_attributeList itemAttr}}
 				<div class="content-item"><span class="col-sm-4">{{itemAttr.P_Attribute_Name_HK}}：</span><lable class="col-sm-8">{{itemAttr.P_Attribute_Value_HK}}</lable></div>
 				{{/each}}
