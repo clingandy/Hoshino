@@ -34,14 +34,14 @@
 					<a class="navbar-brand" href="index.html"> 
 						<img alt="OYEENok" src="/images/logo.png"> 
 						<span class="logo-name">
-							{{i18n.__('CompanyName')}}<br/>
+							{{i18n.__('CompanyNameInfo')}}<br/>
 							Hosino Worldwide Trading Ltd. Co.
 						</span>
 					</a> 
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="main-search mt_60">
-						<input id="search-input" name="search" value="" placeholder="搜索" class="form-control input-lg" autocomplete="off" type="text">
+						<input id="search-input" name="search" value="" placeholder="{{i18n.__('Query')}}" class="form-control input-lg" autocomplete="off" type="text">
 						<span class="input-group-btn">
 							<button id="searchBtn" type="button" class="btn btn-default btn-lg"><i class="search-icon"></i></button>
 						</span> 
@@ -87,8 +87,8 @@
 <script type="text/javascript">
   	// 设置多语言cookie和刷新页面
 	var date=new Date();
-	var expireDays=100; //将date设置为10天以后的时间	
-	date.setTime(date.getTime()+expireDays*24*3600*1000); //将userId和userName两个cookie设置为10天后过期
+	var expireDays=100; //将date设置为100天以后的时间	
+	date.setTime(date.getTime()+expireDays*24*3600*1000); //将userId和userName两个cookie设置为100天后过期
 	function setLang(langType){
 		document.cookie="langType=" + langType + ";expire=" + date;  
 		location.reload();

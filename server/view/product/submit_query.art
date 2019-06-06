@@ -5,55 +5,58 @@
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label"></label>
                 <div class="col-sm-10">
-                    <h3 class="mb_10">产品名称：{{productName}}</h3>
-                    <p>欢迎随时致电/电邮/WECHAT/WHATSAPP查询，我们会尽快回复您们</p>
-                    <p>電話: +852 3957 6783</p>
-                    <p>电邮：enquiry@hosinowt.com</p>
-                    <p>WECHAT： +852 9790 4385</p>
-                    <p>WHATSAPP：+852 9790 4385</p>
-                    <p class="mt_10">您们亦可以填写以下表格并提交查询：</p>
+                    <h3 class="mb_10">{{i18n.__('ProjectName')}}：{{productName}}</h3>
+                    <p>{{i18n.__('ContactInfo')}}</p>
+                    <p>{{i18n.__('Phone')}}: {{companyInfo.phone}}</p>
+                    <p>{{i18n.__('Email')}}：{{companyInfo.email}}</p>
+                    <p>WECHAT：{{companyInfo.wechat}}</p>
+                    <p>WHATSAPP：{{companyInfo.whatsapp}}</p>
+                    <p class="mt_10">{{i18n.__('QuerySubmitInfo')}}</p>
                 </div>
             </div>
             <div class="form-group mt_10">
-                <label for="" class="col-sm-2 control-label">公司*</label>
+                <label for="" class="col-sm-2 control-label">{{i18n.__('CompanyName')}}*</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="company" placeholder="Company Name" />
+                    <input class="form-control" type="text" name="company" id="company" placeholder="{{i18n.__('Input')}}{{i18n.__('CompanyName')}}" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="col-sm-2 control-label">联系人*</label>
+                <label for="" class="col-sm-2 control-label">{{i18n.__('ContactName')}}*</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="contact" placeholder="Contact"/>
+                    <input class="form-control" type="text" name="contact" id="contact" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactName')}}" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="col-sm-2 control-label">电话*</label>
+                <label for="" class="col-sm-2 control-label">{{i18n.__('ContactPhone')}}*</label>
                 <div class="col-sm-10">
-                    <input class="full-with-form " type="text" name="phone" placeholder="Phone Number" />
+                    <input class="full-with-form " type="text" name="phone" id="phone" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactPhone')}}" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="col-sm-2 control-label">电邮*</label>
+                <label for="" class="col-sm-2 control-label">{{i18n.__('EmailAll')}}*</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="email" name="email" placeholder="Email Address" />
+                    <input class="form-control" type="email" name="email" id="email" placeholder="{{i18n.__('Input')}}{{i18n.__('EmailAll')}}" />
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="col-sm-2 control-label">查询事项*</label>
+                <label for="" class="col-sm-2 control-label">{{i18n.__('Inquiry')}}*</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control mt_30" name="message" placeholder="Message" maxlength="500"></textarea>
+                    <textarea class="form-control mt_30" name="message" id="message" placeholder="{{i18n.__('Input')}}{{i18n.__('Inquiry')}}" maxlength="500"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="col-sm-2 control-label">资料上传*</label>
+                <label for="" class="col-sm-2 control-label">{{i18n.__('DataUpload')}}*</label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="file" id="updateFile" name="subject" placeholder="Subject" />
+                    <input class="form-control col-sm-6" id="subject" name="subject" placeholder="{{i18n.__('DataUpload')}}" disabled />
+                    <input class="col-sm-4" type="file" id="updateFile" placeholder="Subject" style="border:none;" />
+                    <input style="display:none;" id="apiUrl" value="{{apiUrl}}" />
+                    <span id="user-subject-error" class="error" style="display:none;">{{i18n.__('Input')}}{{i18n.__('DataUpload')}}</span>
                 </div>
             </div>
             <div class="form-group">
-                <label for="" class="col-sm-2 control-label">验证码*</label>
+                <label for="" class="col-sm-2 control-label">{{i18n.__('AuthCode')}}*</label>
                 <div class="col-sm-5">
-                    <input class="form-control" type="text" name="authcode" placeholder="Authcode" />
+                    <input class="form-control" type="text" name="authcode" id="authcode" placeholder="{{i18n.__('Input')}}{{i18n.__('AuthCode')}}" />
                 </div>
                 <div class="col-sm-5">
                     <img id="validateCode" onclick="this.src=this.src.split('?')[0]+'?'+Math.random()" style="height:2.6em;cursor:pointer;" src="{{apiUrl}}Home/GetValidateCode"></img>
@@ -71,105 +74,4 @@
     {{include '../public/footer.art'}}
 </div>
 <script src="{{cdnUrl}}/lib/jquery.validate.min.js"></script>
-<script type="text/javascript">
-function validform(formId){
-  return $(formId).validate({
-     rules: {
-        company: {
-            required: true,
-            minlength: 6
-        },
-        contact: {
-            required: true,
-            minlength: 2
-        },
-        phone: {
-            required: true,
-            minlength: 6
-        },
-        email: {
-            required: true,
-            email: true
-        },
-        message: {
-            required: true,
-            minlength: 5
-        },
-        subject: "required",
-        authcode: {
-            required: true,
-            minlength: 4
-        }
-    },
-    messages: {
-        company: {
-            required: "请输入公司名称",
-            minlength: "公司名称最少由六个字符组成"
-        },
-        contact: {
-            required: "请输入联系人",
-            minlength: "联系人最少由两个字符组成"
-        },
-        phone: {
-            required: "请输入电话",
-            minlength: "电话最少由六个字符组成"
-        },
-        email: {
-            required: "请输入电邮",
-            email: "请输入正确的电邮"
-        },
-        message: {
-            required: "请输入查询事项",
-            minlength: "查询事项最少由五个字符组成"
-        },
-        subject: {
-            required: "请上传资料内容"
-        },
-        authcode: {
-            required: "请输入验证码",
-            minlength: "验证码必需由四个字符组成"
-        }
-    }
-  });
-}
-
-fileInput = document.getElementById('updateFile');
-fileInput.addEventListener('change', function() {
-    // 检查文件是否选择:
-    if(!fileInput.value) {
-        return false;
-    }                    
-    // 获取File引用:
-    var file = fileInput.files[0];
-    //判断文件大小
-    var size = file.size;
-    if(size >= 10*1024*1024){
-        alert('上传资料不能大于10M!');
-        return false;
-    }
-    var fordata = new FormData();
-    fordata.append("file", file);
-    $.ajax({
-             type: "POST",
-             url: "{{apiUrl}}Upload/Post",
-             data: fordata,
-             contentType: false,
-             processData:false,
-             dataType: "json",
-             success: function(data){
-                if(data.Code == 200){
-                    fileUrl = Result.filePath;
-                }
-            }
-         });
-});
-
-$("#submitBtn").click(function(){
-    if(!validform("#submit_query_form").form()) {
-        
-    } else {
-        $('#submit_query_form')[0].reset() 
-    }
-});
-
-</script>
+<script src="{{cdnUrl}}/js/view/product/submit_query.js"></script>

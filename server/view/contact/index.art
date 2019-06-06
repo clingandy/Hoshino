@@ -2,60 +2,49 @@
 	{{include '../public/header.art'}}
 	 <div class="container mt_20">
       <div class="row ">
-        <!-- =====  BANNER STRAT  ===== -->
-        <!--<div class="col-sm-12">
-          <div class="breadcrumb ptb_20">
-            <h1>联络我们</h1>
-            <ul>
-              <li><a href="index.html">首页</a></li>
-              <li class="active">联络我们</li>
-            </ul>
-          </div>
-        </div>-->
-        <!-- =====  BREADCRUMB END===== -->
         <div class="col-sm-12 col-lg-12">
           <!-- contact  -->
           <div class="row">
             <div class="col-md-4 col-xs-12 contact">
               <div class="location mb_50">
-                <h5 class="capitalize mb_20"><strong>我们的地址：</strong></h5>
-                <div class="address">广东省广州市番禺区番禺广场</div>
+                <h5 class="capitalize mb_20"><strong>{{i18n.__('Addr')}}</strong></h5>
+                <div class="address">{{i18n.__('AddrInfo')}}</div>
               </div>
               <div class="Career mb_50">
-                <h5 class="capitalize mb_20"><strong>电话</strong></h5>
-                <div class="address">+852 3957 6783</div>
+                <h5 class="capitalize mb_20"><strong>{{i18n.__('Phone')}}</strong></h5>
+                <div class="address">{{companyInfo.phone}}</div>
               </div>
               <div class="Hello mb_50">
-                <h5 class="capitalize mb_20"><strong>电邮</strong></h5>
-                <div class="address">enquiry@hosinowt.com</div>
+                <h5 class="capitalize mb_20"><strong>{{i18n.__('Email')}}</strong></h5>
+                <div class="address">{{companyInfo.email}}</div>
               </div>
 			      <div class="Hello mb_50">
                 <h5 class="capitalize mb_20"><strong>WECHAT</strong></h5>
-                <div class="address">+852 9790 4385</div>
+                <div class="address">{{companyInfo.whatsapp}}</div>
             </div>
 			      <div class="Hello mb_50">
                 <h5 class="capitalize mb_20"><strong>WHATSAPP</strong></h5>
-                <div class="address">+852 9790 4385</div>
+                <div class="address">{{companyInfo.wechat}}</div>
               </div>
             </div>
             <div class="col-md-8 col-xs-12 contact-form mb_50">
               <!-- Contact FORM -->
               <div id="contact_form">
                 <form id="contact_body" method="post" action="">
-                 <label class="full-with-form" ><span>*公司名称</span></label>
-                 <input class="full-with-form " type="text" name="company" placeholder="请输入公司名称" data-required="true" />
-                 <label class="full-with-form" ><span>*姓名</span></label>
-                 <input class="full-with-form " type="text" name="name" placeholder="请输入姓名" data-required="true" />
-                 <label class="full-with-form" ><span>*联络电话</span></label>
-                 <input class="full-with-form " type="text" name="phone" placeholder="请输入联络电话" data-required="true" />
-				         <label class="full-with-form" ><span>*电子邮箱</span></label>
-                 <input class="full-with-form " type="email" name="email" placeholder="请输入电子邮箱" data-required="true" />
-				         <label class="full-with-form" ><span>联络地址</span></label>
-                 <input class="full-with-form " type="text" name="address" placeholder="请输入联络地址" data-required="true" />
-				         <label class="full-with-form" ><span>查询事项</span></label>
-                 <textarea class="full-with-form " name="message" placeholder="请输入查询事项" data-required="true"></textarea>
-				         <label class="full-with-form" ><span>*验证码</span></label>
-                 <input class="full-with-form " type="text" name="authcode" placeholder="请输入验证码" data-required="true" />
+                 <label class="full-with-form" ><span>*{{i18n.__('CompanyName')}}</span></label>
+                 <input class="full-with-form " type="text" name="company" placeholder="{{i18n.__('Input')}}{{i18n.__('CompanyName')}}" data-required="true" />
+                 <label class="full-with-form" ><span>*{{i18n.__('ContactName')}}</span></label>
+                 <input class="full-with-form " type="text" name="name" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactName')}}" data-required="true" />
+                 <label class="full-with-form" ><span>*{{i18n.__('ContactPhone')}}</span></label>
+                 <input class="full-with-form " type="text" name="phone" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactPhone')}}" data-required="true" />
+				         <label class="full-with-form" ><span>*{{i18n.__('EmailAll')}}</span></label>
+                 <input class="full-with-form " type="email" name="email" placeholder="{{i18n.__('Input')}}{{i18n.__('EmailAll')}}" data-required="true" />
+				         <label class="full-with-form" ><span>{{i18n.__('ContactAddr')}}</span></label>
+                 <input class="full-with-form " type="text" name="address" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactAddr')}}" data-required="true" />
+				         <label class="full-with-form" ><span>{{i18n.__('Inquiry')}}</span></label>
+                 <textarea class="full-with-form " name="message" placeholder="{{i18n.__('Input')}}{{i18n.__('Inquiry')}}" data-required="true"></textarea>
+				         <label class="full-with-form" ><span>*{{i18n.__('AuthCode')}}</span></label>
+                 <input class="full-with-form " type="text" name="AuthCode" placeholder="{{i18n.__('Input')}}{{i18n.__('AuthCode')}}" data-required="true" />
                  <img id="validateCode" onclick="this.src=this.src.split('?')[0]+'?'+Math.random()" style="height:2.6em;cursor:pointer;" src="{{apiUrl}}Home/GetValidateCode"></img>
                  <div><button class="btn mt_30" type="button" id="submitBtn">提交</button></div>
                 </form>

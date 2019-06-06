@@ -1,16 +1,5 @@
 <div class="container mt_20">
       <div class="row ">
-        <!-- =====  BANNER STRAT  ===== -->
-        <!--<div class="col-sm-12">
-          <div class="breadcrumb ptb_20">
-            <h1>所有产品</h1>
-            <ul>
-              <li><a href="/">首页</a></li>
-              <li class="active">所有产品</li>
-            </ul>
-          </div>
-        </div>-->
-        <!-- =====  BREADCRUMB END===== -->
         <div id="column-left" class="col-sm-2 col-lg-2 ">
           <div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
             {{each categoryList category index}}
@@ -54,7 +43,7 @@
                       <h6 data-name="product_name" class="product-name mt_0">
                         <a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
                       </h6>
-                      <a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">报价查询</a>
+                      <a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">{{i18n.__('QuotationInquiry')}}</a>
                     </div>
                   </div>
                 </div>

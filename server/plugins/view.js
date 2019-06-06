@@ -107,6 +107,8 @@ module.exports = app => {
 		context.imgUrl = getImgUrl();
 		context.apiUrl = getApiUrl();
 		context.categoryList = await getCategory(ctx);
+		context.navigateList = __AppConfig.navigateList;
+		context.companyInfo = __AppConfig.companyInfo;
         const html = render(view, context);
         const writeResp = context.writeResp === false ? false : (context.writeResp || settings.writeResp);
 

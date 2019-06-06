@@ -3,8 +3,108 @@
         "zh_CN": "简体",
         "zh_TW": "繁体"
     },
-    "CompanyName": {
+    "CompanyName":{
+        "zh_CN": "公司名称",
+        "zh_TW": "公司名稱"
+    },
+    "CompanyNameInfo": {
         "zh_CN": "星野国际贸易有限公司",
         "zh_TW": "星野國際貿易有限公司"
+    },
+    "Phone":{
+        "zh_CN": "电话",
+        "zh_TW": "電話"
+    },
+    "Email":{
+        "zh_CN": "电邮",
+        "zh_TW": "電郵"
+    },
+    "ProjectName":{
+        "zh_CN": "产品名称",
+        "zh_TW": "產品名稱"
+    },
+    "ProjectIntro":{
+        "zh_CN": "产品介绍",
+        "zh_TW": "產品介紹"
+    },
+    "ContactInfo":{
+        "zh_CN": "欢迎随时致电/电邮/WECHAT/WHATSAPP查询，我们会尽快回复您们",
+        "zh_TW": "歡迎隨時致電/電郵/WECHAT/WHATSAPP查詢，我們會儘快回復您們"
+    },
+    "QuerySubmitInfo":{
+        "zh_CN": "您们亦可以填写以下表格并提交查询：",
+        "zh_TW": "您們亦可以填寫以下表格並提交查詢："
+    },
+    "AboutMe":{
+        "zh_CN": "关于我们",
+        "zh_TW": "關於我們"
+    },
+    "ProjectNew":{
+        "zh_CN": "最新产品",
+        "zh_TW": "最新產品"
+    },
+    "ProjectHot":{
+        "zh_CN": "热门产品",
+        "zh_TW": "熱門產品"
+    },
+    "PromotionalVideo":{
+        "zh_CN": "宣传视频",
+        "zh_TW": "宣傳視頻"
+    },
+    "ProjectRecommend":{
+        "zh_CN": "推荐产品",
+        "zh_TW": "推薦產品"
+    },
+    "Brand":{
+        "zh_CN": "品牌",
+        "zh_TW": "品牌"
+    },
+    "QuotationInquiry":{
+        "zh_CN": "报价查询",
+        "zh_TW": "報價查詢"
+    },
+    "Query":{
+        "zh_CN": "搜索",
+        "zh_TW": "搜索"
+    },
+    "Addr":{
+        "zh_CN": "我们的地址",
+        "zh_TW": "我們的地址"
+    },
+    "AddrInfo":{
+        "zh_CN": "香港九龙观塘骏业街49号佳贸中心5楼5B室",
+        "zh_TW": "香港九龍觀塘駿業街49號佳貿中心5樓5B室"
+    },
+    "Input":{
+        "zh_CN": "请输入",
+        "zh_TW": "請輸入"
+    },
+    "ContactName":{
+        "zh_CN": "联络姓名",
+        "zh_TW": "聯絡姓名"
+    },
+    "ContactPhone":{
+        "zh_CN": "联络电话",
+        "zh_TW": "聯絡電話"
+    },
+    "EmailAll":{
+        "zh_CN": "电子邮箱",
+        "zh_TW": "電子郵箱"
+    },
+    "ContactAddr":{
+        "zh_CN": "联络地址",
+        "zh_TW": "聯絡地址"
+    },
+    "Inquiry":{
+        "zh_CN": "查询事项",
+        "zh_TW": "查詢事項"
+    },
+    "AuthCode":{
+        "zh_CN": "验证码",
+        "zh_TW": "驗證碼"
+    },
+    "DataUpload":{
+        "zh_CN": "资料上传",
+        "zh_TW": "資料上傳"
     }
 }

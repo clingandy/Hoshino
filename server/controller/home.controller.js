@@ -25,7 +25,6 @@ class HomeController extends BaseController {
             vedioList = vedioList.Code == 200 ? vedioList.Result : [];
 
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
                 currentModule: 'home',
                 bannerList,
                 latestProductList,
@@ -47,7 +46,6 @@ class HomeController extends BaseController {
     async about(ctx, next) {
         try {
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
                 currentModule: 'about',
                 seo: {
                     title: '关于我们',
@@ -73,7 +71,6 @@ class HomeController extends BaseController {
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
 			productList = productList.Code == 200 ? productList.Result : [];
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
                 currentModule: 'product',
                 productList,
 				pageCount,
@@ -101,7 +98,6 @@ class HomeController extends BaseController {
             productList = productList.Code == 200 ? productList.Result : [];
             
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
 				currentModule: 'new',
 				productList,
 				pageCount,
@@ -129,7 +125,6 @@ class HomeController extends BaseController {
             productList = productList.Code == 200 ? productList.Result : [];
             
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
 				currentModule: 'hot',
 				productList,
 				pageCount,
@@ -161,7 +156,6 @@ class HomeController extends BaseController {
             let detail = await homeService.getProductDetail(ctx.query.id, lang);
             detail = detail.Code == 200 ? detail.Result : [];
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
 				currentModule: 'detail',
                 productList,
                 detail,
@@ -182,7 +176,6 @@ class HomeController extends BaseController {
     async contact(ctx, next) {
         try {
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
                 currentModule: 'contact',
                 seo: {
                     title: '联络我们',
@@ -200,7 +193,6 @@ class HomeController extends BaseController {
     async submit_query(ctx, next) {
         try {
             let dataObj = {
-                navigateList: __AppConfig.navigateList,
                 productName:ctx.query.pName,
                 currentModule: 'submit_query',
                 seo: {

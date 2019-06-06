@@ -8,16 +8,33 @@ class ApiService extends BaseService {
 	/**
 	 * 提交联络我们表单
 	 */
-	async postContact(opt) {
+	async postContact(opt, code) {
 		let cacheOpt = { key: `b_contact/Post`, expired:0 };
         let httpOpt = { 
-			url: `b_contact/Post`,
+			url: `b_contact/Post?code=${code}`,
 			method: 'post',
 			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded'
+				'Content-Type': 'application/json-patch+json'
 			},
-			form: true,
-            params: opt
+            param: opt
+		};
+		let result = await this.getData(httpOpt, cacheOpt);
+
+		return result;
+	}
+
+	/**
+	 * 提交报价查询表单
+	 */
+	async postQuery(opt, code) {
+		let cacheOpt = { key: `b_appointment_consultation/Post`, expired:0 };
+        let httpOpt = { 
+			url: `b_appointment_consultation/Post?code=${code}`,
+			method: 'post',
+			headers: {
+				'Content-Type': 'application/json-patch+json'
+			},
+            data: opt
 		};
 		let result = await this.getData(httpOpt, cacheOpt);
 

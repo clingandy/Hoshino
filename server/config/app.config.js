@@ -59,5 +59,11 @@ module.exports = {
 		path: '/contact',
 		col: 2
 	}],
-	categoryList: []
+	companyInfo: {
+		phone : '+852 3957 6783',
+		phone_cn: '+86 198 9657 6596',
+		email : 'enquiry@hosinowt.com',
+		whatsapp: '+852 9790 4385',
+		wechat:'+852 9790 4385'
+	}
 }

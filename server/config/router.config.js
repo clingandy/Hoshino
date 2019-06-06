@@ -8,6 +8,10 @@ module.exports = {
 			method: 'post',
 			path: '/api/submitContact',
 			action: 'submitContactForm'
+		},{
+			method: 'post',
+			path: '/api/submitQuery',
+			action: 'submitQueryForm'
 		}]
 	},
 	{

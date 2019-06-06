@@ -19,12 +19,35 @@
             <div class="col-sm-4 col-md-3 company-logo">
               <img style="filter: invert(80%);" src="{{cdnUrl}}/images/logo.png" alt="#">
               <div class="company-name">
-                <p>星野國際貿易有限公司</p>
+                <p>{{i18n.__('CompanyNameInfo')}}</p>
                 <p>Hosino Worldwide</p>
                 <p>Trading Ltd. Co.</p>
               </div>
             </div>
             <div class="col-sm-8 col-md-9 mt_10 company-intro">
+              {{if i18n.__('Lang') == '简体'}}
+              <h2>关于 HOSINO</h2>
+              <p class="about-text mt_10">
+                星野国际贸易有限公司Hosino Worldwide Trading Ltd. Co. 是一家专门挑选潮流及口碑较佳的日本化妆护肤品代理的专业批发公司，所以产品均由日本大批量直送香港，绝对正货，价格实惠，我们现在代理的品牌有资生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、大木、大创DAISO、太阳社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石泽研究所 ISHIZAWA LABS、米诺 MINON、肌美精 Kracie、克丽贝蒂 Creer Beaute、沛丽康 pelican、妮维雅 Nivea、花王 KAO、娜丽丝 Naris、黎珐 Refa、柳屋 Yanagiya、曼秀雷敦Mentholatum、久光製药、嘉娜宝 Kanebo、贝亲Pigeon、Quality First、Cow牛乳、HOUSE OF ROSE、CECILE MAIA、POLA宝丽、KOSE高丝等，货品种类往后会不断增加。  
+              </p>
+              <p class="mt_10"><b>我们的优点：</b></p>
+              <p>
+                <b>我们除了透过不同送货方法送抵香港客户，我们亦可以代安排送货给中国各省客户。</b>
+              </p>
+              <p class="mt_10">
+                如有任何问题，欢迎大家透过以下方法向我们查询：
+              </p>
+              <p>
+                <p>电话: {{companyInfo.phone}}</p>
+                <p>国内手机: {{companyInfo.phone_cn}}</p>
+                <p>Email: {{companyInfo.email}}</p>
+                <p>Whatsapp: {{companyInfo.whatsapp}}</p>
+                <p>Wechat: {{companyInfo.wechat}}</p>
+              </p>
+              <p class="mt_10">
+               地址：{{i18n.__('AddrInfo')}}(办公室，不设陈列室)
+              </p>
+              {{else}}
               <h2>關於 HOSINO</h2>
               <p class="about-text mt_10">
                 星野國際貿易有限公司Hosino Worldwide Trading Ltd. Co. 是一家專門挑選潮流及口碑較佳的日本化妝護膚品代理的專業批發公司，所以產品均由日本大批量直送香港，絕對正貨，價格實惠，我們現在代理的品牌有資生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、大木、大創DAISO、太陽社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石澤研究所 ISHIZAWA LABS、米諾 MINON、肌美精 Kracie、克麗貝蒂 Creer Beaute、沛麗康 pelican、妮維雅 Nivea、花王 KAO、娜麗絲 Naris、黎琺 Refa、柳屋 Yanagiya、曼秀雷敦Mentholatum、久光製藥、嘉娜寶 Kanebo、貝親Pigeon、Quality First、Cow牛乳、HOUSE OF ROSE、CECILE MAIA、POLA寶麗、KOSE高絲等，貨品種類往後會不斷增加。  
@@ -37,15 +60,16 @@
                 如有任何問題，歡迎大家透過以下方法向我們查詢：
               </p>
               <p>
-                <p>電話: +852 3957 6783</p>
-                <p>國內手機: +86 198 9657 6596</p>
-                <p>Email: enquiry@hosinowt.com</p>
-                <p>Whatsapp: +852 9790 4385</p>
-                <p>Wechat: +852 9790 4385</p>
+                <p>電話: {{companyInfo.phone}}</p>
+                <p>國內手機: {{companyInfo.phone_cn}}</p>
+                <p>Email: {{companyInfo.email}}</p>
+                <p>Whatsapp: {{companyInfo.whatsapp}}</p>
+                <p>Wechat: {{companyInfo.wechat}}</p>
               </p>
               <p class="mt_10">
-               地址：香港九龍觀塘駿業街49號佳貿中心5樓5B室(辦公室，不設陳列室)
+               地址：{{i18n.__('AddrInfo')}}(辦公室，不設陳列室)
               </p>
+              {{/if}}
             </div>
           </div>
           <!--Team Carousel -->
@@ -54,7 +78,7 @@
 	  <div id="brand_carouse" class="ptb_30 text-center">
         <div class="type-01">
           <div class="heading-part mb_10">
-            <h2 class="main_title">品牌</h2>
+            <h2 class="main_title">{{i18n.__('Brand')}}</h2>
           </div>
           <div class="row brandlogo">
             <div class="col-sm-12 mb_20">
