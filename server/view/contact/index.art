@@ -32,21 +32,21 @@
               <div id="contact_form">
                 <form id="contact_body" method="post" action="">
                  <label class="full-with-form" ><span>*{{i18n.__('CompanyName')}}</span></label>
-                 <input class="full-with-form " type="text" name="company" placeholder="{{i18n.__('Input')}}{{i18n.__('CompanyName')}}" data-required="true" />
+                 <input class="full-with-form " id="formCompany" type="text" name="company" placeholder="{{i18n.__('Input')}}{{i18n.__('CompanyName')}}" data-required="true" />
                  <label class="full-with-form" ><span>*{{i18n.__('ContactName')}}</span></label>
-                 <input class="full-with-form " type="text" name="name" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactName')}}" data-required="true" />
+                 <input class="full-with-form " id="formName" type="text" name="name" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactName')}}" data-required="true" />
                  <label class="full-with-form" ><span>*{{i18n.__('ContactPhone')}}</span></label>
-                 <input class="full-with-form " type="text" name="phone" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactPhone')}}" data-required="true" />
+                 <input class="full-with-form " id="formPhone" type="text" name="phone" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactPhone')}}" data-required="true" />
 				         <label class="full-with-form" ><span>*{{i18n.__('EmailAll')}}</span></label>
-                 <input class="full-with-form " type="email" name="email" placeholder="{{i18n.__('Input')}}{{i18n.__('EmailAll')}}" data-required="true" />
+                 <input class="full-with-form " id="formEmail" type="email" name="email" placeholder="{{i18n.__('Input')}}{{i18n.__('EmailAll')}}" data-required="true" />
 				         <label class="full-with-form" ><span>{{i18n.__('ContactAddr')}}</span></label>
-                 <input class="full-with-form " type="text" name="address" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactAddr')}}" data-required="true" />
+                 <input class="full-with-form " id="formAddress" type="text" name="address" placeholder="{{i18n.__('Input')}}{{i18n.__('ContactAddr')}}" data-required="true" />
 				         <label class="full-with-form" ><span>{{i18n.__('Inquiry')}}</span></label>
-                 <textarea class="full-with-form " name="message" placeholder="{{i18n.__('Input')}}{{i18n.__('Inquiry')}}" data-required="true"></textarea>
+                 <textarea class="full-with-form " id="formMesg" name="message" placeholder="{{i18n.__('Input')}}{{i18n.__('Inquiry')}}" data-required="true"></textarea>
 				         <label class="full-with-form" ><span>*{{i18n.__('AuthCode')}}</span></label>
-                 <input style="width:150px;" class="full-with-form " type="text" name="AuthCode" placeholder="{{i18n.__('Input')}}{{i18n.__('AuthCode')}}" data-required="true" />
+                 <input style="width:150px;" id="formCode" class="full-with-form " type="text" name="AuthCode" placeholder="{{i18n.__('Input')}}{{i18n.__('AuthCode')}}" data-required="true" />
                  <img id="validateCode" onclick="this.src=this.src.split('?')[0]+'?'+Math.random()" style="height:2.6em;cursor:pointer;" src="{{apiUrl}}Home/GetValidateCode"></img>
-                 <div><button class="btn mt_30" type="button" id="submitBtn">提交</button></div>
+                 <div><button class="btn mt_30" type="button" id="contactSubmit">提交</button></div>
                 </form>
                 <div id="contact_results"></div>
               </div>

@@ -9,9 +9,8 @@ class APIController {
     async submitContactForm(ctx, next) {
       let apiService = new ApiService();
       let obj = ctx.request.body;
-      let result = await apiService.postContact(obj, ctx.params.code);
+      let result = await apiService.postContact(obj, ctx.query.code);
       return ctx.body = {
-        errorCode: 1,
         result
       };
     }
@@ -19,9 +18,8 @@ class APIController {
     async submitQueryForm(ctx, next) {
       let apiService = new ApiService();
       let obj = ctx.request.body;
-      let result = await apiService.postQuery(obj, ctx.params.code);
+      let result = await apiService.postQuery(obj, ctx.query.code);
       return ctx.body = {
-        errorCode: 1,
         result
       };
     }

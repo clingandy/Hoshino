@@ -62,27 +62,34 @@ function validform(formId){
     });
   }
   $(() => {
-    //let apiService = new ApiService();
-    $("#submitBtn").click(async function(){
+    $("#contactSubmit").click(async function(){
+        
         if(!validform("#contact_body").form()) {
   
         } else {
-          let res = await ApiService.submitContactForm(
+          await ApiService.submitContactForm(
               {
                   "Contact_ID": 0,
-                  "Company": "string",
-                  "Contacts": "string",
-                  "Phone": "string",
-                  "Email": "string",
+                  "Company": $("#formCompany").val(),
+                  "Contacts": $("#formName").val(),
+                  "Phone": $("#formPhone").val(),
+                  "Email": $("#formEmail").val(),
                   "Matter": "string",
                   "Wechat": "string",
                   "WhatsApp": "string",
                   "Contact_Status": 0,
-                  "Processing_Result": "string"
-                }
-          );
+                  "Processing_Result": $("#formMesg").val()
+                },
+                $("#formCode").val()
+          ).then(data => {
+              if (!data.result.IsOk) {
+                  alert(data.result.Message);
+              } else {
+                $('#contact_body')[0].reset();
+              }
+          });
             //$('#contact_body')[0].reset();
-        }
+       }
     });
   })
  

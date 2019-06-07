@@ -1,5 +1,3 @@
-window.Promise = require('es6-promise').Promise;
-
 // 私有方法
 function getHttp(option) {
 	var promise = new Promise(function(resolve, reject) {
@@ -20,6 +18,15 @@ function getHttp(option) {
 			url += `?${_tmpPara.join('&')}`;
 		}
 
+		if(option.Method.toLocaleLowerCase() == 'get' && option.para) {
+			let _paras = [];
+			Object.keys(option.para).forEach(function(item){
+				_paras.push(`${item}=${encodeURIComponent(option.para[item])}`)
+			});
+
+			url += (url.includes('?') ? `&${_paras.join('&')}` : `?${_paras.join('&')}`);
+		}
+
 		// 是否创建成功
 		if (!client) reject(new Error('create XMLHttpRequest failed!please check you browser!'));
 
@@ -30,43 +37,52 @@ function getHttp(option) {
 			client.setRequestHeader('Accept', 'application/json');
 			client.setRequestHeader('Content-Type', 'application/json');
 		}
-		
-		client.responseType = 'json';
-
+	
 		if(option.contentType) {
 			client.setRequestHeader('Accept', option.contentType);
 			client.setRequestHeader('Content-Type', option.contentType);
 			client.responseType = option.responseType
+		} else {
+			client.responseType = 'json';
 		}
 		
 		
 		client.timeout = 30000;
 		client.onreadystatechange = handler;
-		
-		client.send(option.para);
 		client.ontimeout = function() {
 			resolve({
-				errorCode : -1,
+				code : -1,
 				msg : '连接超时'
 			});
 		};
+		
+		client.send(option.para);
 
 		/**
 		 * [handler handler处理程序]
 		 * @return {[type]} [description]
 		 */
 		function handler() {
-
 			if (this.readyState !== 4) {
 				return;
 			}
 			if (this.status === 200) {
-				resolve(typeof this.response != 'object' ? JSON.parse(this.response) : this.response);
+				var _data = this.response || this.responseText;
+				try{
+					resolve(typeof _data != 'object' ? JSON.parse(_data) : _data);
+				} catch(ex) {
+					resolve(_data);
+				}
 			} else if(this.status !== 0) {
+
 				resolve({
-					state: 2,
-					errorCode : this.status,
-					message : this.response.message || '系统异常'
+					code : -1,
+					msg : this.response.message || '系统异常'
+				});
+			} else if(this.status == 0){
+				resolve({
+					code : -1,
+					message : this.response || '系统异常'
 				});
 			}
 		}
@@ -104,7 +120,6 @@ class HttpRequest {
 	static getPage(option) {
 		option = option || {};
 		option.contentType = 'text/html;';
-		option.responseType = 'html';
 		option.Method = 'GET';
 		return getHttp(option);
 	}
@@ -145,7 +160,24 @@ class HttpRequest {
 		return getHttp(option);
 	}
 
-
+	static jsonp(url) {
+		return new Promise((resolve, reject) => {
+			$.ajax({
+				url,
+				type: "GET",
+				dataType: "jsonp", //指定服务器返回的数据类型
+				timeout: 15000,
+				success: function (data) {
+					resolve(data);
+				},
+				error: function(err) {
+					reject(err);
+				}
+			});
+		});
+	}
 }
 
-export default HttpRequest;
+export  {
+	HttpRequest
+};

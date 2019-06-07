@@ -16,7 +16,7 @@ class ApiService extends BaseService {
 			headers: {
 				'Content-Type': 'application/json-patch+json'
 			},
-            param: opt
+            data: opt
 		};
 		let result = await this.getData(httpOpt, cacheOpt);
 
