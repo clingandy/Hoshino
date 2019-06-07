@@ -173,7 +173,15 @@
 	.header-top{
 		.row, .container{
 			padding: 0;
-		}
+        }
+        .col-xs-9{
+            padding: 0;
+            width: 81%;
+        }
+        .col-xs-3{
+            padding: 0;
+            width: 19%;
+        }
 	}
 	.header-top-left, .header-top-right{
         text-align: right;
@@ -185,6 +193,7 @@
             font-size: 12px;
             &:last-child{
                 display: none;
+                margin-left: 0;
             }
         }
     }
@@ -293,6 +302,12 @@
                 width: 130px;
             }
         }
+    }
+    .errorPage .error-img{
+        width: 100%;
+    }
+    .errorPage .text{
+        font-size: 16px !important;
     }
 }
 

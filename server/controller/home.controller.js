@@ -150,7 +150,6 @@ class HomeController extends BaseController {
             // 获取推荐产品列表
 			let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 5];
 			let productList = await homeService.getRecommendProducts(pageindex, pageSize, lang); 
-			// let pageCount = productList.code == 200 ? Math.ceil(productList.total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
             // 详情
             let detail = await homeService.getProductDetail(ctx.query.id, lang);
@@ -163,8 +162,7 @@ class HomeController extends BaseController {
                     title: '产品详情',
                     description: '产品详情',
                     keyword: '产品详情'
-				},
-				arr: [1,2,3,4,5,6,7,8,9]
+				}
             };
             return await ctx.render(`product/detail`, dataObj);
         } catch (ex) {

@@ -1097,6 +1097,9 @@ label.checkme {
   -webkit-transform: scaleY(1);
           transform: scaleY(1); }
 
+.dropdown-menu {
+  top: 52px; }
+
 #menu .dropdown:hover .dropdown-menu {
   display: block;
   width: 100%; }
@@ -1324,8 +1327,7 @@ label.checkme {
 
 #category-menu, .main-navigation {
   background: #FFF;
-  width: 100%;
-  padding: 6px 0; }
+  width: 100%; }
 
 #category-menu-responsive .nav > li > a, #column-left .nav > li > a {
   padding: 10px 0px; }
@@ -2032,7 +2034,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     border-width: 0 0 1px; }
   .mega-dropdown-menu, #menu .dropdown-menu {
     position: relative;
-    width: 100%; }
+    width: 100%;
+    top: 100%; }
   .navbar-collapse.collapse {
     display: none !important; }
   .navbar-nav {
@@ -2289,6 +2292,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 @media only screen and (max-width: 767px) {
   .header-top .row, .header-top .container {
     padding: 0; }
+  .header-top .col-xs-9 {
+    padding: 0;
+    width: 81%; }
+  .header-top .col-xs-3 {
+    padding: 0;
+    width: 19%; }
   .header-top-left, .header-top-right {
     text-align: right; }
   .header-top-left {
@@ -2297,7 +2306,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
       margin-left: 10px;
       font-size: 12px; }
       .header-top-left .contact > a:last-child {
-        display: none; }
+        display: none;
+        margin-left: 0; }
   .navbar-brand {
     padding: 15px 0; }
     .navbar-brand > img {
@@ -2366,7 +2376,11 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     line-height: 30px; }
     .detail-content .content-item span {
       display: inline-block;
-      width: 130px; } }
+      width: 130px; }
+  .errorPage .error-img {
+    width: 100%; }
+  .errorPage .text {
+    font-size: 16px !important; } }
 
 @media only screen and (min-width: 992px) {
   .company-logo {

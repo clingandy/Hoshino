@@ -3,27 +3,25 @@
 <header id="header">
 	<div class="header-top">
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-9 col-sm-10">
-					<div class="header-top-left">
-						<div class="contact">
-							<a href="#">EMAIL: <span>enquiry@hosinowt.com</span></a>
-							<a href="#">WHATSAPP: <span>+852 9790 4385</span></a>  
-						</div>
+			<div class="col-xs-9 col-sm-10">
+				<div class="header-top-left">
+					<div class="contact">
+						<a href="#">EMAIL: <span>enquiry@hosinowt.com</span></a>
+						<a href="#">WHATSAPP: <span>+852 9790 4385</span></a>  
 					</div>
 				</div>
-				<div class="col-xs-3 col-sm-2">
-					<ul class="header-top-right text-right">
-						<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">{{i18n.__('Lang')}}
-								<span class="caret"></span> </span>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a href="javascript:void(0);" onclick="setLang('zh_CN')">简体</a></li>
-								<li><a href="javascript:void(0);" onclick="setLang('zh_TW')">繁体</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+			</div>
+			<div class="col-xs-3 col-sm-2">
+				<ul class="header-top-right text-right">
+					<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">{{i18n.__('Lang')}}
+							<span class="caret"></span> </span>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="javascript:void(0);" onclick="setLang('zh_CN')">简体</a></li>
+							<li><a href="javascript:void(0);" onclick="setLang('zh_TW')">繁体</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -60,12 +58,12 @@
 							<a href="{{item.path}}" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{i18n.__('Lang') == '简体' ? item.name_CN : item.name_HK}}</a>
 							<ul class="dropdown-menu mega-dropdown-menu row">
 								{{each categoryList category}}
-								<li class="col-md-3">
+								<li class="col-md-2">
 									<ul>
-										<li class="dropdown-header">{{category.Name}}</li>
-										{{each category.Child child}}
+										<li class="dropdown-header"><a href="/product/{{category.ID}}">{{category.Name}}</a></li>
+										<!--{{each category.Child child}}
 										<li><a href="#">{{child.Name}}</a></li>
-										{{/each}}
+										{{/each}}-->
 									</ul>
 								</li>
 								{{/each}}

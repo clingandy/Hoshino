@@ -44,7 +44,7 @@
 				         <label class="full-with-form" ><span>{{i18n.__('Inquiry')}}</span></label>
                  <textarea class="full-with-form " name="message" placeholder="{{i18n.__('Input')}}{{i18n.__('Inquiry')}}" data-required="true"></textarea>
 				         <label class="full-with-form" ><span>*{{i18n.__('AuthCode')}}</span></label>
-                 <input class="full-with-form " type="text" name="AuthCode" placeholder="{{i18n.__('Input')}}{{i18n.__('AuthCode')}}" data-required="true" />
+                 <input style="width:150px;" class="full-with-form " type="text" name="AuthCode" placeholder="{{i18n.__('Input')}}{{i18n.__('AuthCode')}}" data-required="true" />
                  <img id="validateCode" onclick="this.src=this.src.split('?')[0]+'?'+Math.random()" style="height:2.6em;cursor:pointer;" src="{{apiUrl}}Home/GetValidateCode"></img>
                  <div><button class="btn mt_30" type="button" id="submitBtn">提交</button></div>
                 </form>

@@ -202,7 +202,9 @@
 #menu .mega-dropdown:hover a::before, #menu>li:hover>a::before, #menu>li:focus>a::before {
     transform: scaleY(1);
 }
-
+.dropdown-menu{
+    top: 52px;
+}
 #menu .dropdown:hover .dropdown-menu {
     display: block;
     width: 100%;
@@ -443,7 +445,7 @@
 #category-menu, .main-navigation {
     background: #FFF;
     width: 100%;
-    padding: 6px 0;
+    // padding: 6px 0;
 }
 #category-menu-responsive .nav>li>a, #column-left .nav>li>a {
     padding: 10px 0px;

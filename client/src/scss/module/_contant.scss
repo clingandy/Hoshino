@@ -791,6 +791,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     .mega-dropdown-menu, #menu .dropdown-menu {
         position: relative;
         width: 100%;
+        top: 100%;
     }
     .navbar-collapse.collapse {
         display: none!important;

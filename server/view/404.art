@@ -1,7 +1,25 @@
 <!--404-->
 <section class="errorPage">
     <div class="contentB">
+        <img class="error-img" src="/images/404.png">
         <p class="text">抱歉！网址有误！</p>
         <a class="btn" href="/">返回首页</a>
     </div>
 </section>
+<style type="text/css">
+    .errorPage .contentB{
+        text-align: center;
+    }
+    .error-img{
+        display: block;
+        width: 45%;
+        margin: 0 auto;
+    }
+    .errorPage .text{
+        margin-top: -60px;
+        font-size: 20px;
+    }
+    .errorPage .btn{
+        margin-top: 20px;
+    }
+</style>
