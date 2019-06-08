@@ -64,17 +64,26 @@ class HomeController extends BaseController {
         try {
             let id = ctx.query.id ? ctx.query.id : -1;
             let product_name = ctx.query.name ? ctx.query.name : "";
+            let page = ctx.params.pageindex ? ctx.params.pageindex : 1;
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
+            let urlQuery = '';
+            let _tmpPara = [];
+            for(let item in ctx.query) {
+                _tmpPara.push(`${item}=${ctx.query[item]}`)
+            }
+            urlQuery += `?${_tmpPara.join('&')}`;
             
-            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
+            let [pageindex, pageSize] = [page, 20];
 			let productList = await homeService.getAllProducts(pageindex, pageSize, lang, product_name, id); 
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
-			productList = productList.Code == 200 ? productList.Result : [];
+            productList = productList.Code == 200 ? productList.Result : [];
+            
             let dataObj = {
                 currentModule: 'product',
                 productList,
 				pageCount,
-				currentPage: pageindex,
+                currentPage: pageindex,
+                urlQuery,
                 seo: {
                     title: '所有产品',
                     description: '所有产品',
@@ -96,13 +105,14 @@ class HomeController extends BaseController {
 			let productList = await homeService.getLatestProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
-            
+            let urlQuery = '';
             let dataObj = {
 				currentModule: 'new',
 				productList,
 				pageCount,
                 currentPage: pageindex,
                 showLabel: true,
+                urlQuery,
                 seo: {
                     title: '最新产品',
                     description: '最新产品',
@@ -123,11 +133,12 @@ class HomeController extends BaseController {
             let productList = await homeService.getHotProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
-            
+            let urlQuery = '';
             let dataObj = {
 				currentModule: 'hot',
 				productList,
-				pageCount,
+                pageCount,
+                urlQuery,
                 currentPage: pageindex,
                 showLabel: true,
                 seo: {
@@ -148,7 +159,7 @@ class HomeController extends BaseController {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
 
             // 获取推荐产品列表
-			let [pageindex, pageSize] = [ctx.query.pageindex ? ctx.query.pageindex : 1, 5];
+			let [pageindex, pageSize] = [ctx.query.page ? ctx.query.page : 1, 5];
 			let productList = await homeService.getRecommendProducts(pageindex, pageSize, lang); 
             productList = productList.Code == 200 ? productList.Result : [];
             // 详情

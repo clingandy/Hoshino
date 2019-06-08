@@ -9,7 +9,7 @@
                 </div>
               <ul class="nav  main-navigation collapse in" style="display: none;">
               {{each category.Child child}}
-                <li><a href="#">{{i18n.__('Lang')=='简体'?child.Name_CN:child.Name_HK}}</a></li>
+                <li><a href="/product?id={{child.ID}}">{{i18n.__('Lang')=='简体'?child.Name_CN:child.Name_HK}}</a></li>
               {{/each}}
               </ul>
             </div>
@@ -50,7 +50,9 @@
               </div>
             {{/each}}
           </div>
-          {{@page(pageCount, currentPage, 11, currentModule)}}
+          {{if pageCount > 1}}
+          {{@page(pageCount, currentPage, 11, currentModule, urlQuery)}}
+          {{/if}}
         </div>
       </div>
     </div>

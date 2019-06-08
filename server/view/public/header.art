@@ -60,7 +60,7 @@
 								{{each categoryList category}}
 								<li class="col-md-2">
 									<ul>
-										<li class="dropdown-header"><a href="/product/{{category.ID}}">{{category.Name}}</a></li>
+										<li class="dropdown-header"><a href="/product?id={{category.ID}}">{{category.Name}}</a></li>
 										<!--{{each category.Child child}}
 										<li><a href="#">{{child.Name}}</a></li>
 										{{/each}}-->
@@ -94,13 +94,28 @@
 
 	// 搜索功能
 	$("#searchBtn").click(function() {
-		let location = window.location.search;
-		let id = '';
-		if (location.indexOf('id') > -1) {
-			location = location.replace('?', '');
-			id = location.split('=')[1];
-		}
 		let name = $("#search-input").val();
-		window.location.href = `/product?id=${id}&name=${name}`;
+		let option = getParams();
+		option.name = name;
+		let url = window.location.href.indexOf('/product') > -1 ? window.location.pathname : "/product";
+		let _tmpPara = [];
+		for(let item in option) {
+			_tmpPara.push(`${item}=${option[item]}`)
+		}
+		url += `?${_tmpPara.join('&')}`
+		window.location.href=url;
 	});
+
+	function getParams() {  
+		var url = location.search; //获取url中"?"符后的字串  
+		var theRequest = new Object(); 
+		if (url.indexOf("?") != -1) {  
+			var str = url.substr(1);  
+			strs = str.split("&");  
+			for(var i = 0; i < strs.length; i ++) {  
+				theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+			}  
+		}  
+		return theRequest;  
+	} 
 </script>

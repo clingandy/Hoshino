@@ -6,7 +6,7 @@ module.exports = Template => {
 	 * @param {*} currentPage 
 	 * @param {*} showCount 展示多少页
 	 */
-	Template.defaults.imports.page = (pageCount, currentPage, showCount, href, showFirstAndLast) => {
+	Template.defaults.imports.page = (pageCount, currentPage, showCount, href, urlQuery, showFirstAndLast) => {
         var _result = [];
         currentPage = parseInt(currentPage);
 		pageCount = parseInt(pageCount);
@@ -29,9 +29,9 @@ module.exports = Template => {
         // 生成中间内容
         for(var i = _startPage; i <= _length; i++) {
             if(i == currentPage) {
-                _result.push(`<a class="active" href="/${href}/${i}" data-pageIndex="${i}">${i}</a>`);
+                _result.push(`<a class="active" href="/${href}/${i}${urlQuery}" data-pageIndex="${i}">${i}</a>`);
             } else {
-                _result.push(`<a href="/${href}/${i}" data-pageIndex="${i}">${i}</a>`);
+                _result.push(`<a href="/${href}/${i}${urlQuery}" data-pageIndex="${i}">${i}</a>`);
             }
         }
 
@@ -41,22 +41,22 @@ module.exports = Template => {
 			if (currentPage == 1) {
 				_result.unshift(`<a class="prv" data-pageIndex="${currentPage - 1}">&lt;</a>`);
 			} else {
-				_result.unshift(`<a class="prv" href="/${href}/${currentPage - 1}" data-pageIndex="${currentPage - 1}">&lt;</a>`);
+				_result.unshift(`<a class="prv" href="/${href}/${currentPage - 1}${urlQuery}" data-pageIndex="${currentPage - 1}">&lt;</a>`);
 			}
 			
 			if(currentPage == pageCount) {
 				_result.push(`<a class="next" data-pageIndex="0">&gt;</a>`);
 			} else {
-				_result.push(`<a class="next" href="/${href}/${currentPage + 1 >= pageCount ? pageCount : currentPage + 1}" data-pageIndex="${currentPage + 1 >= pageCount ? pageCount : currentPage + 1}">&gt;</a>`);
+				_result.push(`<a class="next" href="/${href}/${currentPage + 1 >= pageCount ? pageCount : currentPage + 1}${urlQuery}" data-pageIndex="${currentPage + 1 >= pageCount ? pageCount : currentPage + 1}">&gt;</a>`);
 			}
 		}
 		if (showFirstAndLast) {
-			pageCount == 1 ? _result.unshift(`<a class="fistPage" data-pageIndex="0">首页</a>`) : _result.unshift(`<a class="fistPage" href="/${href}/1" data-pageIndex="1">首页</a>`);;
+			pageCount == 1 ? _result.unshift(`<a class="fistPage" data-pageIndex="0">首页</a>`) : _result.unshift(`<a class="fistPage" href="/${href}/1${urlQuery}" data-pageIndex="1">首页</a>`);;
 			
 			if(currentPage == pageCount) {
 				_result.push(`<a class="lastPage" data-pageIndex="0">最末页</a>`);
 			} else {
-				_result.push(`<a class="lastPage" href="/${href}/${pageCount}" data-pageIndex="${pageCount}">最末页</a>`);
+				_result.push(`<a class="lastPage" href="/${href}/${pageCount}${urlQuery}" data-pageIndex="${pageCount}">最末页</a>`);
 			}
 		}
         return `<div class="pagination-nav">${_result.join('')}</div>`;
