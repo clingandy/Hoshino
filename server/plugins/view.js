@@ -35,7 +35,6 @@ module.exports = app => {
 	function getLang(ctx){
 		var langType = ctx.cookies.get("langType");
 		if(!langType){
-			ctx.cookies.set("langType","zh_TW");
 			langType = "zh_TW"
 		}
 		if(settings.i18n[langType] ==null){

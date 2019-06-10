@@ -5,7 +5,7 @@ const axios = require('axios');
  */
 class BaseService {
 	constructor() {
-		
+		// axios.defaults.withCredentials = true;
 	}
 
 	/**

@@ -6,11 +6,11 @@ module.exports = {
 		controller: '/public/api.controller',
 		router: [{
 			method: 'post',
-			path: '/api/submitContact',
+			path: '/submitContact',
 			action: 'submitContactForm'
 		},{
 			method: 'post',
-			path: '/api/submitQuery',
+			path: '/submitQuery',
 			action: 'submitQueryForm'
 		}]
 	},

@@ -4,7 +4,7 @@
 		<div class="main-banner owl-carousel">
 			{{each bannerList item}}
 			<div class="item">
-				<a href="/"><img width="100%" src="{{imgUrl}}/{{item.Banner_URL}}" class="img-responsive" /></a>
+				<a href="javascript:void(0);"><img width="100%" src="{{imgUrl}}/{{item.Banner_URL}}" class="img-responsive" /></a>
 			</div>
 			{{/each}}
 		</div>

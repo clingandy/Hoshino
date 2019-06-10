@@ -1,20 +1,20 @@
 module.exports = {
 	vision: '20180702',            //版本号;
 	cdnUrl: {                      //cdn的配置
-		development: 'http://47.92.196.208',
-		beta: 'http://47.92.196.208',
-		release: 'http://47.92.196.208'
+		development: 'http://www.hosinowt.com',
+		beta: 'http://www.hosinowt.com',
+		release: 'http://www.hosinowt.com'
 	},
 	api: {
 		dataUri: {                           //彩种相关api的配置,需要和非彩种相关api做一个区分
-			development: 'http://47.92.196.208:81/api/',
-			beta: 'http://47.92.196.208:81/api/',
-			release: 'http://47.92.196.208:81/api/'
+			development: 'http://www.hosinowt.com/api/',
+			beta: 'http://www.hosinowt.com/api/',
+			release: 'http://www.hosinowt.com/api/'
 		},
 		imageUri : {
-			development: 'http://47.92.196.208',
-			beta: 'http://47.92.196.208',
-			release: 'http://47.92.196.208'
+			development: 'http://www.hosinowt.com',
+			beta: 'http://www.hosinowt.com',
+			release: 'http://www.hosinowt.com'
 		}
 	},
 	getCdn(){

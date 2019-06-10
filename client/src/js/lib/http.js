@@ -30,7 +30,7 @@ function getHttp(option) {
 		// 是否创建成功
 		if (!client) reject(new Error('create XMLHttpRequest failed!please check you browser!'));
 
-		client.open(option.Method, '/api' + url);
+		client.open(option.Method, url);
 		if(option.form) {
 			client.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 		} else {

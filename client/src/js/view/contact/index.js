@@ -32,31 +32,31 @@ function validform(formId){
       },
       messages: {
           company: {
-              required: "请输入公司名称",
-              minlength: "公司名称最少由六个字符组成"
+              required: "請輸入公司名稱",
+              minlength: "公司名稱最少由六個字符組成"
           },
           name: {
-              required: "请输入联系人",
-              minlength: "联系人最少由两个字符组成"
+              required: "請輸入聯系人",
+              minlength: "聯系人最少由兩個字符組成"
           },
           phone: {
-              required: "请输入电话",
-              minlength: "电话最少由六个字符组成"
+              required: "請輸入電話",
+              minlength: "電話號碼最少由六個字符組成"
           },
           email: {
-              required: "请输入电邮",
-              email: "请输入正确的电邮"
+              required: "請輸入電郵",
+              email: "請輸入正確的電郵"
           },
           message: {
-              required: "请输入查询事项",
-              minlength: "查询事项最少由五个字符组成"
+              required: "請輸入查詢事項",
+              minlength: "查詢事項最少由五個字符組成"
           },
           address: {
-              required: "请输入联络地址"
+              required: "請輸入聯絡地址"
           },
           authcode: {
-              required: "请输入验证码",
-              minlength: "验证码必需由四个字符组成"
+              required: "請輸入驗證碼",
+              minlength: "驗證碼必需由四個字符組成"
           }
       }
     });
@@ -85,10 +85,10 @@ function validform(formId){
               if (!data.result.IsOk) {
                   alert(data.result.Message);
               } else {
+                alert("提交成功");
                 $('#contact_body')[0].reset();
               }
           });
-            //$('#contact_body')[0].reset();
        }
     });
   })

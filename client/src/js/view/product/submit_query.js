@@ -1,4 +1,4 @@
-//import ApiService from '../../service/api.service';
+import ApiService from '../../service/api.service';
 
 function validform(formId) {
     return $(formId).validate({
@@ -31,31 +31,31 @@ function validform(formId) {
         },
         messages: {
             company: {
-                required: "请输入公司名称",
-                minlength: "公司名称最少由六个字符组成"
+                required: "請輸入公司名稱",
+                minlength: "公司名稱最少由六個字符組成"
             },
             contact: {
-                required: "请输入联系人",
-                minlength: "联系人最少由两个字符组成"
+                required: "請輸入聯系人",
+                minlength: "聯系人最少由兩個字符組成"
             },
             phone: {
-                required: "请输入电话",
-                minlength: "电话最少由六个字符组成"
+                required: "請輸入電話",
+                minlength: "電話號碼最少由六個字符組成"
             },
             email: {
-                required: "请输入电邮",
-                email: "请输入正确的电邮"
+                required: "請輸入電郵",
+                email: "請輸入正確的電郵"
             },
             message: {
-                required: "请输入查询事项",
-                minlength: "查询事项最少由五个字符组成"
+                required: "請輸入查詢事項",
+                minlength: "查詢事項最少由五個字符組成"
             },
             subject: {
-                required: "请上传资料内容"
+                required: "請上傳資料內容"
             },
             authcode: {
-                required: "请输入验证码",
-                minlength: "验证码必需由四个字符组成"
+                required: "請輸入驗證碼",
+                minlength: "驗證碼必需由四個字符組成"
             }
         }
     });
@@ -79,8 +79,8 @@ fileInput.addEventListener('change', function () {
     fordata.append("file", file);
     var apiUrl = $("#apiUrl").val();
 
-    // $("#subject").val("resources/2019060602/20190606022749243.png");
-    // return;
+    //  $("#subject").val("resources/2019060602/20190606022749243.png");
+    //  return;
     $.ajax({
         type: "POST",
         url: apiUrl + "Upload/Post",
@@ -105,34 +105,8 @@ $("#submitBtn").click(async function () {
             $("#user-subject-error").css("display","block").val("请上传资料内容");
             return;
         }
-        var apiUrl = `${$("#apiUrl").val()}b_appointment_consultation/Post?code=${$("#authcode").val()}`;
-        var data = JSON.stringify({
-            "Company": $("#company").val(),
-            "Contacts": $("#contact").val(),
-            "Phone": $("#phone").val(),
-            "Email": $("#email").val(),
-            "Matter": $("#message").val(),
-            "Material": $("#subject").val(),
-            "Processing_Result": "新增"
-        })
-        $.ajax({
-            type: "POST",
-            url: apiUrl,
-            data: data,
-            contentType: "application/json-patch+json",
-            dataType: "json",
-            success: function (data) {
-                if (data.Code == 200) {
-                    alert("提交成功")
-                }else{
-                    alert(data.Message)
-                }
-            },
-            error: function(err) {
-                alert("提交请求失败")
-            }
-        });
-        // let res = await ApiService.submitQueryForm({
+        // var apiUrl = `${$("#apiUrl").val()}b_appointment_consultation/Post?code=${$("#authcode").val()}`;
+        // var data = JSON.stringify({
         //     "Company": $("#company").val(),
         //     "Contacts": $("#contact").val(),
         //     "Phone": $("#phone").val(),
@@ -140,8 +114,41 @@ $("#submitBtn").click(async function () {
         //     "Matter": $("#message").val(),
         //     "Material": $("#subject").val(),
         //     "Processing_Result": "新增"
-        // }, $("#authcode").val());
-        // console.log(res)
-        //$('#submit_query_form')[0].reset()
+        // })
+        // $.ajax({
+        //     type: "POST",
+        //     url: apiUrl,
+        //     data: data,
+        //     contentType: "application/json-patch+json",
+        //     dataType: "json",
+        //     success: function (data) {
+        //         if (data.Code == 200) {
+        //             alert("提交成功")
+        //             $('#submit_query_form')[0].reset();
+        //         }else{
+        //             alert(data.Message)
+        //         }
+        //     },
+        //     error: function(err) {
+        //         alert("提交请求失败")
+        //     }
+        // });
+        await ApiService.submitQueryForm({
+            "Company": $("#company").val(),
+            "Contacts": $("#contact").val(),
+            "Phone": $("#phone").val(),
+            "Email": $("#email").val(),
+            "Matter": $("#message").val(),
+            "Material": $("#subject").val(),
+            "Processing_Result": "新增"
+        }, $("#authcode").val())
+        .then(data => {
+            if (!data.result.IsOk) {
+                alert(data.result.Message);
+            } else {
+                alert("提交成功");
+                $('#submit_query_form')[0].reset();
+            }
+        });
     }
 });

@@ -8,13 +8,14 @@ class ApiService extends BaseService {
 	/**
 	 * 提交联络我们表单
 	 */
-	async postContact(opt, code) {
+	async postContact(opt, code, cookie) {
 		let cacheOpt = { key: `b_contact/Post`, expired:0 };
         let httpOpt = { 
 			url: `b_contact/Post?code=${code}`,
 			method: 'post',
 			headers: {
-				'Content-Type': 'application/json-patch+json'
+				'Content-Type': 'application/json-patch+json',
+				'Cookie':cookie
 			},
             data: opt
 		};
@@ -26,13 +27,15 @@ class ApiService extends BaseService {
 	/**
 	 * 提交报价查询表单
 	 */
-	async postQuery(opt, code) {
+	async postQuery(opt, code, cookie) {
+		console.log(cookie)
 		let cacheOpt = { key: `b_appointment_consultation/Post`, expired:0 };
         let httpOpt = { 
 			url: `b_appointment_consultation/Post?code=${code}`,
 			method: 'post',
 			headers: {
-				'Content-Type': 'application/json-patch+json'
+				'Content-Type': 'application/json-patch+json',
+				'Cookie':cookie
 			},
             data: opt
 		};

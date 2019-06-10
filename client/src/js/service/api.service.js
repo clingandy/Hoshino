@@ -13,7 +13,7 @@ class ApiService {
 	static async submitQueryForm(opt, code) {
 		return HttpRequest.post({
 			url: `/submitQuery?code=${code}&r=${Math.random()}`,
-			para: opt
+			para: JSON.stringify(opt)
 		});
 	}
 }
