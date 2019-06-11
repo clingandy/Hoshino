@@ -1,13 +1,13 @@
 {
   "name": "candy",
   "version": "1.0.0",
-  "description": "棉花糖客户端",
+  "description": "星野客户端",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "棉花糖"
+    "星野"
   ],
   "author": "Leo",
   "license": "ISC",

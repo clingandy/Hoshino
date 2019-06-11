@@ -1,5 +1,5 @@
 module.exports = {
-	vision: '20180702',            //版本号;
+	vision: '20190602',            //版本号;
 	cdnUrl: {                      //cdn的配置
 		development: 'http://www.hosinowt.com',
 		beta: 'http://www.hosinowt.com',

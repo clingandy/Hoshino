@@ -30,7 +30,7 @@
 			<div class="row">
 				<div class="navbar-header col-xs-12 col-sm-8"> 
 					<a class="navbar-brand" href="index.html"> 
-						<img alt="OYEENok" src="/images/logo.png"> 
+						<img alt="OYEENok" src="{{cdnUrl}}/images/logo.png"> 
 						<span class="logo-name">
 							{{i18n.__('CompanyNameInfo')}}<br/>
 							Hosino Worldwide Trading Ltd. Co.

@@ -5,7 +5,7 @@
 			<div class="col-sm-1"></div>
 			{{if !detail.product_resourcesList}}
 			<div class="col-sm-4 detail-pic-one mb_10">
-				<img src="/images/product/product1-2.png" class="detail-pic-one-pic" alt="{{item.P_Resources_Name_HK}}">
+				<img src="{{cdnUrl}}/images/product/product1-2.png" class="detail-pic-one-pic" alt="{{item.P_Resources_Name_HK}}">
 			</div>
 			{{/if}}
 			{{each detail.product_resourcesList item i}}

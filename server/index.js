@@ -7,7 +7,6 @@ const LoggerService = require('./service/public/logger.service')
 
 const proxy = require('koa-proxy');
 
-
 // 日志服务
 const loggerService = new LoggerService();
 
@@ -30,7 +29,7 @@ async function start() {
 
 	let _url = '';
 	let nodeEnv = ((process.env.NODE_ENV || 'development'));
-	if (nodeEnv == "development") {
+	if (nodeEnv == 'development') {
 		_url = __AppConfig.api['imageUri'].development;
 	} else {
 		_url = ((process.env.VERSION || 'beta') == 'beta' ? __AppConfig.api['imageUri'].beta : __AppConfig.api['imageUri'].release);

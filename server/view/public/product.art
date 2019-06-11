@@ -28,7 +28,7 @@
                       {{/if}}
                       <a href="detail?id={{item.Product_ID}}">
                         {{if item.product_resourcesList.length ==0}}
-                          <img src="/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
+                          <img src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
                           title="{{item.Product_Name_HK}}" class="img-responsive">
                         {{/if}}
                         {{each item.product_resourcesList imgItem k}}

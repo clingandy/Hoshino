@@ -22,7 +22,8 @@ module.exports = app => {
 		layoutName: 'layout/master',
 		i18n: [],
 		imgUrl: '',
-		apiUrl: ''
+		apiUrl: '',
+		cdnUrl: ''
 	}
 
 	// 添加helper;
@@ -74,6 +75,19 @@ module.exports = app => {
 		return settings.apiUrl
 	}
 
+	// 获取cdnUrl
+	function getCdnUrl(){
+		if(settings.cdnUrl ==''){
+			let nodeEnv = ((process.env.NODE_ENV || 'development'));
+			if (nodeEnv == "development") {
+				settings.cdnUrl = __AppConfig.cdnUrl.development;
+			} else {
+				settings.cdnUrl = ((process.env.VERSION || 'beta') == 'beta' ? __AppConfig.cdnUrl.beta : __AppConfig.cdnUrl.release);
+			}
+		}
+		return settings.cdnUrl
+	}
+
 	// 获取分类
 	async function getCategory(ctx){
 		let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
@@ -102,7 +116,8 @@ module.exports = app => {
 		const ctx = this;
 		const context = Object.assign({}, ctx.state, _context);
 		context.i18n = getLang(ctx);
-		context.cdnUrl = context.cdnUrl ? context.cdnUrl : '';
+		context.cdnUrl = getCdnUrl();
+		console.log(getCdnUrl())
 		context.imgUrl = getImgUrl();
 		context.apiUrl = getApiUrl();
 		context.categoryList = await getCategory(ctx);
