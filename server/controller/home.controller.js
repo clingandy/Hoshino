@@ -83,7 +83,8 @@ class HomeController extends BaseController {
                 productList,
 				pageCount,
                 currentPage: pageindex,
-                urlQuery,
+				urlQuery,
+				currentId: id,
                 seo: {
                     title: '所有产品',
                     description: '所有产品',

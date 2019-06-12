@@ -548,7 +548,10 @@ i.right {
 }
 .nav>li>a:hover, .nav>li>a:focus {
     background: transparent;
-    color: #e40001;
+    color: #eb215a;
+}
+.nav>li>a.active, .nav>li>a.active {
+	color: #eb215a;
 }
 #product-tab .nav li {
     display: inline-block;

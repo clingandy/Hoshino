@@ -46,7 +46,7 @@ class HomeService extends BaseService {
 	 * 获取全部产品列表
 	*/
 	async getAllProducts(pageindex = 1, pagesize = 20, lang = 2, product_name = "", categoryID = -1) {
-		let cacheOpt = { key: `b_product/GetProductList`, expired:3000 };
+		let cacheOpt = { key: `b_product/GetProductList?${pageindex}_${lang}_${product_name}_${categoryID}`, expired:3000 };
         let httpOpt = { 
             url: `b_product/GetProductList` ,
             params: {
@@ -65,7 +65,7 @@ class HomeService extends BaseService {
 	 * 获取最新产品列表
 	*/
 	async getLatestProducts(pageindex = 1, pagesize = 25, lang = 2) {
-		let cacheOpt = { key: `b_product/GetNewProductList`, expired:3000 };
+		let cacheOpt = { key: `b_product/GetNewProductList?${pageindex}_${lang}`, expired:3000 };
         let httpOpt = { 
             url: `b_product/GetNewProductList` ,
             params: {
@@ -82,7 +82,7 @@ class HomeService extends BaseService {
 	/*获取热门产品列表*/
 	async getHotProducts(pageindex = 1, pagesize = 20, lang = 2) {
 
-		let cacheOpt = { key: `b_product/GetHotProductList`, expired:3000 };
+		let cacheOpt = { key: `b_product/GetHotProductList?${pageindex}_${lang}`, expired:3000 };
         let httpOpt = { 
             url: `b_product/GetHotProductList` ,
             params: {
@@ -100,7 +100,7 @@ class HomeService extends BaseService {
 	/** 获取推荐产品列表*/
 	async getRecommendProducts(pageindex = 1, pagesize = 20, lang = 2) {
 
-		let cacheOpt = { key: `b_product/GetRecommendProductList`, expired:3000 };
+		let cacheOpt = { key: `b_product/GetRecommendProductList?${pageindex}_${lang}`, expired:3000 };
         let httpOpt = { 
             url: `b_product/GetRecommendProductList` ,
 			params: {
@@ -117,7 +117,7 @@ class HomeService extends BaseService {
 	/** 获取产品详情*/
 	async getProductDetail(product_id, lang = 2) {
 
-		let cacheOpt = { key: `b_product/Get`, expired:3000 };
+		let cacheOpt = { key: `b_product/Get?${product_id}_${lang}`, expired:3000 };
         let httpOpt = { 
             url: `b_product/Get` ,
 			params: {

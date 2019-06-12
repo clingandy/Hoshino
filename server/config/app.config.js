@@ -1,9 +1,9 @@
 module.exports = {
 	vision: '20190602',            //版本号;
 	cdnUrl: {                      //cdn的配置
-		development: 'http://www.hosinowt.com',
-		beta: 'http://www.hosinowt.com',
-		release: 'http://www.hosinowt.com'
+		development: '',
+		beta: '',
+		release: ''
 	},
 	api: {
 		dataUri: {                           //彩种相关api的配置,需要和非彩种相关api做一个区分

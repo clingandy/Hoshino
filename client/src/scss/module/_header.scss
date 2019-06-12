@@ -447,6 +447,9 @@
     width: 100%;
     // padding: 6px 0;
 }
+#category-menu-responsive .nav>li>a.active, #column-left .nav>li>a.active{
+	color: #eb215a;
+}
 #category-menu-responsive .nav>li>a, #column-left .nav>li>a {
     padding: 10px 0px;
 }
