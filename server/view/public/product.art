@@ -24,7 +24,7 @@
                   <div class="product-thumb clearfix mb_20">
                     <div class="image product-imageblock">
                       {{if showLabel}}
-                        <img class="product-lable-img" src="/images/{{currentModule}}.png">
+                        <img class="product-lable-img" src="{{cdnUrl}}/images/{{currentModule}}.png">
                       {{/if}}
                       <a href="detail?id={{item.Product_ID}}">
                         {{if item.product_resourcesList.length ==0}}
