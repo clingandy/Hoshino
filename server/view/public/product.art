@@ -27,7 +27,7 @@
                         <img class="product-lable-img" src="{{cdnUrl}}/images/{{currentModule}}.png">
                       {{/if}}
                       <a href="detail?id={{item.Product_ID}}">
-                        {{if item.product_resourcesList.length ==0}}
+                        {{if !item.product_resourcesList || item.product_resourcesList.length ==0}}
                           <img src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
                           title="{{item.Product_Name_HK}}" class="img-responsive">
                         {{/if}}

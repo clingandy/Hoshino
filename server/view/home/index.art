@@ -50,7 +50,7 @@
 										<div class="product-thumb">
 											<div class="image product-imageblock">
 												<a href="detail?id={{item.Product_ID}}">
-													{{if item.product_resourcesList.length ==0}}
+													{{if !item.product_resourcesList || item.product_resourcesList.length ==0}}
 														<img data-name="product_image"
 														src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
 														title="{{item.Product_Name_HK}}" class="img-responsive">
@@ -99,7 +99,7 @@
 										<div class="product-thumb">
 											<div class="image product-imageblock">
 												<a href="detail?id={{item.Product_ID}}">
-													{{if item.product_resourcesList.length ==0}}
+													{{if !item.product_resourcesList || item.product_resourcesList.length ==0}}
 														<img data-name="product_image"
 														src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
 														title="{{item.Product_Name_HK}}" class="img-responsive">

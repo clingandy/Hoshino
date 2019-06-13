@@ -160,12 +160,13 @@ class HomeController extends BaseController {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
 
             // 获取推荐产品列表
-			let [pageindex, pageSize] = [ctx.query.page ? ctx.query.page : 1, 5];
-			let productList = await homeService.getRecommendProducts(pageindex, pageSize, lang); 
-            productList = productList.Code == 200 ? productList.Result : [];
+			// let [pageindex, pageSize] = [ctx.query.page ? ctx.query.page : 1, 5];
+			// let productList = await homeService.getRecommendProducts(pageindex, pageSize, lang); 
+            // productList = productList.Code == 200 ? productList.Result : [];
             // 详情
             let detail = await homeService.getProductDetail(ctx.query.id, lang);
             detail = detail.Code == 200 ? detail.Result : [];
+            let productList = detail != [] && detail.rel_productList ? detail.rel_productList : [];
             let dataObj = {
 				currentModule: 'detail',
                 productList,
