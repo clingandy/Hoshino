@@ -38,11 +38,11 @@
                 如有任何问题，欢迎大家透过以下方法向我们查询：
               </p>
               <p>
-                <p>电话: {{companyInfo.phone}}</p>
-                <p>国内手机: {{companyInfo.phone_cn}}</p>
-                <p>Email: {{companyInfo.email}}</p>
-                <p>Whatsapp: {{companyInfo.whatsapp}}</p>
-                <p>Wechat: {{companyInfo.wechat}}</p>
+                <p class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone}}</p>
+                <p class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone_cn}}</p>
+                <p class="query-icon"><span class="email-icon"></span>{{companyInfo.email}}</p>
+                <p class="query-icon"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</p>
+                <p class="query-icon"><span class="wechat-icon"></span>{{companyInfo.wechat}}</p>
               </p>
               <p class="mt_10">
                地址：{{i18n.__('AddrInfo')}}

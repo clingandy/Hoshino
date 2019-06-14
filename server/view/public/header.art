@@ -6,8 +6,10 @@
 			<div class="col-xs-9 col-sm-10">
 				<div class="header-top-left">
 					<div class="contact">
-						<a href="javascript:void(0);">EMAIL: <span>enquiry@hosinowt.com</span></a>
-						<a href="javascript:void(0);">WHATSAPP: <span>+852 9790 4385</span></a>  
+						<a href="javascript:;" class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone}}</a>
+						<a href="javascript:;" class="query-icon"><span class="email-icon"></span>{{companyInfo.email}}</a>
+						<a href="javascript:;" class="query-icon"><span class="wechat-icon"></span>{{companyInfo.wechat}}</a>
+						<a href="javascript:;" class="query-icon"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</a>  
 					</div>
 				</div>
 			</div>
@@ -16,7 +18,7 @@
 					<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">{{i18n.__('Lang')}}
 							<span class="caret"></span> </span>
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="top: 100%;">
 							<li><a href="javascript:void(0);" onclick="setLang('zh_CN')">简体</a></li>
 							<li><a href="javascript:void(0);" onclick="setLang('zh_TW')">繁体</a></li>
 						</ul>

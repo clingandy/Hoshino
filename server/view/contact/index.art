@@ -11,20 +11,20 @@
                 <div class="address">{{i18n.__('AddrInfo')}}</div>
               </div>
               <div class="Career mb_50">
-                <h5 class="capitalize mb_20"><strong>{{i18n.__('Phone')}}</strong></h5>
-                <div class="address">{{companyInfo.phone}}</div>
+                <!--h5 class="capitalize mb_20"><strong>{{i18n.__('Phone')}}</strong></h5-->
+                <div class="address"><span class="tel-icon"></span>{{companyInfo.phone}}</div>
               </div>
               <div class="Hello mb_50">
-                <h5 class="capitalize mb_20"><strong>{{i18n.__('Email')}}</strong></h5>
-                <div class="address">{{companyInfo.email}}</div>
+                <!--h5 class="capitalize mb_20"><strong>{{i18n.__('Email')}}</strong></h5-->
+                <div class="address"><span class="email-icon"></span>{{companyInfo.email}}</div>
               </div>
 			      <div class="Hello mb_50">
-                <h5 class="capitalize mb_20"><strong>WECHAT</strong></h5>
-                <div class="address">{{companyInfo.whatsapp}}</div>
+                <!--h5 class="capitalize mb_20"><strong>WECHAT</strong></h5-->
+                <div class="address"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</div>
             </div>
 			      <div class="Hello mb_50">
-                <h5 class="capitalize mb_20"><strong>WHATSAPP</strong></h5>
-                <div class="address">{{companyInfo.wechat}}</div>
+                <!--h5 class="capitalize mb_20"><strong>WHATSAPP</strong></h5-->
+                <div class="address"><span class="wechat-icon"></span>{{companyInfo.wechat}}</div>
               </div>
             </div>
             <div class="col-md-8 col-xs-12 contact-form mb_50">

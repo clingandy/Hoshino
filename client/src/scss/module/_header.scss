@@ -31,9 +31,11 @@
     text-transform: uppercase;
 }
 .header-top-left .contact>a {
-    color: #e40001;
+    // color: #e40001;
+    font-family: STKaiti;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
+    color: #848282;
 }
 .header-top-left .contact>a:hover,
 .header-top-left .contact>a:focus {

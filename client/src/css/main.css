@@ -37,19 +37,19 @@
 .scrollup {
   background: url(../../images/icons/arrow-up.png) no-repeat center; }
 
-.contactWays .tel-icon {
+.tel-icon {
   background: url(../../images/icons/tel-icon.png) no-repeat center;
   background-size: 100% auto; }
 
-.contactWays .email-icon {
+.email-icon {
   background: url(../../images/icons/email-icon.png) no-repeat center;
   background-size: 100% auto; }
 
-.contactWays .wechat-icon {
+.wechat-icon {
   background: url(../../images/icons/wechat-icon.png) no-repeat center;
   background-size: 100% auto; }
 
-.contactWays .whatsapp-icon {
+.whatsapp-icon {
   background: url(../../images/icons/whatsapp-icon.png) no-repeat center;
   background-size: 100% auto; }
 
@@ -932,9 +932,10 @@ label.checkme {
   text-transform: uppercase; }
 
 .header-top-left .contact > a {
-  color: #e40001;
+  font-family: STKaiti;
   font-size: 14px;
-  font-weight: 700; }
+  font-weight: 400;
+  color: #848282; }
 
 .header-top-left .contact > a:hover,
 .header-top-left .contact > a:focus {
@@ -2258,12 +2259,20 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   object-fit: cover;
   margin: 0 auto; }
 
-.contactWays span {
+.contactWays span, .contact .address span, .query-icon span {
   display: inline-block;
-  width: 26px;
-  height: 32px;
+  width: 22px;
+  height: 30px;
   margin-right: 10px;
   vertical-align: middle; }
+
+.contact .address .whatsapp-icon, .query-icon .whatsapp-icon {
+  -webkit-filter: invert(60%);
+          filter: invert(60%); }
+
+.contact .address span, .query-icon span {
+  -webkit-filter: invert(68%);
+          filter: invert(68%); }
 
 .detail-content {
   margin: 20px 0;
@@ -2280,7 +2289,10 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   .header-top-left .contact {
     white-space: nowrap; }
     .header-top-left .contact > a {
-      margin-right: 7px; }
+      font-size: 12px;
+      margin-right: 5px; }
+      .header-top-left .contact > a span {
+        margin-right: 5px; }
   .navbar-brand {
     padding: 20px 0; }
     .navbar-brand > img {
@@ -2314,11 +2326,9 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   .header-top-left {
     text-align: left; }
     .header-top-left .contact > a {
+      display: none;
       margin-left: 10px;
       font-size: 12px; }
-      .header-top-left .contact > a:last-child {
-        display: none;
-        margin-left: 0; }
   .navbar-brand {
     padding: 15px 0; }
     .navbar-brand > img {
