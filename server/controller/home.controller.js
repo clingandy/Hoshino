@@ -73,7 +73,7 @@ class HomeController extends BaseController {
             }
             urlQuery += `?${_tmpPara.join('&')}`;
             
-            let [pageindex, pageSize] = [page, 20];
+            let [pageindex, pageSize] = [page, 24];
 			let productList = await homeService.getAllProducts(pageindex, pageSize, lang, product_name, id); 
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
@@ -102,7 +102,7 @@ class HomeController extends BaseController {
         try {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
 
-            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
+            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 24];
 			let productList = await homeService.getLatestProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];
@@ -130,7 +130,7 @@ class HomeController extends BaseController {
     async hot(ctx, next) {
         try {
             let lang = ctx.cookies.get("langType")=="zh_CN"? 1:2;
-            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 20];
+            let [pageindex, pageSize] = [ctx.params.pageindex ? ctx.params.pageindex : 1, 24];
             let productList = await homeService.getHotProducts(pageindex, pageSize, lang); 
 			let pageCount = productList.Code == 200 ? Math.ceil(productList.Total/pageSize) : 1;
             productList = productList.Code == 200 ? productList.Result : [];

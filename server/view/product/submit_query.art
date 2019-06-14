@@ -5,7 +5,7 @@
             <div class="form-group">
                 <label for="" class="col-sm-2 control-label"></label>
                 <div class="col-sm-10">
-                    <h3 class="mb_10">{{i18n.__('ProjectName')}}：{{productName}}</h3>
+                    <h3 class="mb_20">{{i18n.__('ProjectName')}}：{{productName}}</h3>
                     <p>{{i18n.__('ContactInfo')}}</p>
                     <p>{{i18n.__('Phone')}}: {{companyInfo.phone}}</p>
                     <p>{{i18n.__('Email')}}：{{companyInfo.email}}</p>

@@ -131,6 +131,12 @@
     padding-bottom: 10px;
     border: 1px solid #f6f6f6;
     background-color: #fff;
+    h6{
+        height: 36px;
+        overflow: hidden;
+        text-align: left;
+        padding: 0 10px;
+    }
 }
 .product-thumb:hover {
     border-collapse: #e9e9e9;
