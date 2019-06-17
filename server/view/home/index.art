@@ -140,7 +140,7 @@
 					</div>
 					<div class="tab-content clearfix box" style="margin:0;">
 						{{each vedioList item j}}
-						<video src="{{item.Video_URL}}" width="100%" autoplay="autoplay" controls="controls">
+						<video id="video" src="{{item.Video_URL}}" width="100%" muted="true" autoplay="autoplay" controls="controls">
 							您的瀏覽器不支持 video 標簽。
 						</video>
 						{{/each}}
