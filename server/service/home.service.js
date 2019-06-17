@@ -42,6 +42,18 @@ class HomeService extends BaseService {
 		return result;
 	}
 
+	/** 获取logo列表*/
+	async getLogoList() {
+		let cacheOpt = { key: `b_logo_resources/GetIndexList`, expired:3000 };
+        let httpOpt = { 
+            url: `b_logo_resources/GetIndexList` ,
+            params: {}
+		};
+		let result = await this.getData(httpOpt, cacheOpt);
+
+		return result;
+	}
+
 	/** 
 	 * 获取全部产品列表
 	*/

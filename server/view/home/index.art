@@ -1,155 +1,146 @@
 <div>
-	{{include '../public/header.art'}}
-	<div class="container banner mt_10">
-		<div class="main-banner owl-carousel">
-			{{each bannerList item}}
-			<div class="item">
-				<a href="javascript:void(0);"><img width="100%" src="{{imgUrl}}/{{item.Banner_URL}}" class="img-responsive" /></a>
-			</div>
-			{{/each}}
-		</div>
-	</div>
-	<!-- =====  CONTAINER START  ===== -->
-	<div class="container">
-		<div class="row ">
-			<div class="col-sm-12 mtb_10">
-				<!-- =====  aboutUs  ===== -->
-				<div id="product-tab" class="mt_10">
-					<div class="heading-part mb_10 ">
-						<h2 class="main_title">{{i18n.__('AboutMe')}}</h2>
-					</div>
-					<div class="home-about-content">
-						{{if i18n.__('Lang') == '简体'}}
-						星野国际贸易有限公司Hosino Worldwide Trading Ltd. Co. 是一家专门挑选潮流及口碑较佳的日本化妆护肤品代理的专业批发公司，
-						所有产品均由日本大批量直送香港，绝对正货，价格实惠，我们现在代理的品牌有资生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、
-						大木、大创DAISO、太阳社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石泽研究所 ISHIZAWA LABS、米诺 MINON、肌美精 Kracie、克丽贝蒂 Creer Beaute、
-						沛丽康 pelican、妮维雅 Nivea、花王 KAO、娜丽丝 Naris、黎珐 Refa、柳屋 Yanagiya...<a class="seeMore" href="/about">查看更多</a>
-						{{else}}
-						星野國際貿易有限公司Hosino Worldwide Trading Ltd. Co. 是一家專門挑選潮流及口碑較佳的日本化妝護膚品代理的專業批發公司，
-						所有產品均由日本大批量直送香港，絕對正貨，價格實惠，我們現在代理的品牌有資生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、
-						大木、大創DAISO、太陽社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石澤研究所 ISHIZAWA LABS、米諾 MINON、肌美精 Kracie、克麗貝蒂 Creer Beaute、
-						沛麗康 pelican、妮維雅 Nivea、花王 KAO、娜麗絲 Naris、黎琺 Refa、柳屋 Yanagiya...<a class="seeMore" href="/about">查看更多</a>
-						{{/if}}
-					</div>
-				</div>
-				<!-- =====  aboutUs END  ===== -->
-				<!-- =====  PRODUCT TAB  ===== -->
-				<div id="product-tab" class="mt_10">
-					<div class="heading-part mb_10 ">
-						<h2 class="main_title">{{i18n.__('ProjectNew')}}</h2>
-					</div>
-					{{each latestProductList itemTemp i}}
-					{{if i%5==0}}
-					<div class="tab-content clearfix box">
-						<div class="tab-pane active" id="nArrivals">
-							<div class="nArrivals owl-carousel">
-								{{each latestProductList item j}}
-								{{if j<i+5 && j>=i}}
-								<div class="product-grid">
-									<div class="item">
-										<div class="product-thumb">
-											<div class="image product-imageblock">
-												<img class="product-lable-img" src="{{cdnUrl}}/images/new.png" style='width:44%;height:auto;'>
-												<a href="detail?id={{item.Product_ID}}">
-													{{if !item.product_resourcesList || item.product_resourcesList.length ==0}}
-														<img data-name="product_image"
-														src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
-														title="{{item.Product_Name_HK}}" class="img-responsive">
-													{{/if}}
-													{{each item.product_resourcesList imgItem k}}
-													{{if k==0}}
-														<img data-name="product_image"
-														src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
-														title="{{item.Product_Name_HK}}" class="img-responsive">
-													{{/if}}
-													{{/each}}
-												</a>
-											</div>
-											<div class="caption product-detail text-center pt_10">
-												<h6 data-name="product_name" class="product-name">
-													<a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
-												</h6>
-												<a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">{{i18n.__('QuotationInquiry')}}</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								{{/if}}
-								{{/each}}
-							</div>
-						</div>
-					</div>
-					{{/if}}
-					{{/each}}
-				</div>
-				<!-- =====  PRODUCT TAB  END ===== -->
-				<!-- =====  PRODUCT TAB  ===== -->
-				<div id="product-tab" class="mt_10">
-					<div class="heading-part mb_10 ">
-						<h2 class="main_title">{{i18n.__('ProjectHot')}}</h2>
-					</div>
-					{{each hotProductList itemTemp i}}
-					{{if i%5==0}}
-					<div class="tab-content clearfix box">
-						<div class="tab-pane active" id="nArrivals">
-							<div class="nArrivals owl-carousel">
-								{{each hotProductList item j}}
-								{{if j<i+5 && j>=i}}
-								<div class="product-grid">
-									<div class="item">
-										<div class="product-thumb">
-											<div class="image product-imageblock">
-												<img class="product-lable-img" src="{{cdnUrl}}/images/hot.png" style='width:44%;height:auto;' >
-												<a href="detail?id={{item.Product_ID}}">
-													{{if !item.product_resourcesList || item.product_resourcesList.length ==0}}
-														<img data-name="product_image"
-														src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
-														title="{{item.Product_Name_HK}}" class="img-responsive">
-													{{/if}}
-													{{each item.product_resourcesList imgItem k}}
-													{{if k==0}}
-														<img data-name="product_image"
-														src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
-														title="{{item.Product_Name_HK}}" class="img-responsive">
-													{{/if}}
-													{{/each}}
-												</a>
-											</div>
-											<div class="caption product-detail text-center pt_10">
-												<h6 data-name="product_name" class="product-name">
-													<a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
-												</h6>
-												<a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">{{i18n.__('QuotationInquiry')}}</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								{{/if}}
-								{{/each}}
-							</div>
-						</div>
-					</div>
-					{{/if}}
-					{{/each}}
-				</div>
-				<!-- =====  PRODUCT TAB END  ===== -->
-				<!-- =====  Video  ===== -->
-				<div id="product-tab" class="mt_10">
-					<div class="heading-part mb_10 ">
-						<h2 class="main_title">{{i18n.__('PromotionalVideo')}}</h2>
-					</div>
-					<div class="tab-content clearfix box" style="margin:0;">
-						{{each vedioList item j}}
-						<video id="video" src="{{item.Video_URL}}" width="100%" muted="true" autoplay="autoplay" controls="controls">
-							您的瀏覽器不支持 video 標簽。
-						</video>
-						{{/each}}
-					</div>
-				</div>
-				<!-- =====  Video END  ===== -->
-			</div>
-		</div>
-	</div>
-	{{include '../public/footer.art'}}
+    {{include '../public/header.art'}}
+    <div class="container banner mt_10">
+        <div class="main-banner owl-carousel">
+            {{each bannerList item}}
+            <div class="item">
+                <a href="javascript:void(0);"><img width="100%" src="{{imgUrl}}/{{item.Banner_URL}}" class="img-responsive" /></a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-12 mtb_10">
+                <div id="product-tab" class="mt_10">
+                    <div class="heading-part mb_10 ">
+                        <h2 class="main_title">{{i18n.__('AboutMe')}}</h2>
+                    </div>
+                    <div class="home-about-content">
+                        {{if i18n.__('Lang') == '简体'}}
+                        星野国际贸易有限公司Hosino Worldwide Trading Ltd. Co. 是一家专门挑选潮流及口碑较佳的日本化妆护肤品代理的专业批发公司，
+                        所有产品均由日本大批量直送香港，绝对正货，价格实惠，我们现在代理的品牌有资生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、
+                        大木、大创DAISO、太阳社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石泽研究所 ISHIZAWA LABS、米诺 MINON、肌美精 Kracie、克丽贝蒂 Creer Beaute、
+                        沛丽康 pelican、妮维雅 Nivea、花王 KAO、娜丽丝 Naris、黎珐 Refa、柳屋 Yanagiya...<a class="seeMore" href="/about">查看更多</a>
+                        {{else}}
+                        星野國際貿易有限公司Hosino Worldwide Trading Ltd. Co. 是一家專門挑選潮流及口碑較佳的日本化妝護膚品代理的專業批發公司，
+                        所有產品均由日本大批量直送香港，絕對正貨，價格實惠，我們現在代理的品牌有資生堂 Shiseido、Cle de Peau – Beaute、inclear、PILLBOX、
+                        大木、大創DAISO、太陽社、日本 kawai河合、碧迪皙 PDC、白雪美肌、石澤研究所 ISHIZAWA LABS、米諾 MINON、肌美精 Kracie、克麗貝蒂 Creer Beaute、
+                        沛麗康 pelican、妮維雅 Nivea、花王 KAO、娜麗絲 Naris、黎琺 Refa、柳屋 Yanagiya...<a class="seeMore" href="/about">查看更多</a>
+                        {{/if}}
+                    </div>
+                </div>
+                <div id="product-tab" class="mt_10">
+                    <div class="heading-part mb_10 ">
+                        <h2 class="main_title">{{i18n.__('ProjectNew')}}</h2>
+                    </div>
+                    {{each latestProductList itemTemp i}}
+                    {{if i%5==0}}
+                    <div class="tab-content clearfix box">
+                        <div class="tab-pane active" id="nArrivals">
+                            <div class="nArrivals owl-carousel">
+                                {{each latestProductList item j}}
+                                {{if j<i+5 && j>=i}}
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb">
+                                            <div class="image product-imageblock">
+                                                <img class="product-lable-img" src="{{cdnUrl}}/images/new.png" style='width:44%;height:auto;'>
+                                                <a href="detail?id={{item.Product_ID}}">
+                                                    {{if !item.product_resourcesList || item.product_resourcesList.length ==0}}
+                                                        <img data-name="product_image"
+                                                        src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
+                                                        title="{{item.Product_Name_HK}}" class="img-responsive">
+                                                    {{/if}}
+                                                    {{each item.product_resourcesList imgItem k}}
+                                                    {{if k==0}}
+                                                        <img data-name="product_image"
+                                                        src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
+                                                        title="{{item.Product_Name_HK}}" class="img-responsive">
+                                                    {{/if}}
+                                                    {{/each}}
+                                                </a>
+                                            </div>
+                                            <div class="caption product-detail text-center pt_10">
+                                                <h6 data-name="product_name" class="product-name">
+                                                    <a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
+                                                </h6>
+                                                <a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">{{i18n.__('QuotationInquiry')}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+                <div id="product-tab" class="mt_10">
+                    <div class="heading-part mb_10 ">
+                        <h2 class="main_title">{{i18n.__('ProjectHot')}}</h2>
+                    </div>
+                    {{each hotProductList itemTemp i}}
+                    {{if i%5==0}}
+                    <div class="tab-content clearfix box">
+                        <div class="tab-pane active" id="nArrivals">
+                            <div class="nArrivals owl-carousel">
+                                {{each hotProductList item j}}
+                                {{if j<i+5 && j>=i}}
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb">
+                                            <div class="image product-imageblock">
+                                                <img class="product-lable-img" src="{{cdnUrl}}/images/hot.png" style='width:44%;height:auto;' >
+                                                <a href="detail?id={{item.Product_ID}}">
+                                                    {{if !item.product_resourcesList || item.product_resourcesList.length ==0}}
+                                                        <img data-name="product_image"
+                                                        src="{{cdnUrl}}/images/product/product1-2.png" alt="{{item.Product_Name_HK}}"
+                                                        title="{{item.Product_Name_HK}}" class="img-responsive">
+                                                    {{/if}}
+                                                    {{each item.product_resourcesList imgItem k}}
+                                                    {{if k==0}}
+                                                        <img data-name="product_image"
+                                                        src="{{imgUrl}}/{{imgItem.P_Resources_URL}}" alt="{{item.Product_Name_HK}}"
+                                                        title="{{item.Product_Name_HK}}" class="img-responsive">
+                                                    {{/if}}
+                                                    {{/each}}
+                                                </a>
+                                            </div>
+                                            <div class="caption product-detail text-center pt_10">
+                                                <h6 data-name="product_name" class="product-name">
+                                                    <a href="detail?id={{item.Product_ID}}" title="{{item.Product_Name_HK}}">{{item.Product_Name_HK}}</a>
+                                                </h6>
+                                                <a href="/submit_query?pName={{item.Product_Name_HK}}" class="price">{{i18n.__('QuotationInquiry')}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+                <div id="product-tab" class="mt_10">
+                    <div class="heading-part mb_10 ">
+                        <h2 class="main_title">{{i18n.__('PromotionalVideo')}}</h2>
+                    </div>
+                    <div class="tab-content clearfix box" style="margin:0;">
+                        {{each vedioList item j}}
+                        <video id="video" src="{{item.Video_URL}}" width="100%" muted="true" autoplay="autoplay" controls="controls">
+                            您的瀏覽器不支持 video 標簽。
+                        </video>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{include '../public/footer.art'}}
 </div>
 <script src="{{cdnUrl}}/lib/custom.js"></script>

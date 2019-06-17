@@ -48,7 +48,6 @@
 			{{/if}}
 			{{/each}}
 		</div>
-      <!-- =====  PRODUCT TAB  ===== -->
 	<div id="product-tab" class="mt_10" style="position: static;">
 		<div class="heading-part mb_10 ">
 			<h2 class="main_title">{{i18n.__('ProjectRecommend')}}</h2>
@@ -90,7 +89,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- =====  PRODUCT TAB  END ===== -->
     </div>
 	{{include '../public/footer.art'}}
 </div>

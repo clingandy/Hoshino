@@ -2,19 +2,7 @@
 	{{include '../public/header.art'}}
 	<div class="container about mt_20">
       <div class="row ">
-        <!-- =====  BANNER STRAT  ===== -->
-        <!--<div class="col-sm-12">
-          <div class="breadcrumb ptb_20">
-            <h1>关于我们</h1>
-            <ul>
-              <li><a href="/">首页</a></li>
-              <li class="active">关于我们</li>
-            </ul>
-          </div>
-        </div>-->
-        <!-- =====  BREADCRUMB END===== -->
         <div class="col-sm-12 col-lg-12">
-          <!-- about  -->
           <div class="row">
             <div class="col-sm-4 col-md-3 company-logo">
               <img style="filter: invert(80%);" src="{{cdnUrl}}/images/logo.png" alt="#">
@@ -62,7 +50,6 @@
               </p>
             </div>
           </div>
-          <!--Team Carousel -->
         </div>
       </div>
 	  <div id="brand_carouse" class="ptb_30 text-center">
@@ -72,34 +59,9 @@
           </div>
           <div class="row brandlogo">
             <div class="col-sm-12 mb_20">
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand1.jpg" alt="CECILE MAIA" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand2.jpg" alt="Cle de Peau – Beaute" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand3.jpg" alt="Cow牛乳" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand4.jpg" alt="HOUSE OF ROSE" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand5.jpg" alt="inclear" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand6.jpg" alt="KOSE高絲" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand7.jpg" alt="pillbox" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand8.jpg" alt="pola" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand9.jpg" alt="Quality First" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand10.jpg" alt="貝親Pigeon" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand11.jpg" alt="碧迪皙 PDC" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand12.jpg" alt="大創DAISO" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand13.jpg" alt="大木製藥" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand14.jpg" alt="花王 KAO" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand15.jpg" alt="肌美精 Kracie" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand16.jpg" alt="嘉娜寶 Kanebo" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand17.jpg" alt="久光製藥" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand18.jpg" alt="克麗貝蒂 Creer Beaute" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand19.jpg" alt="黎琺 Refa" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand20.jpg" alt="柳屋 Yanagiya" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand21.jpg" alt="曼秀雷敦Mentholatum" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand22.jpg" alt="米諾 MINON" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand23.jpg" alt="妮維雅 Nivea" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand24.jpg" alt="沛麗康 pelican" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand25.jpg" alt="日本 kawai河合" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand26.jpg" alt="石澤研究所 ISHIZAWA LABS" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand27.jpg" alt="太陽社" class="img-responsive" /></a>
-              <a class="col-sm-3" href="javascript:void(0);"><img src="{{cdnUrl}}/images/brand/brand28.jpg" alt="資生堂 Shiseido" class="img-responsive" /></a>
+              {{each logoList item}}
+              <a class="col-sm-3" href="javascript:void(0);"><img src="{{imgUrl}}/{{item.Logo_URL}}" alt="{{item.Logo_Name_HK}}" class="img-responsive" /></a>
+              {{/each}}
             </div>
           </div>
         </div>

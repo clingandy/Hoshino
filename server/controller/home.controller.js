@@ -45,8 +45,11 @@ class HomeController extends BaseController {
     // 关于我们
     async about(ctx, next) {
         try {
+            let logoList = await homeService.getLogoList(); 
+            logoList = logoList.Code == 200 ? logoList.Result : [];
             let dataObj = {
                 currentModule: 'about',
+                logoList,
                 seo: {
                     title: '关于我们',
                     description: '关于我们',
