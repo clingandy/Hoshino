@@ -15,12 +15,12 @@
               <div class="Hello mb_50">
                 <div class="address"><span class="email-icon"></span>{{companyInfo.email}}</div>
               </div>
-			      <div class="Hello mb_50">
-                <div class="address"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</div>
-            </div>
-			      <div class="Hello mb_50">
+			    <div class="Hello mb_50">
+                <div class="address"><span class="wechat-icon"></span><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</div>
+            	</div>
+			  <!--div class="Hello mb_50">
                 <div class="address"><span class="wechat-icon"></span>{{companyInfo.wechat}}</div>
-              </div>
+              </div-->
             </div>
             <div class="col-md-8 col-xs-12 contact-form mb_50">
               <div id="contact_form">

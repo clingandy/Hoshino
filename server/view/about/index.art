@@ -42,8 +42,8 @@
                 <p class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone}}</p>
                 <p class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone_cn}}</p>
                 <p class="query-icon"><span class="email-icon"></span>{{companyInfo.email}}</p>
-                <p class="query-icon"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</p>
-                <p class="query-icon"><span class="wechat-icon"></span>{{companyInfo.wechat}}</p>
+                <p class="query-icon"><span class="wechat-icon"></span><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</p>
+                <!--p class="query-icon"><span class="wechat-icon"></span>{{companyInfo.wechat}}</p-->
               </p>
               <p class="mt_10">
                地址：{{i18n.__('AddrInfo')}}

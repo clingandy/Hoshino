@@ -23,11 +23,11 @@
 				<a href="#" style="color: #fff;"> <span class="email-icon"></span>{{companyInfo.email}}</a>
 			</div>
 			<div class="col-md-3">
-				<a href="#" style="color: #fff;"> <span class="wechat-icon"></span>{{companyInfo.wechat}}</a>  
+				<a href="#" style="color: #fff;"> <span class="wechat-icon"></span> <span class="whatsapp-icon"></span>{{companyInfo.wechat}}</a>  
 			</div>
-			<div class="col-md-3">
+			<!--div class="col-md-3">
 				<a href="#" style="color: #fff;"> <span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</a>  
-			</div>
+			</div-->
 		</div>
 	</div>
 	<div class="footer-bottom mt_60 ptb_20">
