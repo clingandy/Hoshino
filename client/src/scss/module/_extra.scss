@@ -19,7 +19,6 @@
     }
 }
 .owl-carousel .owl-item img{
-	height: 383px;
 	object-fit: cover;
 }
 .brand .item>a>img, 
@@ -87,7 +86,6 @@
 }
 .product-layout{
 	.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
-		height: 243px;
 		object-fit: cover;
 		margin: 0 auto;
 	}
@@ -236,9 +234,6 @@
 	.home-about-content{
 		line-height: 28px;
 		font-size: 14px;
-	}
-	.owl-carousel .owl-item .product-imageblock img{
-		height: 208px;
 	}
 	.caption.product-detail{
 		margin-top: 0;
