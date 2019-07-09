@@ -3,13 +3,13 @@
         <div id="column-left" class="col-sm-2 col-lg-2 ">
           <div id="category-menu" class="navbar collapse in" aria-expanded="true" style="" role="button">
             {{each categoryList category index}}
-			<div class="nav-responsive" data-index="{{index}}">
+			        <div class="nav-responsive" data-index="{{index}}">
                 <div class="heading-part">{{i18n.__('Lang')}}
-                  <h2 class="main_title">{{i18n.__('Lang')=='简体'?category.Name_CN:category.Name_HK}}</h2>
+                  <h2 class="main_title">{{category.Name}}</h2>
                 </div>
-              <ul class="nav  main-navigation collapse in" style="display: none;">
-              {{each category.Child child}}
-                <li><a class="{{if currentId == child.ID}}active{{/if}}" href="/product?id={{child.ID}}">{{i18n.__('Lang')=='简体'?child.Name_CN:child.Name_HK}}</a></li>
+              <ul class="nav  main-navigation collapse in" style="{{if currentId != category.ID }}display: none;{{/if}}">
+              {{each category.Child child childIndex}}
+                <li><a class="{{if currentId == child.ID}}active{{/if}}" href="/product?id={{child.ID}}">{{child.Name}}</a></li>
               {{/each}}
               </ul>
             </div>
