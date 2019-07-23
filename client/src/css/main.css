@@ -2238,7 +2238,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     color: #fff; }
 
 .header-top-left .contact > a {
-  margin-right: 15px; }
+  margin-right: 20px; }
 
 .header-top-left .contact span {
   font-weight: 400; }
@@ -2282,10 +2282,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 @media only screen and (min-width: 768px) {
   .header-top-left .contact {
     white-space: nowrap; }
-    .header-top-left .contact > a {
+    .header-top-left .contact > a span {
       margin-right: 5px; }
-      .header-top-left .contact > a span {
-        margin-right: 5px; }
   .navbar-brand {
     padding: 20px 0; }
     .navbar-brand > img {

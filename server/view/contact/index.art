@@ -12,6 +12,9 @@
               <div class="Career mb_50">
                 <div class="address"><span class="tel-icon"></span>{{companyInfo.phone}}</div>
               </div>
+              <div class="Career mb_50">
+                <div class="address"><span class="tel-icon"></span>{{companyInfo.phone_cn}}</div>
+              </div>
               <div class="Hello mb_50">
                 <div class="address"><span class="email-icon"></span>{{companyInfo.email}}</div>
               </div>

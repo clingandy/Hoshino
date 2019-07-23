@@ -20,6 +20,9 @@
 				<a href="#" style="color: #fff;"> <span class="tel-icon"></span>{{companyInfo.phone}}</a> 
 			</div>
 			<div class="col-md-3">
+				<a href="#" style="color: #fff;"> <span class="tel-icon"></span>{{companyInfo.phone_cn}}</a> 
+			</div>
+			<div class="col-md-3">
 				<a href="#" style="color: #fff;"> <span class="email-icon"></span>{{companyInfo.email}}</a>
 			</div>
 			<div class="col-md-3">

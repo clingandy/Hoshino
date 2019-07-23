@@ -8,6 +8,7 @@
                     <h3 class="mb_20">{{i18n.__('ProjectName')}}：{{productName}}</h3>
                     <p>{{i18n.__('ContactInfo')}}</p>
                     <p class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone}}</p>
+                    <p class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone_cn}}</p>
                     <p class="query-icon"><span class="email-icon"></span>{{companyInfo.email}}</p>
                     <p class="query-icon"><span class="wechat-icon"></span><span class="whatsapp-icon"></span>{{companyInfo.wechat}}</p>
                     <!--p class="query-icon"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</p-->

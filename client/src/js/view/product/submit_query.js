@@ -100,11 +100,11 @@ $("#submitBtn").click(async function () {
     if (!validform("#submit_query_form").form()) {
         return false;
     } else {
-        $("#user-subject-error").css("display","none");
-        if(!$("#subject").val()){
-            $("#user-subject-error").css("display","block").val("请上传资料内容");
-            return;
-        }
+        // $("#user-subject-error").css("display","none");
+        // if(!$("#subject").val()){
+        //     $("#user-subject-error").css("display","block").val("请上传资料内容");
+        //     return;
+        // }
         // var apiUrl = `${$("#apiUrl").val()}b_appointment_consultation/Post?code=${$("#authcode").val()}`;
         // var data = JSON.stringify({
         //     "Company": $("#company").val(),
