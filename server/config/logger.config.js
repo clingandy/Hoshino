@@ -20,7 +20,7 @@ module.exports = {
 		"pm2": true
 	},
 	expectionlessConfig : {
-		apiKey: process.env.NODE_ENV == 'production' ? 'egUiSWf2G4enX3UBAZ6yRKEeCQ0qhDfxl2Y7Blky' : 'N5p7ZcOHQIpmb6M8jruCYXzCWkXoMbX6trwatyhp',
-		serverUrl: process.env.NODE_ENV == 'production' ? 'http://120.77.146.128:8090' : 'http://log.1398c.com'
+		apiKey: process.env.NODE_ENV == 'production' ? '2213123' : '32323',
+		serverUrl: process.env.NODE_ENV == 'production' ? 'http://127.0.0.1:8090' : 'http://127.0.0.1:8090'
 	}
 }

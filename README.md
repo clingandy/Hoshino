@@ -15,7 +15,7 @@ gulp watch
 npm start
 npm run dev
 
-http://47.92.196.208:81/swagger/index.html
+http://103.1.14.232:81/swagger/index.html
 http://www.hosinowt.com/backstage/login.html
 
 

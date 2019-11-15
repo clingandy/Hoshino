@@ -6,15 +6,15 @@ module.exports = {
 		release: ''
 	},
 	api: {
-		dataUri: {                           //彩种相关api的配置,需要和非彩种相关api做一个区分
-			development: 'http://www.hosinowt.com/api/',
-			beta: 'http://www.hosinowt.com/api/',
-			release: 'http://www.hosinowt.com/api/'
+		dataUri: {
+			development: 'http://103.1.14.232/api/',
+			beta: 'http://103.1.14.232/api/',
+			release: 'http://103.1.14.232/api/'
 		},
 		imageUri : {
-			development: 'http://www.hosinowt.com',
-			beta: 'http://www.hosinowt.com',
-			release: 'http://www.hosinowt.com'
+			development: 'http://103.1.14.232',
+			beta: 'http://103.1.14.232',
+			release: 'http://103.1.14.232'
 		}
 	},
 	getCdn(){

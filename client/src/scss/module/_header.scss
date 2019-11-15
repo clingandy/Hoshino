@@ -43,7 +43,7 @@
     padding-left: 5px;
 }
 .header{
-    background: #000;
+    background: #f6f6f6;
 }
 /* ----------------------------------------------
 	2.2 Navbar
@@ -73,7 +73,7 @@
         line-height: 27px;
         vertical-align: middle;
         font-size: 19px;
-        color: #fff;
+        color: #333333;
     }
 }
 .navbar > p {
@@ -137,8 +137,8 @@
 }
 .mega-dropdown-menu>li ul>li>a:hover, .mega-dropdown-menu>li ul>li>a:focus {
     text-decoration: none;
-    color: #ffff;
-    background-color: #eb215a;
+    color: #333333;
+    background-color: #f6f6f6;
 }
 .mega-dropdown-menu .dropdown-header {
     color: #fff;
@@ -226,7 +226,7 @@
 .main-search {
 	float: right;
     margin-bottom: 0;
-    background-color: #262626;
+    background-color: #ffffff;
     width: 220px;
     position: relative;
 }
@@ -236,7 +236,7 @@
     padding: 0 40px 0 10px;
     border: none;
     border-radius: 0;
-    background-color: #262626;
+    background-color: #ffffff;
 }
 .main-search .btn-lg {
     font-size: 16px;

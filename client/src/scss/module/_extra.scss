@@ -55,7 +55,7 @@
     width: 40px;
     height: 40px;
     @extend %arrow-up;
-    background-color: #e40001;
+    background-color: #4b4b4b;
 }
 .product-thumb .price{
     margin-top: 10px;
@@ -206,14 +206,27 @@
             // }
         }
     }
+    .header-top-left .contact {
+        >a{
+            margin-right: 2px;
+            margin-left: 15px;
+            font-size: 13px;
+            span{
+                margin-right: 1px;
+            }
+        }
+    }
     .navbar-brand{
         padding: 15px 0;
         >img{
-            width: 150px;
+            // width: 150px;
+            width: 30%;
         }
         .logo-name{
             margin-left: 0;
-            font-size: 16px;
+            font-size: 13px;
+            display: inline-block;
+            width: 65%;
         }
 	}
 	.main-search {

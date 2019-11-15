@@ -1,40 +1,36 @@
 <header id="header">
 	<div class="header-top">
 		<div class="container">
-			<div class="col-xs-9 col-sm-10">
-				<div class="header-top-left">
-					<div class="contact">
-						<a href="javascript:;" style="display:inline-block;" class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone}}</a>
-						<a href="javascript:;" class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone_cn}}</a>
-						<a href="javascript:;" class="query-icon"><span class="email-icon"></span>{{companyInfo.email}}</a>
-						<a href="javascript:;" style="display:inline-block;" class="query-icon"><span class="wechat-icon"></span><span class="whatsapp-icon"></span>{{companyInfo.wechat}}</a>
-						<!--a href="javascript:;" class="query-icon"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</a-->  
-					</div>
+			<div class="col-xs-9 col-sm-10 header-top-left">
+				<div class="contact row">
+					<a href="javascript:;" style="display:inline-block;" class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone}}</a>
+					<a href="javascript:;" style="display:inline-block;" class="query-icon"><span class="tel-icon"></span>{{companyInfo.phone_cn}}</a>
+					<a href="javascript:;" class="query-icon"><span class="email-icon"></span>{{companyInfo.email}}</a>
+					<a href="javascript:;" style="display:inline-block;" class="query-icon"><span class="wechat-icon"></span><span class="whatsapp-icon"></span>{{companyInfo.wechat}}</a>
+					<!--a href="javascript:;" class="query-icon"><span class="whatsapp-icon"></span>{{companyInfo.whatsapp}}</a-->  
 				</div>
 			</div>
-			<div class="col-xs-3 col-sm-2">
-				<ul class="header-top-right text-right">
-					<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">{{i18n.__('Lang')}}
-							<span class="caret"></span> </span>
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="top: 100%;">
-							<li><a href="javascript:void(0);" onclick="setLang('zh_CN')">简体</a></li>
-							<li><a href="javascript:void(0);" onclick="setLang('zh_TW')">繁体</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			<ul class="col-xs-3 col-sm-2 header-top-right text-right">
+				<li class="language dropdown"> <span class="dropdown-toggle" id="dropdownMenu1"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">{{i18n.__('Lang')}}
+						<span class="caret"></span> </span>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="top: 100%;">
+						<li><a href="javascript:void(0);" onclick="setLang('zh_CN')">简体</a></li>
+						<li><a href="javascript:void(0);" onclick="setLang('zh_TW')">繁体</a></li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<div class="header">
 		<div class="container">
 			<div class="row">
 				<div class="navbar-header col-xs-12 col-sm-8"> 
-					<a class="navbar-brand" href="/"> 
-						<img alt="OYEENok" src="{{cdnUrl}}/images/logo.png"> 
+					<a class="navbar-brand" href="/">
+						<img alt="OYEENok" style="filter: invert(80%);" src="{{cdnUrl}}/images/logo.png"> 
 						<span class="logo-name">
-							{{i18n.__('CompanyNameInfo')}}<br/>
-							Hosino Worldwide Trading Ltd. Co.
+							<p>{{i18n.__('CompanyNameInfo')}}</p>
+							<p>Hosino Worldwide Trading Ltd. Co.</p>
 						</span>
 					</a> 
 				</div>
